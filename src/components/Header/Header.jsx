@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { NAV_ITEMS } from "../../constants/navigation.js";
 
 export default function Header(props) {
     return (
@@ -9,9 +10,11 @@ export default function Header(props) {
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/standards">Standards</Link></li>
-                    <li><Link to="/templates">Templates</Link></li>
-                    <li><Link to="/examples">Examples</Link></li>
+                    {NAV_ITEMS.map(doc => (
+                        <li key={doc.id}>
+                            <Link to={doc.path}>{doc.name}</Link>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </header>
