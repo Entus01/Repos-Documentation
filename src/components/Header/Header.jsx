@@ -1,13 +1,22 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import "./Header.css";
 
-export default function Header(props) {
+export default function Header({ logo, title }) {
     return (
         <header className="header">
-            <img className="header-logo" src={props.logo} alt="Structure Logo" />
-            <h1 className="header-title">{props.title}</h1>
-            <div>searchbar here</div>
+            <img
+                className="header__logo"
+                src={logo}
+                alt="Structure Logo"
+            />
+
+            <h1 className="header__title">
+                {title}
+            </h1>
+
+            <div className="header__searchbar">
+                searchbar here
+            </div>
         </header>
     );
 }
