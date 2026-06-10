@@ -1,0 +1,9 @@
+:root {
+    --color-background: ...;
+    --color-surface: ...;
+    --color-text-primary: ...;
+    --spacing-sm: ...;
+    --spacing-md: ...;
+    --layout-max-width: 1440px;
+    --shadow-default: ...;
+}
