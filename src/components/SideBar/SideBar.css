@@ -1,0 +1,80 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar__title {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+.sidebar__category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__category-item {
+    padding: 0;
+}
+
+.sidebar__category-title {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 6px 0 10px;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.sidebar__category-title:hover {
+    color: #2282a8;
+}
+
+.sidebar__category-title:focus-visible {
+    outline: 2px solid #2282a8;
+    outline-offset: 2px;
+}
+
+.sidebar__category-title::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease-in-out;
+  margin-left: 0.5rem;
+}
+
+.sidebar__category-title--expanded::after {
+  transform: rotate(45deg);
+}
+
+.sidebar__documents-list {
+    list-style: none;
+    padding: 10px 0 0 20px;
+}
+
+.sidebar__document-item {
+    padding-bottom: 10px;
+}
+
+.sidebar__document-link {
+    text-decoration: none;
+    color: #555;
+}
+
+.sidebar__document-link:hover {
+    text-decoration: underline;
+}
