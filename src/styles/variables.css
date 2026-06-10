@@ -1,9 +1,90 @@
+/* ==========================================================================
+   Variables
+   Global design tokens for the application.
+   ========================================================================== */
+
 :root {
-    --color-background: ...;
-    --color-surface: ...;
-    --color-text-primary: ...;
-    --spacing-sm: ...;
-    --spacing-md: ...;
+    /* ==========================================================================
+       Colors
+       ========================================================================== */
+    --color-background: #fafaf8;
+    --color-surface: #f2f2f0;
+    --color-border: #d8d8d4;
+
+    --color-text-primary: #1e1e1e;
+    --color-text-secondary: #555555;
+
+    --color-accent: #4a6c8c;
+    --color-accent-hover: #35506a;
+
+    --color-selection-background: #4a6c8c;
+    --color-selection-text: #ffffff;
+
+    /* ==========================================================================
+       Typography
+       ========================================================================== */
+    --font-family-heading: "Merriweather", serif;
+    --font-family-base: "Inter", sans-serif;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+    --font-size-4xl: 3rem;
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-base: 1.6;
+    --line-height-heading: 1.2;
+
+    /* ==========================================================================
+       Layout
+       ========================================================================== */
     --layout-max-width: 1440px;
-    --shadow-default: ...;
+
+    --sidebar-ratio: 1fr;
+    --content-ratio: 3fr;
+
+    /* ==========================================================================
+       Spacing
+       ========================================================================== */
+    --spacing-xs: 0.375rem;   /* 6px */
+    --spacing-sm: 0.625rem;   /* 10px */
+    --spacing-md: 1rem;       /* 16px */
+    --spacing-lg: 1.25rem;    /* 20px */
+    --spacing-xl: 2rem;       /* 32px */
+    --spacing-2xl: 3rem;      /* 48px */
+
+    /* ==========================================================================
+       Borders & Shadows
+       ========================================================================== */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --border-width-thin: 1px;
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+
+    /* ==========================================================================
+       Motion
+       ========================================================================== */
+    --transition-default: 0.2s ease-in-out;
+
+    /* ==========================================================================
+       Branding
+       ========================================================================== */
+    --logo-size: 3.125rem; /* 50px */
+
+    /* ==========================================================================
+       Footer
+       ========================================================================== */
+    --footer-font-size: var(--font-size-sm);
 }

@@ -3,79 +3,78 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 20px;
-    background-color: #f4f4f4;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 0 var(--spacing-lg);
+
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-sm);
 }
 
 .sidebar__title {
-    font-size: 1.5em;
-    padding-bottom: 20px;
-    color: #333;
-}
+    padding-bottom: var(--spacing-lg);
 
-.sidebar__category-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
 
-.sidebar__category-item {
-    padding: 0;
+    color: var(--color-text-primary);
 }
 
 .sidebar__category-title {
     display: flex;
-    width: 100%;
-    text-align: left;
     align-items: center;
     justify-content: space-between;
+
+    width: 100%;
+    padding: var(--spacing-xs) 0 var(--spacing-sm);
+
     background: none;
     border: none;
-    padding: 6px 0 10px;
-    font: inherit;
     color: inherit;
+    font: inherit;
+    text-align: left;
     cursor: pointer;
 }
 
 .sidebar__category-title:hover {
-    color: #2282a8;
+    color: var(--color-accent);
 }
 
 .sidebar__category-title:focus-visible {
-    outline: 2px solid #2282a8;
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
 
 .sidebar__category-title::after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(-45deg);
-  transition: transform 0.2s ease-in-out;
-  margin-left: 0.5rem;
+    content: "";
+    width: 8px;
+    height: 8px;
+
+    margin-left: var(--spacing-sm);
+
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: rotate(-45deg);
+    transition: transform var(--transition-default);
 }
 
 .sidebar__category-title--expanded::after {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .sidebar__documents-list {
-    list-style: none;
-    padding: 10px 0 0 20px;
+    padding: var(--spacing-sm) 0 0 var(--spacing-lg);
 }
 
 .sidebar__document-item {
-    padding-bottom: 10px;
+    padding-bottom: var(--spacing-sm);
 }
 
 .sidebar__document-link {
-    text-decoration: none;
-    color: #555;
+    color: var(--color-text-secondary);
 }
 
 .sidebar__document-link:hover {
+    color: var(--color-accent);
     text-decoration: underline;
 }

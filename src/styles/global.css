@@ -1,5 +1,23 @@
-.body {
-    margin: 0;
-    padding: 0 20px;
-    font-family: 'Arial', sans-serif;
+/* ==========================================================================
+   Global
+   Global application styles.
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--color-background);
+}
+
+#root {
+    min-height: 100vh;
+}
+
+::selection {
+    background-color: var(--color-selection-background);
+    color: var(--color-selection-text);
 }
