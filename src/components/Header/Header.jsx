@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Header.css";
+import SearchBar from '../SearchBar/SearchBar';
 
 export default function Header({ logo, title }) {
     return (
@@ -15,7 +16,7 @@ export default function Header({ logo, title }) {
             </h1>
 
             <div className="header__searchbar">
-                searchbar here
+                <SearchBar />
             </div>
         </header>
     );

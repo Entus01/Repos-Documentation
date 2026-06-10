@@ -1,0 +1,17 @@
+.searchbar {
+    width: 100%;
+}
+
+.searchbar__input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.searchbar__input:focus {
+    border-color: #6b7280;
+}
