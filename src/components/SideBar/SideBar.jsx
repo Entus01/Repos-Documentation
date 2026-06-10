@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SideBar.css";
@@ -20,7 +19,7 @@ export default function SideBar() {
   }
 
   return (
-    <div className="sidebar">
+    <aside className="sidebar">
       <h2 className="sidebar__title">Library Catalog</h2>
       <ul className="sidebar__category-list">
         {CATEGORIES.map((category) => (
@@ -53,6 +52,6 @@ export default function SideBar() {
           </li>
         ))}
       </ul>
-    </div>
+    </aside>
   );
 }
