@@ -12,6 +12,16 @@ Este documento define las convenciones de desarrollo, documentación, control de
 
 ---
 
+## Principio de Aplicación
+
+Estas reglas representan un conjunto de buenas prácticas generales para el desarrollo y mantenimiento de proyectos de software.
+
+Su adopción debe considerar el contexto, tamaño y complejidad de cada proyecto.
+
+En proyectos pequeños o personales, algunas convenciones pueden aplicarse de forma simplificada para evitar complejidad innecesaria. En proyectos medianos o grandes, se recomienda adoptar el conjunto completo de reglas para favorecer la mantenibilidad, la escalabilidad y la colaboración.
+
+---
+
 ## 1) Commits
 
 Formato:
@@ -141,8 +151,9 @@ Archivos estratégicos:
 Reglas:
 
 * Documentar únicamente cuando aporte contexto.
-* Priorizar JSDoc en funciones complejas.
+* Priorizar JSDoc en funciones, componentes o módulos complejos.
 * Documentar responsabilidades importantes.
+* Adaptar el nivel de documentación a la complejidad del proyecto.
 * Mantener la documentación sincronizada con el código.
 * Evitar documentación redundante o desactualizada.
 
@@ -150,7 +161,7 @@ Reglas:
 
 ## 4) Documentación del Proyecto
 
-Todo proyecto debe mantener actualizados los documentos definidos dentro de `docs/`.
+Todo proyecto debe mantener actualizados los documentos definidos dentro de `docs/` que formen parte de su documentación adoptada.
 
 Documentación mínima recomendada:
 
@@ -178,6 +189,8 @@ Reglas:
 * Evitar documentación duplicada entre archivos.
 * Cada documento debe tener una responsabilidad claramente definida.
 * Utilizar `glossary.md` como fuente oficial para definiciones y terminología compartida.
+* Adaptar la cantidad de documentación al tamaño y necesidades del proyecto.
+* Evitar mantener documentos que no aporten valor al contexto actual.
 
 ---
 
@@ -281,7 +294,7 @@ Reglas:
 * Componentes pequeños y reutilizables.
 * Evitar lógica compleja dentro del JSX.
 * Mantener props explícitas.
-* Extraer lógica reutilizable a hooks.
+* * Extraer lógica reutilizable a hooks cuando mejore la reutilización o la separación de responsabilidades.
 * Evitar componentes con múltiples responsabilidades.
 
 Correcto:
@@ -308,7 +321,7 @@ Reglas:
 
 * Utilizar metodología BEM.
 * Evitar selectores excesivamente anidados.
-* Centralizar colores, tipografías y espaciados mediante variables.
+* Centralizar colores, tipografías, espaciados y demás valores compartidos mediante variables o design tokens.
 * Mantener consistencia visual entre módulos.
 
 Correcto:
@@ -344,6 +357,8 @@ Reglas:
 * No conservar código muerto comentado.
 * Utilizar Git para recuperar versiones anteriores.
 * Mantener un orden consistente de imports en todo el proyecto.
+* Mantener configuraciones y metadatos compartidos en una única fuente de verdad.
+* Evitar duplicar configuraciones o datos estructurales entre múltiples archivos o componentes.
 
 ---
 
@@ -352,7 +367,7 @@ Reglas:
 Reglas:
 
 * Nunca subir archivos `.env`.
-* Mantener un archivo `.env.example` actualizado.
+* Mantener un archivo `.env.example` actualizado cuando el proyecto utilice variables de entorno.
 * No exponer credenciales en el código fuente.
 * Documentar todas las variables requeridas por el proyecto.
 
@@ -400,6 +415,8 @@ Reglas:
 * Mantener sincronizada la documentación relacionada.
 * Resolver observaciones antes de solicitar aprobación final.
 
+En proyectos individuales donde no se utilicen Pull Requests, estas recomendaciones pueden aplicarse al proceso de revisión previo al merge o al push principal.
+
 ---
 
 ## 12) Sincronización de Documentación
@@ -414,6 +431,7 @@ Reglas:
 * Los cambios en despliegue o infraestructura deben reflejarse en `deployment.md`.
 * Los cambios arquitectónicos deben reflejarse en `architecture.md`.
 * Los nuevos términos compartidos deben evaluarse para su incorporación en `glossary.md`.
+* Toda fuente de verdad centralizada debe mantenerse sincronizada con la documentación correspondiente cuando tenga impacto arquitectónico o funcional.
 
 ---
 
@@ -434,7 +452,7 @@ Reglas:
 
 ---
 
-## 14) Validación Mínima antes de PR
+## 14) Validación Mínima antes de Integrar Cambios
 
 Validaciones recomendadas:
 
@@ -450,23 +468,31 @@ Además:
 * Confirmar que la documentación siga siendo válida.
 * Revisar que no existan imports sin utilizar.
 
+Estas validaciones se recomiendan antes de abrir un Pull Request en proyectos colaborativos o antes de realizar el merge o push principal en proyectos individuales.
+
 ---
 
 ## 15) Aprobación
 
 Reglas:
 
-* No realizar merge sin revisión previa.
-* No realizar push final sin validación del responsable del proyecto.
+* En proyectos colaborativos, no realizar merge sin revisión previa.
+* En proyectos individuales, realizar una revisión propia antes del merge o push final.
 * Toda modificación relevante debe poder justificarse mediante commit e historial.
 
 ---
 
 ## 16) Relación con Otros Documentos
 
+Los siguientes documentos forman parte de la estructura documental recomendada.
+
+Su adopción dependerá del tamaño, complejidad y necesidades de cada proyecto.
+
 ### glossary.md
 
 Define la terminología utilizada dentro de la documentación.
+
+Aplicación recomendada: Proyectos medianos y grandes.
 
 ---
 
@@ -474,11 +500,15 @@ Define la terminología utilizada dentro de la documentación.
 
 Describe cómo se organiza el repositorio.
 
+Aplicación recomendada: Todo proyecto.
+
 ---
 
 ### changelog.md
 
 Registra la evolución relevante del proyecto.
+
+Aplicación recomendada: Todo proyecto.
 
 ---
 
@@ -486,11 +516,15 @@ Registra la evolución relevante del proyecto.
 
 Describe objetivos e iniciativas futuras.
 
+Aplicación recomendada: Proyectos medianos y grandes.
+
 ---
 
 ### decisions.md
 
 Registra el contexto detrás de decisiones importantes.
+
+Aplicación recomendada: Proyectos medianos y grandes.
 
 ---
 
@@ -498,11 +532,15 @@ Registra el contexto detrás de decisiones importantes.
 
 Describe cómo está construido el sistema.
 
+Aplicación recomendada: Proyectos medianos y grandes.
+
 ---
 
 ### deployment.md
 
 Describe cómo se construye y publica el proyecto.
+
+Aplicación recomendada: Proyectos medianos y grandes, o proyectos pequeños con procesos de despliegue no triviales.
 
 ---
 

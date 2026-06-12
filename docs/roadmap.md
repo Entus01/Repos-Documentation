@@ -506,6 +506,25 @@ Impacto esperado:
 
 ---
 
+### Biblioteca Documental Escalable
+
+Prioridad: Alta
+
+Objetivos:
+
+* Facilitar la incorporación de nuevos documentos y categorías.
+* Mantener una navegación consistente basada en configuración centralizada.
+* Mejorar la organización y mantenibilidad del catálogo documental.
+* Preparar la estructura para futuras ampliaciones del repositorio.
+
+Impacto esperado:
+
+* Mayor escalabilidad del proyecto.
+* Menor esfuerzo para mantener y ampliar la documentación.
+* Consistencia estructural entre futuras versiones.
+
+---
+
 ### Estándares de Accesibilidad
 
 Prioridad: Media
@@ -523,60 +542,11 @@ Impacto esperado:
 
 ---
 
-### Sistema de Búsqueda Documental
-
-Prioridad: Media
-
-Objetivos:
-
-* Incorporar búsqueda de documentos desde la interfaz principal.
-* Permitir localizar documentos por nombre.
-* Reducir el tiempo de navegación dentro de la biblioteca documental.
-
-Impacto esperado:
-
-* Mejor experiencia de usuario.
-* Acceso más rápido al contenido.
-* Escalabilidad para futuras incorporaciones documentales.
-
----
-
 ## In Progress
 
-### Construcción de la Biblioteca Documental
+Actualmente no existen iniciativas en desarrollo.
 
-Prioridad: Alta
-
-Objetivos:
-
-* Transformar la documentación en una experiencia navegable.
-* Implementar navegación estructurada por categorías.
-* Crear una experiencia similar a un catálogo documental.
-* Preparar la base para futuras funcionalidades de búsqueda y filtrado.
-
-Impacto esperado:
-
-* Mayor usabilidad.
-* Navegación más intuitiva.
-* Mejor presentación de los estándares documentados.
-
----
-
-### Consolidación de la Documentación Base
-
-Prioridad: Alta
-
-Objetivos:
-
-* Refinar los estándares iniciales.
-* Validar la coherencia entre documentos.
-* Garantizar reutilización en diferentes tipos de proyectos.
-* Mantener sincronización entre documentación y aplicación.
-
-Impacto esperado:
-
-* Base documental sólida y sostenible.
-* Mayor consistencia entre repositorios.
+Las próximas evoluciones del proyecto se encuentran en fase de planificación estratégica y serán incorporadas a esta sección cuando comience su implementación.
 
 ---
 
@@ -624,6 +594,33 @@ Logros:
 
 ---
 
+### Construcción de la Biblioteca Documental
+
+Fecha: 2026-06-10
+
+Logros:
+
+* Transformación de la aplicación en una biblioteca documental navegable.
+* Implementación de navegación estructurada mediante SideBar.
+* Incorporación de un menú lateral con soporte para expansión y colapso.
+* Consolidación de una experiencia de navegación basada en categorías.
+* Preparación de una estructura escalable para futuras ampliaciones del catálogo documental.
+
+---
+
+### Consolidación de la Documentación Base
+
+Fecha: 2026-06-10
+
+Logros:
+
+* Refinamiento de los documentos principales del proyecto.
+* Alineación entre arquitectura, estructura, decisiones y roadmap.
+* Consolidación del glosario como referencia oficial de terminología.
+* Fortalecimiento de la coherencia y reutilización del ecosistema documental.
+
+---
+
 ## On Hold
 
 Actualmente no existen iniciativas pausadas.
@@ -632,7 +629,15 @@ Actualmente no existen iniciativas pausadas.
 
 ## Cancelled
 
-Actualmente no existen iniciativas canceladas.
+### Sistema de Búsqueda Documental
+
+Fecha: 2026-06-10
+
+Motivo:
+
+La evolución del proyecto priorizó una navegación documental clara y estructurada mediante categorías, descartando la incorporación de un sistema de búsqueda en la interfaz principal.
+
+La iniciativa podrá reevaluarse en el futuro si el crecimiento del catálogo documental lo hace necesario.
 
 ---
 
@@ -680,13 +685,13 @@ Mejoras deseables con impacto limitado o sin urgencia inmediata.
 
 Registra los cambios que ya fueron implementados.
 
-roadmap.md describe cambios que podrían implementarse en el futuro.
+`roadmap.md` describe cambios que podrían implementarse en el futuro.
 
 ---
 
 ### decisions.md
 
-Las iniciativas incluidas en este documento pueden derivar en decisiones técnicas, organizativas o estratégicas que deberán registrarse en decisions.md.
+Las iniciativas incluidas en este documento pueden derivar en decisiones técnicas, organizativas o estratégicas que deberán registrarse en `decisions.md`.
 
 ---
 
@@ -718,7 +723,7 @@ Las iniciativas relacionadas con procesos o estándares de desarrollo pueden req
 
 Define la terminología utilizada dentro de la documentación.
 
-Los términos utilizados en este documento deben mantenerse alineados con glossary.md.
+Los términos utilizados en este documento deben mantenerse alineados con `glossary.md`.
 
 ---
 

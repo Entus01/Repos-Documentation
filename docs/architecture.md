@@ -346,9 +346,9 @@ Responsable de:
 
 Responsable de:
 
-* Mostrar identidad visual del proyecto.
-* Mostrar logotipo.
-* Mostrar el nombre del proyecto.
+* Mostrar la identidad visual del proyecto.
+* Mostrar el logotipo y el nombre del proyecto.
+* Actuar como punto principal de acceso y reconocimiento de la aplicación.
 
 ---
 
@@ -359,7 +359,7 @@ Responsable de:
 * Mostrar el catálogo documental.
 * Organizar documentos por categorías.
 * Gestionar la expansión y colapso de categorías.
-* Facilitar la navegación entre documentos.
+* Facilitar la navegación entre documentos mediante React Router.
 
 ---
 
@@ -376,25 +376,20 @@ Responsable de:
 
 Responsable de:
 
-* Mostrar información global del proyecto.
-* Proporcionar elementos auxiliares de navegación o referencia.
+* Mostrar información del autor y del proyecto.
+* Proporcionar enlaces sociales y recursos de referencia.
 
 ---
 
 ## Modelo de Navegación
 
-La navegación se basa en dos fuentes de datos centralizadas:
-
-```text
-CATEGORIES
-NAV_ITEMS
-```
-
-Definidas dentro de:
+La navegación se basa en fuentes de datos centralizadas definidas en:
 
 ```text
 src/constants/navigation.js
 ```
+
+Estas estructuras contienen la información necesaria para construir la interfaz de navegación sin duplicar configuraciones entre componentes.
 
 ---
 
@@ -415,7 +410,7 @@ Project Management
 
 ### Documentos
 
-Cada documento contiene:
+Cada documento contiene la información mínima necesaria para generar la navegación:
 
 ```text
 id
@@ -424,7 +419,7 @@ path
 category
 ```
 
-Estas propiedades permiten generar automáticamente la navegación sin duplicar información dentro de los componentes.
+Esta estrategia permite mantener una única fuente de verdad para la estructura documental y simplifica la incorporación de nuevas categorías o documentos.
 
 ---
 
@@ -450,7 +445,7 @@ Documento
 
 ## Organización Arquitectónica
 
-Actualmente la aplicación utiliza una arquitectura basada en componentes.
+Actualmente la aplicación utiliza una arquitectura basada en componentes y responsabilidades separadas.
 
 ```text
 src/
@@ -459,8 +454,8 @@ src/
 ├── assets/
 ├── components/
 ├── constants/
-├── styles/
-└── pages/
+├── pages/
+└── styles/
 ```
 
 ### Principios Aplicados
@@ -470,6 +465,7 @@ src/
 * Configuración centralizada.
 * Navegación declarativa.
 * Escalabilidad progresiva.
+* Sistema de estilos global basado en design tokens.
 
 ---
 
@@ -481,7 +477,8 @@ Depende de:
 
 ```text
 Logo
-Propiedades visuales
+Recursos visuales
+Estilos globales
 ```
 
 ---
@@ -493,6 +490,7 @@ Depende de:
 ```text
 navigation.js
 React Router
+Estado interno de expansión de categorías
 ```
 
 ---
@@ -539,6 +537,20 @@ Los componentes consumidores no deben duplicar esta información.
 
 ---
 
+### Arquitectura de Estilos
+
+La aplicación utiliza una estructura de estilos globales organizada y desacoplada de los componentes.
+
+Los estilos compartidos, variables de diseño y reglas globales deben centralizarse dentro de:
+
+```text
+src/styles/
+```
+
+Esta organización permite mantener consistencia visual y facilita la evolución del sistema de diseño.
+
+---
+
 ### Biblioteca Documental
 
 La organización del contenido debe seguir una estructura similar a una biblioteca:
@@ -556,7 +568,8 @@ La arquitectura actual permite:
 * Agregar nuevas categorías.
 * Incorporar nuevos documentos.
 * Crear nuevas rutas.
-* Reorganizar navegación sin modificar componentes principales.
+* Reorganizar la navegación sin modificar los componentes principales.
+* Evolucionar el sistema de diseño a través de estilos y tokens globales.
 
 ---
 

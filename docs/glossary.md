@@ -81,6 +81,14 @@ Proceso de publicación de una aplicación en un entorno accesible para usuarios
 
 ---
 
+## Design Token
+
+Valor reutilizable que representa una decisión de diseño compartida, como colores, tipografías, espaciados o tamaños.
+
+Su objetivo es mantener consistencia visual y centralizar la configuración del sistema de diseño.
+
+---
+
 ## Dominio
 
 Área funcional específica dentro de un proyecto.
@@ -107,6 +115,14 @@ Una feature puede involucrar múltiples componentes, servicios y módulos relaci
 ## Frontend
 
 Capa responsable de la interfaz de usuario y de la interacción directa con el sistema.
+
+---
+
+## Fuente de Verdad (Single Source of Truth)
+
+Principio según el cual una información debe mantenerse en una única ubicación oficial dentro del sistema, evitando duplicidad y reduciendo inconsistencias.
+
+Los demás componentes o módulos deben consumir esa información en lugar de mantener copias independientes.
 
 ---
 

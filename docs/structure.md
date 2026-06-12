@@ -12,6 +12,17 @@ Este documento describe la forma en que organizo mis proyectos y las responsabil
 
 No pretende definir una arquitectura universal, sino documentar las convenciones que utilizo para mantener consistencia entre repositorios.
 
+---
+
+## Principio de Aplicación
+
+Las estructuras descritas en este documento representan convenciones y recomendaciones generales.
+
+No todos los proyectos requieren adoptar todos los directorios, archivos o niveles de organización aquí descritos. La estructura debe ajustarse al alcance, complejidad y necesidades reales de cada repositorio.
+
+Se recomienda comenzar con una organización simple y evolucionarla progresivamente a medida que el proyecto crezca.
+
+---
 
 ## 1) Principios de Organización
 
@@ -91,7 +102,7 @@ La estructura debe priorizar claridad y facilidad de navegación antes que patro
 
 Todo proyecto debe mantener una estructura raíz clara, consistente y fácilmente reconocible.
 
-Estructura mínima recomendada:
+Estructura base recomendada:
 
 project-root/
 │
@@ -116,6 +127,8 @@ project-root/
 ├── package.json
 └── README.md
 
+La composición exacta dependerá del tipo y tamaño del proyecto. Algunos directorios o archivos pueden no ser necesarios en repositorios pequeños.
+La carpeta `tests/` es recomendable para proyectos que incorporen pruebas automatizadas, pero no es un requisito para repositorios pequeños o prototipos.
 
 Objetivos:
 
@@ -127,7 +140,7 @@ Objetivos:
 
 ## 3) Documentación
 
-Toda la documentación interna del proyecto debe centralizarse dentro de la carpeta `docs/`.
+Toda la documentación interna que forme parte del proyecto debería centralizarse dentro de la carpeta `docs/`.
 
 Estructura recomendada:
 
@@ -141,6 +154,7 @@ docs/
 ├── decisions.md
 └── deployment.md
 
+No todos los proyectos requieren mantener todos estos documentos. Su adopción dependerá del alcance y las necesidades del repositorio.
 
 Objetivos:
 
@@ -262,6 +276,8 @@ Si una herramienta permite configurarse dentro de `package.json`, puede mantener
 ## 6) Frontend (Referencia)
 
 Estructura sugerida:
+
+La siguiente organización representa una referencia. Cada proyecto puede adoptar únicamente las carpetas que aporten valor según su complejidad y arquitectura.
 
 src/
 │
@@ -418,6 +434,7 @@ Principios:
 * Evitar complejidad innecesaria.
 * Priorizar claridad sobre anticipación.
 * Favorecer la mantenibilidad a largo plazo.
+* Evitar crear carpetas o niveles de organización que aún no tengan una responsabilidad real.
 
 
 ## 10) Principio de Organización de la Raíz
@@ -458,6 +475,8 @@ Cualquier desarrollador que abra el repositorio debe poder encontrar documentaci
 
 
 ## 11) Relación con Otros Documentos
+
+Los siguientes documentos complementan las convenciones de organización descritas en este archivo. Su utilización dependerá del tamaño, complejidad y necesidades de cada proyecto.
 
 ### glossary.md
 

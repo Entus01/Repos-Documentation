@@ -675,6 +675,58 @@ Documentación relacionada:
 
 ---
 
+## DEC-006
+
+Fecha: 2026-06-10
+
+Estado: Accepted
+
+Título:
+
+Centralizar la configuración de navegación documental
+
+Contexto:
+
+A medida que la interfaz evolucionó hacia una biblioteca documental organizada por categorías, la información de navegación comenzó a ser utilizada por múltiples componentes.
+
+Mantener rutas, categorías y metadatos distribuidos en la implementación de cada componente incrementaba el riesgo de inconsistencias y dificultaba la incorporación de nuevos documentos.
+
+Opciones consideradas:
+
+1. Mantener la configuración de navegación distribuida entre los componentes.
+2. Generar la navegación de forma manual dentro de cada vista.
+3. Centralizar toda la configuración de navegación en una única fuente de datos reutilizable.
+
+Decisión:
+
+Centralizar la definición de categorías, documentos y rutas en un archivo de configuración compartido ubicado en `src/constants/navigation.js`.
+
+Motivo:
+
+Reducir la duplicidad de información, facilitar el mantenimiento y permitir que la estructura documental evolucione sin modificar la lógica de los componentes consumidores.
+
+Impacto:
+
+* Configuración de navegación mantenida en una única fuente de verdad.
+* Mayor reutilización entre componentes.
+* Incorporación simplificada de nuevas categorías y documentos.
+* Menor acoplamiento entre la estructura documental y la interfaz.
+
+Consecuencias:
+
+* Los componentes de navegación deberán consumir la configuración centralizada en lugar de definir datos propios.
+* Las modificaciones de la estructura documental deberán realizarse desde el módulo de constantes correspondiente.
+* La documentación arquitectónica y estructural deberá mantenerse sincronizada con esta decisión.
+
+Documentación relacionada:
+
+* architecture.md
+* structure.md
+* changelog.md
+
+
+---
+
 # Plantilla para Nuevas Decisiones
 
 ```text

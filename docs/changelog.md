@@ -399,6 +399,34 @@ Ejemplos:
 
 # Historial del Proyecto
 
+## [1.2.0] - 2026-06-10
+
+### Added
+
+* Implementación de una navegación documental categorizada mediante un SideBar interactivo.
+* Incorporación de un menú lateral con soporte para expansión y colapso de categorías.
+* Adición de enlaces sociales e información del autor en el Footer.
+* Consolidación de una arquitectura global de estilos basada en archivos compartidos y design tokens.
+
+### Changed
+
+* Centralización de la configuración de navegación en constantes reutilizables.
+* Simplificación del Header para enfocarlo en la identidad visual y la navegación principal.
+* Reorganización de la arquitectura de estilos para mejorar consistencia y mantenibilidad.
+* Actualización de la documentación arquitectónica y de planificación para reflejar la evolución del proyecto.
+
+### Removed
+
+* Eliminación de páginas plantilla y componentes temporales que dejaron de formar parte de la experiencia principal.
+* Retiro del componente de búsqueda de la interfaz como parte de la simplificación del layout.
+
+### Notes
+
+* La interfaz evoluciona hacia un modelo de biblioteca documental más organizado y escalable.
+* Se consolida una estructura basada en configuración centralizada y componentes reutilizables como base para futuras ampliaciones.
+
+---
+
 ## [1.1.0] - 2026-06-08
 
 ### Added
@@ -478,7 +506,7 @@ El changelog registra el resultado de esos cambios.
 
 ### architecture.md
 
-Los cambios arquitectónicos importantes deberían reflejarse tanto en architecture.md como en este documento.
+Los cambios arquitectónicos importantes deberían reflejarse tanto en `architecture.md` como en este documento.
 
 ---
 
@@ -492,7 +520,7 @@ Los cambios relevantes relacionados con construcción, infraestructura o desplie
 
 Define la terminología utilizada dentro de la documentación.
 
-Los términos utilizados en este documento deben mantenerse alineados con glossary.md.
+Los términos utilizados en este documento deben mantenerse alineados con `glossary.md`.
 
 ---
 
@@ -524,6 +552,8 @@ El changelog complementa el historial de Git.
 ¿Por qué ese cambio fue importante para la evolución del proyecto?
 ```
 
+Las entradas del changelog representan versiones funcionales del proyecto y pueden agrupar múltiples commits relacionados bajo una misma evolución o iniciativa.
+
 Ambos mecanismos deben mantenerse sincronizados para garantizar trazabilidad y contexto histórico.
 
 ---
@@ -534,6 +564,6 @@ El historial de commits explica el trabajo realizado.
 
 El changelog explica la evolución del proyecto.
 
-Por esta razón, cada entrada debe centrarse en el impacto del cambio y no en los detalles específicos de implementación.
+Por esta razón, cada entrada debe centrarse en el impacto del cambio y no en los detalles específicos de implementación, evitando convertirse en una copia del historial de Git.
 
 Este documento funciona como una referencia histórica del proyecto y como una plantilla reutilizable para mantener consistencia entre repositorios.
