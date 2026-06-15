@@ -2,277 +2,198 @@
 
 Status: Active
 
-Scope: Documentation of project build, configuration, and deployment.
+Scope: Documentation of the project's current build, configuration, and deployment process.
 
 Main reference:
 
-[https://entus01.github.io/Repos-Structure/](https://entus01.github.io/Repos-Structure/)
+https://entus01.github.io/Repos-Structure/
 
 ---
 
 # Purpose
 
-This document describes the project build, configuration, and deployment process.
+This document describes the build, configuration, and deployment process currently used by the project.
 
-Its goal is to provide a clear and up-to-date reference on how to prepare, publish, and maintain a functional version of the system across the available environments.
+Its goal is to provide a clear and up-to-date reference for preparing, publishing, and maintaining a functional version of the application.
 
-Unlike the project's reusable documents, this document should be adapted to the specific needs of each repository.
+Unlike the reusable deployment template documented elsewhere, this document reflects the actual operational process used by the repository.
 
 ---
 
 ## Objectives
 
-* Document the current deployment process.
+* Document the current deployment workflow.
 * Facilitate publishing new versions.
 * Reduce operational errors.
-* Centralize environment-related information.
+* Centralize build and environment information.
 * Facilitate onboarding of new collaborators.
-* Serve as a reference for maintenance tasks.
+* Serve as a reference for future maintenance tasks.
 
 ---
 
-## When to Update this Document
+## Current Deployment
 
-Update when there is any change related to:
-
-* Deployment platforms.
-* Build processes.
-* Required environment variables.
-* Publishing automations.
-* Infrastructure configuration.
-* External services used during deployment.
-* Versioning or release strategies.
-
----
-
-## When Not to Update this Document
-
-It is not necessary to update this document for:
-
-* Functional changes to the system.
-* Visual adjustments.
-* Internal refactors.
-* Updates that do not affect build or deployment.
-
----
-
-## Recommended Structure
-
-The deployment documentation should answer, at minimum, the following questions.
-
-### How is the project built?
-
-Example:
+### Application Type
 
 ```text
-npm install
+Single Page Application (SPA)
+```
 
-npm run build
+Built with:
+
+```text
+React
+React Router
+Vite
 ```
 
 ---
 
-### Where is it deployed?
+## Deployment Summary
 
-Example:
+Repos Documentation is a static web application that does not require a backend or external infrastructure services.
 
-```text
-GitHub Pages
+The application is built locally using Vite and published as a static site through GitHub Pages.
 
-Vercel
-
-Netlify
-
-AWS
-
-Docker
-```
+At the current stage of the project, the deployment process is intentionally simple and does not rely on automated CI/CD pipelines.
 
 ---
-
-### What environments exist?
-
-Example:
-
-```text
-Development
-
-Testing
-
-Staging
-
-Production
-```
-
----
-
-### What environment variables does it require?
-
-Example:
-
-```text
-VITE_API_URL
-
-DATABASE_URL
-
-JWT_SECRET
-```
-
----
-
-### What automations exist?
-
-Example:
-
-```text
-GitHub Actions
-
-CI/CD
-
-Automatic Deploy
-```
-
----
-
-### How to publish a new version?
-
-Example:
-
-```text
-1. Run tests.
-2. Generate build.
-3. Update documentation.
-4. Create release.
-5. Run deployment.
-```
-
----
-
-## Recommended Template
-
-```text
-# Current Deployment
-
-## Summary
-
-General description of the deployment process.
 
 ## Environments
 
-List of available environments.
+The project currently uses the following environments:
+
+```text
+Development
+Production
+```
+
+### Development
+
+Local environment used during active development.
+
+Runs through the Vite development server:
+
+```bash
+npm run dev
+```
+
+---
+
+### Production
+
+Static build generated locally and published to GitHub Pages.
+
+The production version is available at:
+
+https://entus01.github.io/Repos-Structure/
+
+---
 
 ## Requirements
 
-Dependencies needed to build the project.
+The following tools are required to build and publish the project:
+
+```text
+Node.js
+npm
+Git
+```
+
+A GitHub account with access to the repository is also required to publish updates.
+
+---
 
 ## Environment Variables
 
-Variables required for execution and deployment.
+The project currently does not require custom environment variables for execution or deployment.
 
-## Build
+If environment-specific configuration becomes necessary in the future, it should be documented here and managed through an appropriate configuration file such as:
 
-Commands used to generate the application.
+```text
+.env.example
+```
+
+---
+
+## Build Process
+
+The production build is generated using the following commands:
+
+```bash
+# Install dependencies
+npm install
+
+# Generate production build
+npm run build
+```
+
+The generated output is placed inside the default Vite build directory:
+
+```text
+dist/
+```
+
+---
 
 ## Deployment Platform
 
-Services used to publish the project.
+The project is currently deployed using:
+
+```text
+GitHub Pages
+```
+
+The repository is configured to publish the generated static files as the production version of the application.
+
+---
 
 ## Automation
 
-Available automatic processes.
+The deployment process is currently performed manually.
+
+No CI/CD pipeline or automated deployment workflow has been configured at this stage of the project.
+
+Future automation solutions may include:
+
+```text
+GitHub Actions
+Automatic build validation
+Automatic deployment
+```
+
+---
 
 ## Publishing Procedure
 
-Steps required to release a new version.
+The recommended process for publishing a new version is:
+
+1. Verify that the project builds correctly.
+2. Update the relevant documentation.
+3. Review and commit pending changes.
+4. Generate the production build.
+5. Publish the updated version to GitHub Pages.
+6. Verify that the deployed application is working correctly.
+
+---
 
 ## Operational Considerations
 
-Important information for maintenance and support.
-```
+### Documentation Synchronization
+
+Any relevant change affecting the build or deployment process should be reflected in this document to keep it aligned with the actual operational workflow.
 
 ---
 
-## Relationship with Other Documents
+### Deployment Changes
 
-### architecture.md
-
-Describes how the system is built.
-
-The architecture may influence decisions related to build, infrastructure, and deployment.
-
----
-
-### structure.md
-
-Describes how the repository is organized.
-
-The location of files related to infrastructure, automation, and configuration must remain aligned with the documented structure.
-
----
-
-### rules.md
-
-Describes the rules and conventions used during development.
-
-The processes documented in deployment.md must respect the rules defined by the project.
-
----
-
-### roadmap.md
-
-May contain future improvements related to infrastructure, automation, or deployment.
-
----
-
-### decisions.md
-
-Must record relevant decisions related to infrastructure, hosting, or publishing processes.
-
----
-
-### changelog.md
-
-Must record relevant changes that affect the project's build, configuration, or deployment.
-
----
-
-### glossary.md
-
-Defines the terminology used within the documentation.
-
-The terms used in this document must remain aligned with glossary.md.
-
----
-
-## Terminology
-
-The terminology used in this document must remain aligned with:
-
-```text
-docs/glossary.md
-```
-
-When new concepts related to infrastructure, automation, environments, or deployment are incorporated, their inclusion in the official glossary should be evaluated.
-
----
-
-## Operational Change Log
-
-Any relevant modification related to:
-
-* Infrastructure.
-* Deployment platforms.
-* Automations.
-* Build processes.
-* Publishing processes.
-
-should also be recorded in:
+Relevant modifications to infrastructure, publishing procedures, or deployment platforms should also be recorded in:
 
 ```text
 docs/changelog.md
 ```
 
-and, when it involves a significant technical decision, in:
+and, when they involve an important long-term decision, in:
 
 ```text
 docs/decisions.md
@@ -288,22 +209,16 @@ This document must never include:
 * Tokens.
 * Secrets.
 * Private keys.
-* Sensitive information.
+* Sensitive configuration values.
 
-Required variables must be documented using descriptive names and maintained through appropriate configuration files.
-
-Example:
-
-```text
-.env.example
-```
+Operational or environment-specific information should always be documented using descriptive placeholders instead of exposing real values.
 
 ---
 
 ## Fundamental Principle
 
-This document must represent the actual process used to build and deploy the project.
+This document must represent the actual process currently used to build and deploy the project.
 
-If there is a difference between the documentation and the current operational process, the documentation must be updated to reflect the actual behavior of the system.
+If the operational workflow changes, the documentation must be updated to reflect the current implementation rather than an idealized or outdated process.
 
-Its main purpose is to serve as the source of truth about how to publish and maintain the project in operation.
+Its main purpose is to serve as the source of truth for publishing and maintaining the project in operation.

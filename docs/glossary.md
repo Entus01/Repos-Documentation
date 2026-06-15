@@ -2,9 +2,9 @@
 
 Status: Active
 
-Scope: Definitions and terminology used in project documentation and organization.
+Scope: Official definitions and terminology used throughout the project documentation.
 
-Primary reference:
+Main reference:
 
 https://entus01.github.io/Repos-Structure/
 
@@ -12,34 +12,35 @@ https://entus01.github.io/Repos-Structure/
 
 # Purpose
 
-This document centralizes the definitions of terms used within the project documentation.
+This document centralizes the definitions of terms used across the project's documentation.
 
-Its goal is to reduce ambiguity, facilitate communication among collaborators, and maintain consistent language across repositories.
+Its goal is to reduce ambiguity, facilitate communication between collaborators, and maintain a consistent vocabulary throughout the repository.
 
-When a technical, organizational, or architectural term requires a shared interpretation, it should be documented in this file.
-
----
-
-## When to Update This Document
-
-Update when:
-
-* New relevant terminology is introduced.
-* Concepts frequently used in the documentation appear.
-* It is necessary to clarify the meaning of a term.
-* New practices, tools, or architectural patterns are adopted.
+When a technical, organizational, or architectural concept requires a shared interpretation, its definition should be maintained here.
 
 ---
 
-## When Not to Update This Document
+## Objectives
 
-Do not record:
+* Provide a single source of truth for project terminology.
+* Reduce ambiguity across documentation.
+* Facilitate onboarding of new collaborators.
+* Maintain consistency in the language used throughout the repository.
+* Clarify project-specific interpretations of technical concepts.
+* Support the long-term maintainability of the documentation.
 
-* Obvious or universally known definitions.
-* Implementation-specific details.
-* Development rules.
-* Technical decisions.
-* Temporary or version-dependent information.
+---
+
+## Writing Guidelines
+
+Glossary entries should follow these general principles:
+
+* Keep definitions concise and easy to understand.
+* Use consistent terminology across all project documents.
+* Avoid circular or ambiguous definitions.
+* Include examples only when they improve understanding.
+* Focus on the meaning of the concept rather than implementation details.
+* Update existing entries instead of creating duplicate definitions.
 
 ---
 
@@ -47,239 +48,168 @@ Do not record:
 
 ## Architecture
 
-Conceptual organization of the system and the relationship between its main components, modules, and information flows.
+The conceptual organization of the application and the relationship between its main modules, components, and information flows.
+
+Within this project, architecture refers to the current implementation documented in `docs/architecture.md`.
 
 ---
 
 ## Atomic Commit
 
-Commit that represents a single logical change, clearly identifiable and easily reversible.
-
----
-
-## Backend
-
-Set of services responsible for business logic, data processing, persistence, and communication with external systems.
+A commit that represents a single logical change, making it easy to understand, review, and revert if necessary.
 
 ---
 
 ## Build
 
-Process by which source code is transformed into an executable or deployable version.
+The process of transforming the source code into a production-ready static application.
+
+For this project, the build is generated using:
+
+```text
+npm run build
+```
 
 ---
 
 ## Component
 
-Reusable unit of interface or functionality with a specific responsibility.
+A reusable user interface unit with a single, clearly defined responsibility.
+
+The application follows a component-based architecture where components are organized according to their role within the system.
 
 ---
 
 ## Deploy
 
-Process of publishing an application to an environment accessible to users or external systems.
+The process of publishing the generated application so that it becomes accessible to users.
+
+For this project, deployment is performed through GitHub Pages.
 
 ---
 
 ## Design Token
 
-Reusable value that represents a shared design decision, such as colors, typography, spacing, or sizes.
+A reusable value representing a shared visual decision, such as colors, typography, spacing, or dimensions.
 
-Its goal is to maintain visual consistency and centralize the design system configuration.
+Design tokens are centralized within the global style system to maintain visual consistency.
 
 ---
 
-## Domain
+## Document
 
-Specific functional area within a project.
+A reusable piece of project documentation presented through the application interface.
 
-Examples:
-
-```text
-Authentication
-Users
-Billing
-Inventory
-```
+Each document addresses a single responsibility and is organized into categories within the document library.
 
 ---
 
 ## Feature
 
-Specific functionality or capability offered by the system.
+A specific functionality or capability provided by the system.
 
-A feature may involve multiple related components, services, and modules.
+In this repository, features mainly correspond to documentation navigation, rendering, and organization capabilities.
 
 ---
 
 ## Frontend
 
-Layer responsible for the user interface and direct interaction with the system.
+The part of the application responsible for rendering the user interface and managing user interaction.
 
----
-
-## Single Source of Truth
-
-Principle according to which information should be maintained in a single official location within the system, avoiding duplication and reducing inconsistencies.
-
-Other components or modules should consume that information instead of maintaining independent copies.
-
----
-
-## Hook
-
-Reusable function that encapsulates shared logic within a React application.
-
----
-
-## Infrastructure
-
-Set of services, tools, and resources required to run, deploy, and maintain an application.
+This project consists exclusively of a frontend application.
 
 ---
 
 ## Module
 
-Group of related elements that share a common responsibility or purpose.
+A group of related components or files that share a common responsibility.
+
+Examples within this project include the Header, SideBar, Footer, and Content Area modules.
 
 ---
 
-## Monorepo
+## Navigation Model
 
-Repository that contains multiple related applications or packages within the same codebase.
+The centralized structure that defines categories, documents, routes, and navigation behavior.
+
+The navigation model is configured through:
+
+```text
+src/constants/navigation.js
+```
+
+and acts as the single source of truth for the document library.
 
 ---
 
 ## Page
 
-Main view associated with a specific route or section of an application.
+A top-level view associated with a specific route within the application.
 
----
-
-## Architectural Pattern
-
-Set of rules and principles used to organize the structure of a system.
-
-Examples:
-
-```text
-MVC
-Repository Pattern
-Layered Architecture
-Feature Based Architecture
-```
-
----
-
-## Provider
-
-Component responsible for sharing state, services, or configurations across multiple parts of an application.
-
----
-
-## Refactor
-
-Internal code modification whose goal is to improve readability, maintainability, or structure without altering functional behavior.
+Each documentation file is rendered through a dedicated page component.
 
 ---
 
 ## Repository
 
-Project managed through version control that contains code, documentation, and related resources.
+A version-controlled project containing source code, documentation, assets, and configuration files.
+
+This repository acts both as an application and as a centralized documentation reference.
 
 ---
 
 ## Responsibility
 
-Clearly defined purpose that a file, component, module, or service must fulfill.
+The specific purpose assigned to a file, component, module, or document.
 
----
-
-## Service
-
-Element responsible for encapsulating business logic or communication with external systems.
+Each element should fulfill a single primary responsibility and avoid overlapping concerns.
 
 ---
 
 ## Single Page Application (SPA)
 
-Web application that updates content dynamically without fully reloading the page.
+A web application that dynamically updates its content without requiring full page reloads.
+
+Repos Documentation is implemented as a Single Page Application using React and React Router.
 
 ---
 
-## System
+## Single Source of Truth
 
-Complete set of components, services, and resources that make up an application.
+A principle stating that information should exist in one official location to avoid duplication and inconsistencies.
 
----
-
-## Stakeholder
-
-Person or group with a direct interest in the project, its evolution, or its outcomes.
+This principle is applied throughout the project, particularly in navigation configuration and documentation management.
 
 ---
 
-## Base Technology
+## Structure
 
-Fundamental tool or framework on which the project is built.
+The logical organization of the repository and its directories.
 
-Examples:
-
-```text
-React
-Node.js
-Express
-Vite
-```
+The project structure and organization rules are documented in `docs/structure.md`.
 
 ---
 
-## Utility
+## Terminology
 
-Function or set of reusable functions intended to solve specific and repetitive tasks.
+The shared vocabulary officially adopted by the project.
+
+Whenever ambiguity exists regarding the meaning of a concept, this glossary should be considered the authoritative reference.
 
 ---
 
 ## Versioning
 
-Process of identifying and controlling changes through software versions.
+The process of identifying and managing changes through version numbers.
+
+The project follows the `MAJOR.MINOR.PATCH` convention documented in `docs/changelog.md`.
 
 ---
 
-# Relationship with Other Documents
+## Fundamental Principle
 
-### rules.md
+Documentation should use a consistent and shared terminology.
 
-Defines how development conventions should be applied.
+When there is uncertainty about the meaning of a concept, this document should be considered the official reference for its interpretation within the project.
 
----
-
-### structure.md
-
-Defines how projects are organized.
-
----
-
-### architecture.md
-
-Describes the specific architecture of the project.
-
----
-
-### deployment.md
-
-Describes build and deployment processes.
-
----
-
-### decisions.md
-
-Records important decisions related to the project.
-
----
-
-# Fundamental Principle
-
-Documentation should use consistent terminology.
-
-When there is ambiguity about the meaning of a term, this document should be considered the official reference for its interpretation within the project.
+Its main purpose is to establish a common language that improves communication, reduces misunderstandings, and supports the long-term evolution of the repository.

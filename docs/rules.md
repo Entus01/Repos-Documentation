@@ -2,13 +2,24 @@
 
 Status: Active
 
-Scope: All projects that adopt the standards defined in Repos Documentation.
+Scope:
+
+* The rules defined in this document are intended to represent stable and long-term conventions.
+* Temporary practices, project-specific decisions, or implementation details should be documented in their corresponding documents instead of being incorporated here.
 
 Primary reference:
 
-[https://entus01.github.io/Repos-Structure/](https://entus01.github.io/Repos-Structure/)
+https://entus01.github.io/Repos-Structure/
+
+---
+
+## Purpose
 
 This document defines the development, documentation, version control, and workflow conventions used in my projects.
+
+Its purpose is to establish a stable set of practices that improve consistency, maintainability, and collaboration across repositories.
+
+Unlike project-specific documents, the rules defined here are intended to be reusable and applicable across different types of software projects.
 
 ---
 
@@ -22,15 +33,15 @@ In small or personal projects, some conventions may be applied in a simplified f
 
 ---
 
-## 1) Commits
+## Commit Conventions
 
-Format:
+## Format
 
 ```text
 <type>(optional-scope): brief description
 ```
 
-Allowed types:
+### Allowed types
 
 ```text
 feat
@@ -46,7 +57,7 @@ perf
 revert
 ```
 
-Rules:
+### Rules
 
 * Ideal message <= 72 characters.
 * Use a single language per commit.
@@ -55,7 +66,7 @@ Rules:
 * Avoid massive or ambiguous commits.
 * Commits should be atomic and easily reversible.
 
-Correct examples:
+### Correct examples
 
 ```text
 feat(auth): add login validation
@@ -69,7 +80,7 @@ docs(rules): update commit conventions
 style(button): improve spacing and alignment
 ```
 
-Incorrect examples:
+### Incorrect examples
 
 ```text
 fix: several project updates
@@ -81,15 +92,15 @@ update stuff
 
 ---
 
-## 2) Comments
+## Code Comments
 
-Format:
+## Format
 
 ```text
 // Tag: brief and technical description.
 ```
 
-Allowed tags:
+### Allowed tags
 
 * File
 * Constant
@@ -98,7 +109,7 @@ Allowed tags:
 * TODO
 * FIXME
 
-Rules:
+### Rules
 
 * Comments should explain the reason for a decision.
 * Avoid describing obvious code.
@@ -106,13 +117,13 @@ Rules:
 * Avoid obsolete comments.
 * Code should be understandable without relying on extensive comments.
 
-Correct example:
+### Correct example
 
 ```js
 // Function: Prevents duplicate requests while the current request is still active.
 ```
 
-Incorrect example:
+### Incorrect example
 
 ```js
 // Increments the counter by one.
@@ -121,9 +132,9 @@ counter++;
 
 ---
 
-## 3) Documentation
+## Code Documentation
 
-Complex functions:
+### Complex functions
 
 ```js
 /**
@@ -132,7 +143,7 @@ Complex functions:
  */
 ```
 
-Complex components:
+### Complex components
 
 ```jsx
 /**
@@ -140,7 +151,7 @@ Complex components:
  */
 ```
 
-Strategic files:
+### Strategic files
 
 ```js
 /**
@@ -148,7 +159,7 @@ Strategic files:
  */
 ```
 
-Rules:
+### Rules
 
 * Document only when it adds context.
 * Prioritize JSDoc for complex functions, components, or modules.
@@ -159,11 +170,11 @@ Rules:
 
 ---
 
-## 4) Project Documentation
+## Project Documentation
 
 Every project should keep up to date the documents defined within `docs/` that are part of its adopted documentation.
 
-Minimum recommended documentation:
+### Minimum recommended documentation
 
 ```text
 docs/
@@ -173,7 +184,7 @@ docs/
 └── structure.md
 ```
 
-Recommended documentation for medium or large projects:
+### Recommended documentation for medium or large projects
 
 ```text
 docs/
@@ -183,7 +194,7 @@ docs/
 └── deployment.md
 ```
 
-Rules:
+### Rules
 
 * Keep documentation aligned with the project's actual state.
 * Avoid duplicated documentation across files.
@@ -194,7 +205,7 @@ Rules:
 
 ---
 
-## 5) Naming Conventions
+## Naming Conventions
 
 ### Components
 
@@ -265,10 +276,9 @@ BEM methodology
 .card--active {}
 ```
 
-Rules:
+### Rules
 
 * Use descriptive names.
-
 * Avoid generic names such as:
 
   * data
@@ -278,32 +288,31 @@ Rules:
   * utils
   * common
   * misc
-
 * Maintain consistency throughout the repository.
 
-Deployment note:
+### Deployment note
 
 The project should respect these conventions to avoid case-sensitive path errors on Linux, Docker, Vercel, and GitHub Pages.
 
 ---
 
-## 6) React
+## React Guidelines
 
-Rules:
+### Rules
 
 * Small and reusable components.
 * Avoid complex logic inside JSX.
 * Keep props explicit.
-* * Extract reusable logic into hooks when it improves reusability or separation of responsibilities.
+* Extract reusable logic into hooks when it improves reusability or separation of responsibilities.
 * Avoid components with multiple responsibilities.
 
-Correct:
+### Correct
 
 ```jsx
 const canEdit = user.role === "admin";
 ```
 
-Incorrect:
+### Incorrect
 
 ```jsx
 {
@@ -315,22 +324,22 @@ Incorrect:
 
 ---
 
-## 7) CSS
+## CSS Guidelines
 
-Rules:
+### Rules
 
 * Use BEM methodology.
 * Avoid excessively nested selectors.
 * Centralize colors, typography, spacing, and other shared values through variables or design tokens.
 * Maintain visual consistency across modules.
 
-Correct:
+### Correct
 
 ```css
 .card__title {}
 ```
 
-Incorrect:
+### Incorrect
 
 ```css
 .card .header .title {}
@@ -338,9 +347,9 @@ Incorrect:
 
 ---
 
-## 8) File Management
+## File Management
 
-Recommended import order:
+## Recommended import order
 
 ```text
 1. External libraries
@@ -351,7 +360,7 @@ Recommended import order:
 6. Assets
 ```
 
-Rules:
+### Rules
 
 * Remove unused imports.
 * Do not keep commented-out dead code.
@@ -362,9 +371,9 @@ Rules:
 
 ---
 
-## 9) Environment Variables
+## Environment Variables
 
-Rules:
+### Rules
 
 * Never commit `.env` files.
 * Keep an up-to-date `.env.example` file when the project uses environment variables.
@@ -373,9 +382,9 @@ Rules:
 
 ---
 
-## 10) Branches
+## Branch Conventions
 
-Recommended format:
+## Recommended format
 
 ```text
 feature/description
@@ -384,7 +393,7 @@ refactor/description
 docs/description
 ```
 
-Examples:
+### Examples
 
 ```text
 feature/user-authentication
@@ -396,7 +405,7 @@ refactor/payment-service
 docs/update-readme
 ```
 
-Rules:
+### Rules
 
 * Use kebab-case.
 * Avoid spaces.
@@ -405,9 +414,9 @@ Rules:
 
 ---
 
-## 11) Pull Requests
+## Pull Requests
 
-Rules:
+### Rules
 
 * One objective per Pull Request.
 * Avoid excessively large Pull Requests.
@@ -419,9 +428,9 @@ In individual projects where Pull Requests are not used, these recommendations m
 
 ---
 
-## 12) Documentation Synchronization
+## Documentation Synchronization
 
-Rules:
+### Rules
 
 * Structural changes should be reflected in `structure.md`.
 * Standard changes should be reflected in `rules.md`.
@@ -435,26 +444,9 @@ Rules:
 
 ---
 
-## 13) Terminology
+## Minimum Validation Before Integrating Changes
 
-The terminology used in project documentation should remain aligned with:
-
-```text
-docs/glossary.md
-```
-
-Rules:
-
-* Avoid duplicating definitions across multiple documents.
-* Use consistent terminology across repositories.
-* Add new terms to the glossary when they require a shared interpretation.
-* Consider `glossary.md` the official terminological reference source.
-
----
-
-## 14) Minimum Validation before Integrating Changes
-
-Recommended validations:
+## Recommended validations
 
 ```bash
 npm run lint
@@ -472,9 +464,9 @@ These validations are recommended before opening a Pull Request in collaborative
 
 ---
 
-## 15) Approval
+## Approval
 
-Rules:
+### Rules
 
 * In collaborative projects, do not merge without prior review.
 * In individual projects, perform a self-review before the final merge or push.
@@ -482,69 +474,7 @@ Rules:
 
 ---
 
-## 16) Relationship with Other Documents
-
-The following documents are part of the recommended documentation structure.
-
-Their adoption will depend on the size, complexity, and needs of each project.
-
-### glossary.md
-
-Defines the terminology used within the documentation.
-
-Recommended for: Medium and large projects.
-
----
-
-### structure.md
-
-Describes how the repository is organized.
-
-Recommended for: Every project.
-
----
-
-### changelog.md
-
-Records the relevant evolution of the project.
-
-Recommended for: Every project.
-
----
-
-### roadmap.md
-
-Describes future objectives and initiatives.
-
-Recommended for: Medium and large projects.
-
----
-
-### decisions.md
-
-Records the context behind important decisions.
-
-Recommended for: Medium and large projects.
-
----
-
-### architecture.md
-
-Describes how the system is built.
-
-Recommended for: Medium and large projects.
-
----
-
-### deployment.md
-
-Describes how the project is built and published.
-
-Recommended for: Medium and large projects, or small projects with non-trivial deployment processes.
-
----
-
-## 17) Avoid
+## Avoid
 
 * Excessively large files.
 * Components with multiple responsibilities.
@@ -558,7 +488,90 @@ Recommended for: Medium and large projects, or small projects with non-trivial d
 
 ---
 
-## 18) Fundamental Principle
+## Terminology
+
+The terminology used in project documentation should remain aligned with:
+
+```text
+docs/glossary.md
+```
+
+## Rules
+
+* Avoid duplicating definitions across multiple documents.
+* Use consistent terminology across repositories.
+* Add new terms to the glossary when they require a shared interpretation.
+* Consider `glossary.md` the official terminological reference source.
+
+---
+
+## Relationship with Other Documents
+
+The following documents complement the conventions described in this file.
+
+### rules.md
+
+Defines the long-term development, documentation, and workflow conventions adopted across projects.
+
+This document serves as the central reference for stable standards and should remain focused on reusable practices rather than project-specific implementation details.
+
+---
+
+### structure.md
+
+Defines how projects and repositories are organized.
+
+While `rules.md` defines how development should be carried out, `structure.md` defines where each responsibility should be located.
+
+---
+
+### architecture.md
+
+Describes how the system is built and how its parts interact.
+
+Architectural changes may require updates to both documents.
+
+---
+
+### deployment.md
+
+Describes build, configuration, and deployment processes.
+
+Operational conventions documented there should remain aligned with the rules defined here.
+
+---
+
+### decisions.md
+
+Records important technical, organizational, or strategic decisions.
+
+Changes to long-term development conventions may justify a formal decision entry.
+
+---
+
+### roadmap.md
+
+Contains future initiatives that may introduce new standards or development practices.
+
+---
+
+### changelog.md
+
+Records relevant changes applied to the project.
+
+Updates to development conventions that affect repository usage should also be reflected there.
+
+---
+
+### glossary.md
+
+Defines the official terminology used across the documentation ecosystem.
+
+The concepts used in this document should remain aligned with the glossary.
+
+---
+
+## Fundamental Principle
 
 Every development decision should prioritize:
 

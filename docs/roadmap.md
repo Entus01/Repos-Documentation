@@ -160,352 +160,6 @@ Expected impact:
 
 ---
 
-### Accessibility Standards
-
-Priority: Medium
-
-Objectives:
-
-* Incorporate minimum accessibility criteria.
-* Document best practices for web interfaces.
-* Establish recommended validations.
-
-Expected impact:
-
-* More inclusive experiences.
-* Better overall application quality.
-
----
-
-## In Progress
-
-### Base Documentation Consolidation
-
-Priority: High
-
-Objectives:
-
-* Refine initial standards.
-* Validate coherence between documents.
-* Ensure reusability across different project types.
-
-Expected impact:
-
-* Solid and sustainable documentation foundation.
-* Greater consistency across repositories.
-
----
-
-## Completed
-
-### Initial Version
-
-Date: 2026-06-07
-
-Achievements:
-
-* Project creation.
-* Definition of general development standards.
-* Definition of organization standards.
-* Establishment of a centralized documentation structure.
-* Creation of base documentation for future iterations.
-
----
-
-## On Hold
-
-There are currently no paused initiatives.
-
----
-
-## Cancelled
-
-There are currently no cancelled initiatives.
-
----
-
-# Template for New Initiatives
-
-```text
-### Initiative name
-
-Priority:
-
-Objectives:
-
--
-
-Expected impact:
-
--
-```
-
----
-
-# Priorities
-
-## High
-
-Items necessary for the immediate evolution of the project.
-
----
-
-## Medium
-
-Important improvements that do not block current progress.
-
----
-
-## Low
-
-Desirable improvements with limited impact or no immediate urgency.
-
----
-
-## Relationship with Other Documents
-
-### changelog.md
-
-Records changes that have already been implemented.
-
-roadmap.md describes changes that could be implemented in the future.
-
----
-
-### decisions.md
-
-Initiatives included in this document may lead to technical, organizational, or strategic decisions that must be recorded in decisions.md.
-
----
-
-### architecture.md
-
-Architecture-related initiatives may require modifications to the project's architectural documentation.
-
----
-
-### deployment.md
-
-Infrastructure or automation-related initiatives may require updates to build and deployment processes.
-
----
-
-### structure.md
-
-Repository organization-related initiatives may require changes to the documented structure.
-
----
-
-### rules.md
-
-Development process or standards-related initiatives may require updates to documented conventions.
-
----
-
-### glossary.md
-
-Defines the terminology used within the documentation.
-
-Terms used in this document must remain aligned with glossary.md.
-
----
-
-## Terminology
-
-The terminology used in this document must remain aligned with:
-
-```text
-docs/glossary.md
-```
-
-When an initiative introduces new technical, organizational, or architectural concepts that require a shared interpretation, their inclusion in the official glossary should be evaluated.
-
----
-
-## Scope of Initiatives
-
-Including an initiative in this document does not imply a mandatory commitment to implementation.
-
-Priorities, statuses, and objectives may change as project needs evolve.
-
-The roadmap represents strategic direction, not a fixed plan.
-
----
-
-## Fundamental Principle
-
-Included initiatives must represent real improvement opportunities for the project.
-
-Each documented item should contribute to the consistency, sustainability, maintainability, or evolution of the documentation and development ecosystem.
-
-
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-
-# Roadmap
-
-Status: Active
-
-Scope: Evolution and strategic planning for the project.
-
-Main reference:
-
-https://entus01.github.io/Repos-Structure/
-
----
-
-# Purpose
-
-This document defines the objectives, improvements, and planned initiatives for the evolution of the project.
-
-Its purpose is to provide a clear view of identified growth areas, current priorities, and future development directions.
-
-Unlike a task management system, this document does not aim to record daily operational activities, but initiatives with strategic impact for project evolution.
-
----
-
-# Statuses
-
-## Planned
-
-Work identified and considered for future versions.
-
----
-
-## In Progress
-
-Work currently in development.
-
----
-
-## Completed
-
-Work finished and incorporated into the project.
-
----
-
-## On Hold
-
-Work temporarily paused.
-
----
-
-## Cancelled
-
-Work discarded or replaced by an alternative.
-
----
-
-# Current Initiatives
-
-## Planned
-
-### TypeScript Standards
-
-Priority: High
-
-Objectives:
-
-* Define conventions for TypeScript projects.
-* Establish typing rules.
-* Document organization of types and interfaces.
-* Define recommended structure for React + TypeScript projects.
-
-Expected impact:
-
-* Greater consistency between JavaScript and TypeScript projects.
-* Better maintainability and scalability.
-
----
-
-### Testing Standards
-
-Priority: High
-
-Objectives:
-
-* Define conventions for unit tests.
-* Define conventions for integration tests.
-* Document organization of test files.
-* Establish minimum validation criteria before publishing.
-
-Expected impact:
-
-* Better software quality.
-* Greater confidence during refactors and new features.
-
----
-
-### Monorepo Standards
-
-Priority: Medium
-
-Objectives:
-
-* Document recommended structures for monorepos.
-* Define separation between applications and shared packages.
-* Establish criteria for scalable organization.
-
-Expected impact:
-
-* Facilitate management of complex projects.
-* Maintain consistency across related applications.
-
----
-
-### CI/CD Standards
-
-Priority: Medium
-
-Objectives:
-
-* Define conventions for automation.
-* Establish minimum validations for continuous integration.
-* Document recommended deployment workflows.
-
-Expected impact:
-
-* Better quality control.
-* More reliable deployment processes.
-
----
-
-### Docker Standards
-
-Priority: Medium
-
-Objectives:
-
-* Define base structure for containerized projects.
-* Document conventions for Dockerfile and Docker Compose.
-* Establish best practices for development and production environments.
-
-Expected impact:
-
-* Greater portability across environments.
-* More consistent configurations.
-
----
-
-### API Standards
-
-Priority: High
-
-Objectives:
-
-* Define recommended organization for backend services.
-* Establish conventions for controllers, services, and repositories.
-* Document validation patterns and error handling.
-
-Expected impact:
-
-* More maintainable APIs.
-* Greater consistency across backend projects.
-
----
-
 ### Scalable Documentation Library
 
 Priority: High
@@ -544,9 +198,24 @@ Expected impact:
 
 ## In Progress
 
-There are currently no initiatives in development.
+### Documentation System Consolidation
 
-Upcoming project evolutions are in the strategic planning phase and will be added to this section when implementation begins.
+Priority: High
+
+Objectives:
+
+* Refine the project's main documents.
+* Align interactive documentation components with project-specific Markdown files.
+* Consolidate the glossary as the official terminology reference.
+* Strengthen consistency and reusability across the documentation ecosystem.
+* Validate the separation of responsibilities between reusable templates and project documentation.
+
+Expected impact:
+
+* Greater consistency across all project documents.
+* Better maintainability of the documentation library.
+* Increased reusability for future repositories.
+* Reduced duplication between the interface and the documentation sources.
 
 ---
 
@@ -608,19 +277,6 @@ Achievements:
 
 ---
 
-### Base Documentation Consolidation
-
-Date: 2026-06-10
-
-Achievements:
-
-* Refinement of the project's main documents.
-* Alignment between architecture, structure, decisions, and roadmap.
-* Consolidation of the glossary as the official terminology reference.
-* Strengthening of coherence and reusability of the documentation ecosystem.
-
----
-
 ## On Hold
 
 There are currently no paused initiatives.
@@ -638,24 +294,6 @@ Reason:
 Project evolution prioritized clear, structured documentation navigation through categories, discarding the incorporation of a search system in the main interface.
 
 The initiative may be reevaluated in the future if the growth of the documentation catalog makes it necessary.
-
----
-
-# Template for New Initiatives
-
-```text
-### Initiative name
-
-Priority:
-
-Objectives:
-
--
-
-Expected impact:
-
--
-```
 
 ---
 
@@ -679,55 +317,7 @@ Desirable improvements with limited impact or no immediate urgency.
 
 ---
 
-## Relationship with Other Documents
-
-### changelog.md
-
-Records changes that have already been implemented.
-
-`roadmap.md` describes changes that could be implemented in the future.
-
----
-
-### decisions.md
-
-Initiatives included in this document may lead to technical, organizational, or strategic decisions that must be recorded in `decisions.md`.
-
----
-
-### architecture.md
-
-Architecture-related initiatives may require modifications to the project's architectural documentation.
-
----
-
-### deployment.md
-
-Infrastructure or automation-related initiatives may require updates to build and deployment processes.
-
----
-
-### structure.md
-
-Repository organization-related initiatives may require changes to the documented structure.
-
----
-
-### rules.md
-
-Development process or standards-related initiatives may require updates to documented conventions.
-
----
-
-### glossary.md
-
-Defines the terminology used within the documentation.
-
-Terms used in this document must remain aligned with `glossary.md`.
-
----
-
-## Terminology
+# Terminology
 
 The terminology used in this document must remain aligned with:
 
@@ -739,7 +329,7 @@ When an initiative introduces new technical, organizational, or architectural co
 
 ---
 
-## Scope of Initiatives
+# Scope of Initiatives
 
 Including an initiative in this document does not imply a mandatory commitment to implementation.
 
@@ -749,7 +339,7 @@ The roadmap represents strategic direction, not a fixed plan.
 
 ---
 
-## Fundamental Principle
+# Fundamental Principle
 
 Included initiatives must represent real improvement opportunities for the project.
 

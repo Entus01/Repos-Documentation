@@ -1,49 +1,86 @@
-# Repos Documentation
+# README
 
-## 📖 Description
+Status: Active
 
-Repos Documentation is the project where I document the way I organize and structure my software development repositories.
+Scope: General overview and purpose of the project.
 
-It serves as a centralized reference for the standards, conventions, architectural decisions and organizational criteria I apply across frontend, backend and full-stack projects. The goal is to promote consistency, simplify maintenance and provide a common understanding of how my projects are built.
+Main reference:
 
-This repository does not aim to define a universal structure or establish a single correct way to develop software. Instead, it documents my own practices and provides a reusable reference for future projects and collaborators.
-
----
-
-## 🎯 Goals
-
-* Centralize project organization and development standards.
-* Maintain consistency across multiple repositories.
-* Reduce the setup time for new projects.
-* Simplify onboarding for collaborators.
-* Provide a reusable template and reference architecture.
-* Document the evolution of my development practices.
+https://entus01.github.io/Repos-Structure/
 
 ---
 
-## 🛠️ Technologies
+# Purpose
 
-### Application
+This document provides a general overview of the project.
 
-* React
-* Vite
-* React Router
-* JavaScript (ES6+)
-* CSS3
+Its purpose is to explain what Repos Documentation is, why it exists, what objectives it pursues, and how the different documents that compose the repository are organized.
 
-### Architecture and Organization
-
-* Object-Oriented Programming (OOP)
-* Component-Based Architecture
-* Modular Design
-* Separation of Responsibilities
-* BEM Methodology
-* Consistent Naming Conventions
-* DRY, KISS and YAGNI principles
+It serves as the main entry point for understanding the project before exploring its individual documentation sections.
 
 ---
 
-## 🚀 Installation and Development
+## Objectives
+
+* Provide a centralized reference for project organization standards.
+* Maintain consistency across multiple software repositories.
+* Facilitate the creation and maintenance of new projects.
+* Reduce onboarding time for collaborators.
+* Document the evolution of development practices and architectural criteria.
+* Serve as the starting point for navigating the project's documentation.
+
+---
+
+## Project Summary
+
+Repos Documentation is a personal documentation project that centralizes the conventions, standards, architectural decisions, and organizational criteria used across software development repositories.
+
+Rather than defining a universal methodology, it documents a practical and evolving approach to organizing frontend, backend, and full-stack projects.
+
+The repository itself acts as both a knowledge base and a reusable reference that can be consulted when creating or maintaining future projects.
+
+---
+
+## Documentation Model
+
+The application functions as an interactive documentation library.
+
+Documents are organized into categories and displayed dynamically through the user interface, allowing information to be consulted in a structured and predictable way.
+
+The documentation is intended to evolve together with the practices and standards it describes.
+
+---
+
+## Main Technologies
+
+```text
+React
+React Router
+Vite
+JavaScript
+CSS
+```
+
+---
+
+## Development Principles
+
+The project promotes the use of:
+
+* Object-Oriented Programming (OOP).
+* Component-based architecture.
+* Separation of responsibilities.
+* Modular design.
+* Reusable components.
+* BEM methodology.
+* Consistent naming conventions.
+* DRY, KISS, and YAGNI principles.
+
+---
+
+## Installation and Development
+
+To run the project locally:
 
 ```bash
 # Clone the repository
@@ -61,52 +98,36 @@ npm run dev
 
 ---
 
-## 🌐 Live Project
+## Documentation Structure
 
-Production:
+The project is composed of multiple complementary documents, each focused on a specific aspect of the repository.
 
-https://entus01.github.io/Repos-Structure/
-
----
-
-## 📚 Documentation
-
-The project itself acts as an interactive documentation portal. The available documents are organized into categories and rendered dynamically through the application interface.
-
-### Available Documents
-
-| Document     | Purpose                                   |
-| ------------ | ----------------------------------------- |
-| README       | Project overview and purpose              |
-| Glossary     | Definitions and common terminology        |
-| Rules        | Development standards and conventions     |
-| Structure    | Repository organization guidelines        |
-| Architecture | Project architecture and design decisions |
-| Deployment   | Build and deployment process              |
-| Decisions    | Important project decisions and rationale |
-| Roadmap      | Planned improvements and future evolution |
-| Changelog    | Project history and significant updates   |
-
-The source code for these documents is located in the `src/pages/` directory, while supplementary project resources may be stored inside the `docs/` folder.
+| Document     | Purpose                                         |
+| ------------ | ----------------------------------------------- |
+| README       | General overview and project purpose            |
+| Glossary     | Shared definitions and terminology              |
+| Rules        | Development standards and conventions           |
+| Structure    | Repository organization guidelines              |
+| Architecture | Current architecture and design decisions       |
+| Deployment   | Build and deployment process                    |
+| Decisions    | Relevant technical and organizational decisions |
+| Roadmap      | Planned improvements and future evolution       |
+| Changelog    | Significant project history and updates         |
 
 ---
 
-## 🧭 Philosophy
+## Status
 
-A well-organized project should be easy to understand, maintain and evolve.
+```text
+Active
+```
 
-Documentation, structure and conventions exist to reduce complexity, improve consistency and help developers quickly understand how a project is organized and why certain decisions have been made.
-
----
-
-## 📌 Status
-
-**Active**
-
-This repository evolves together with the development practices and project organization standards it documents.
+The project evolves together with the development practices and organizational standards it documents.
 
 ---
 
-## 📄 License
+## Fundamental Principle
 
-Personal reference repository used to document the organization, conventions and architectural criteria applied across my software development projects.
+This repository is not intended to define the only correct way to organize software projects.
+
+Its purpose is to document a consistent set of personal practices, provide a reusable reference for future work, and make project organization easier to understand, maintain, and evolve.
