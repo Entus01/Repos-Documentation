@@ -1,68 +1,68 @@
 # Deployment
 
-Estado: Activo
+Status: Active
 
-Alcance: Documentación de construcción, configuración y despliegue del proyecto.
+Scope: Documentation of project build, configuration, and deployment.
 
-Referencia principal:
+Main reference:
 
 [https://entus01.github.io/Repos-Structure/](https://entus01.github.io/Repos-Structure/)
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento describe el proceso de construcción, configuración y despliegue del proyecto.
+This document describes the project build, configuration, and deployment process.
 
-Su objetivo es proporcionar una referencia clara y actualizada sobre cómo preparar, publicar y mantener una versión funcional del sistema en los distintos entornos disponibles.
+Its goal is to provide a clear and up-to-date reference on how to prepare, publish, and maintain a functional version of the system across the available environments.
 
-A diferencia de los documentos reutilizables del proyecto, este documento debe adaptarse a las necesidades específicas de cada repositorio.
-
----
-
-## Objetivos
-
-* Documentar el proceso de despliegue actual.
-* Facilitar la publicación de nuevas versiones.
-* Reducir errores operativos.
-* Centralizar información relacionada con entornos.
-* Facilitar la incorporación de nuevos colaboradores.
-* Servir como referencia para tareas de mantenimiento.
+Unlike the project's reusable documents, this document should be adapted to the specific needs of each repository.
 
 ---
 
-## Cuándo Actualizar este Documento
+## Objectives
 
-Actualizar cuando exista algún cambio relacionado con:
-
-* Plataformas de despliegue.
-* Procesos de construcción.
-* Variables de entorno requeridas.
-* Automatizaciones de publicación.
-* Configuración de infraestructura.
-* Servicios externos utilizados durante el despliegue.
-* Estrategias de versionado o liberación.
+* Document the current deployment process.
+* Facilitate publishing new versions.
+* Reduce operational errors.
+* Centralize environment-related information.
+* Facilitate onboarding of new collaborators.
+* Serve as a reference for maintenance tasks.
 
 ---
 
-## Cuándo No Actualizar este Documento
+## When to Update this Document
 
-No es necesario actualizar este documento para:
+Update when there is any change related to:
 
-* Cambios funcionales del sistema.
-* Ajustes visuales.
-* Refactors internos.
-* Actualizaciones que no afecten construcción o despliegue.
+* Deployment platforms.
+* Build processes.
+* Required environment variables.
+* Publishing automations.
+* Infrastructure configuration.
+* External services used during deployment.
+* Versioning or release strategies.
 
 ---
 
-## Estructura Recomendada
+## When Not to Update this Document
 
-La documentación de despliegue debería responder, como mínimo, las siguientes preguntas.
+It is not necessary to update this document for:
 
-### ¿Cómo se construye el proyecto?
+* Functional changes to the system.
+* Visual adjustments.
+* Internal refactors.
+* Updates that do not affect build or deployment.
 
-Ejemplo:
+---
+
+## Recommended Structure
+
+The deployment documentation should answer, at minimum, the following questions.
+
+### How is the project built?
+
+Example:
 
 ```text
 npm install
@@ -72,9 +72,9 @@ npm run build
 
 ---
 
-### ¿Dónde se despliega?
+### Where is it deployed?
 
-Ejemplo:
+Example:
 
 ```text
 GitHub Pages
@@ -90,9 +90,9 @@ Docker
 
 ---
 
-### ¿Qué entornos existen?
+### What environments exist?
 
-Ejemplo:
+Example:
 
 ```text
 Development
@@ -106,9 +106,9 @@ Production
 
 ---
 
-### ¿Qué variables de entorno requiere?
+### What environment variables does it require?
 
-Ejemplo:
+Example:
 
 ```text
 VITE_API_URL
@@ -120,159 +120,159 @@ JWT_SECRET
 
 ---
 
-### ¿Qué automatizaciones existen?
+### What automations exist?
 
-Ejemplo:
+Example:
 
 ```text
 GitHub Actions
 
 CI/CD
 
-Deploy Automático
+Automatic Deploy
 ```
 
 ---
 
-### ¿Cómo publicar una nueva versión?
+### How to publish a new version?
 
-Ejemplo:
+Example:
 
 ```text
-1. Ejecutar pruebas.
-2. Generar build.
-3. Actualizar documentación.
-4. Crear release.
-5. Ejecutar despliegue.
+1. Run tests.
+2. Generate build.
+3. Update documentation.
+4. Create release.
+5. Run deployment.
 ```
 
 ---
 
-## Plantilla Recomendada
+## Recommended Template
 
 ```text
-# Deployment Actual
+# Current Deployment
 
-## Resumen
+## Summary
 
-Descripción general del proceso de despliegue.
+General description of the deployment process.
 
-## Entornos
+## Environments
 
-Listado de entornos disponibles.
+List of available environments.
 
-## Requisitos
+## Requirements
 
-Dependencias necesarias para construir el proyecto.
+Dependencies needed to build the project.
 
-## Variables de Entorno
+## Environment Variables
 
-Variables requeridas para ejecución y despliegue.
+Variables required for execution and deployment.
 
-## Construcción
+## Build
 
-Comandos utilizados para generar la aplicación.
+Commands used to generate the application.
 
-## Plataforma de Despliegue
+## Deployment Platform
 
-Servicios utilizados para publicar el proyecto.
+Services used to publish the project.
 
-## Automatización
+## Automation
 
-Procesos automáticos disponibles.
+Available automatic processes.
 
-## Procedimiento de Publicación
+## Publishing Procedure
 
-Pasos necesarios para liberar una nueva versión.
+Steps required to release a new version.
 
-## Consideraciones Operativas
+## Operational Considerations
 
-Información importante para mantenimiento y soporte.
+Important information for maintenance and support.
 ```
 
 ---
 
-## Relación con Otros Documentos
+## Relationship with Other Documents
 
 ### architecture.md
 
-Describe cómo está construido el sistema.
+Describes how the system is built.
 
-La arquitectura puede condicionar decisiones relacionadas con construcción, infraestructura y despliegue.
+The architecture may influence decisions related to build, infrastructure, and deployment.
 
 ---
 
 ### structure.md
 
-Describe cómo está organizado el repositorio.
+Describes how the repository is organized.
 
-La ubicación de archivos relacionados con infraestructura, automatización y configuración debe mantenerse alineada con la estructura documentada.
+The location of files related to infrastructure, automation, and configuration must remain aligned with the documented structure.
 
 ---
 
 ### rules.md
 
-Describe las normas y convenciones utilizadas durante el desarrollo.
+Describes the rules and conventions used during development.
 
-Los procesos documentados en deployment.md deben respetar las reglas definidas por el proyecto.
+The processes documented in deployment.md must respect the rules defined by the project.
 
 ---
 
 ### roadmap.md
 
-Puede contener futuras mejoras relacionadas con infraestructura, automatización o despliegue.
+May contain future improvements related to infrastructure, automation, or deployment.
 
 ---
 
 ### decisions.md
 
-Debe registrar decisiones relevantes relacionadas con infraestructura, hosting o procesos de publicación.
+Must record relevant decisions related to infrastructure, hosting, or publishing processes.
 
 ---
 
 ### changelog.md
 
-Debe registrar cambios relevantes que afecten la construcción, configuración o despliegue del proyecto.
+Must record relevant changes that affect the project's build, configuration, or deployment.
 
 ---
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Los términos utilizados en este documento deben mantenerse alineados con glossary.md.
+The terms used in this document must remain aligned with glossary.md.
 
 ---
 
-## Terminología
+## Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con:
+The terminology used in this document must remain aligned with:
 
 ```text
 docs/glossary.md
 ```
 
-Cuando se incorporen nuevos conceptos relacionados con infraestructura, automatización, entornos o despliegue, deberá evaluarse su incorporación al glosario oficial.
+When new concepts related to infrastructure, automation, environments, or deployment are incorporated, their inclusion in the official glossary should be evaluated.
 
 ---
 
-## Registro de Cambios Operativos
+## Operational Change Log
 
-Toda modificación relevante relacionada con:
+Any relevant modification related to:
 
-* Infraestructura.
-* Plataformas de despliegue.
-* Automatizaciones.
-* Procesos de construcción.
-* Procesos de publicación.
+* Infrastructure.
+* Deployment platforms.
+* Automations.
+* Build processes.
+* Publishing processes.
 
-debería registrarse también en:
+should also be recorded in:
 
 ```text
 docs/changelog.md
 ```
 
-y, cuando implique una decisión técnica significativa, en:
+and, when it involves a significant technical decision, in:
 
 ```text
 docs/decisions.md
@@ -280,19 +280,19 @@ docs/decisions.md
 
 ---
 
-## Consideraciones de Seguridad
+## Security Considerations
 
-Este documento nunca debe incluir:
+This document must never include:
 
-* Credenciales.
+* Credentials.
 * Tokens.
-* Secretos.
-* Claves privadas.
-* Información sensible.
+* Secrets.
+* Private keys.
+* Sensitive information.
 
-Las variables necesarias deben documentarse utilizando nombres descriptivos y mantenerse mediante archivos de configuración apropiados.
+Required variables must be documented using descriptive names and maintained through appropriate configuration files.
 
-Ejemplo:
+Example:
 
 ```text
 .env.example
@@ -300,10 +300,10 @@ Ejemplo:
 
 ---
 
-## Principio Fundamental
+## Fundamental Principle
 
-Este documento debe representar el proceso real utilizado para construir y desplegar el proyecto.
+This document must represent the actual process used to build and deploy the project.
 
-Si existe una diferencia entre la documentación y el proceso operativo actual, la documentación debe actualizarse para reflejar el comportamiento real del sistema.
+If there is a difference between the documentation and the current operational process, the documentation must be updated to reflect the actual behavior of the system.
 
-Su propósito principal es servir como fuente de verdad sobre cómo publicar y mantener el proyecto en funcionamiento.
+Its main purpose is to serve as the source of truth about how to publish and maintain the project in operation.

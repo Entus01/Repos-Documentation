@@ -1,112 +1,112 @@
-# Repos Structure
+# Repos Documentation
 
-## 📖 Descripción
+## 📖 Description
 
-Repos Structure es el repositorio donde documento la forma en que organizo mis proyectos de desarrollo de software.
+Repos Documentation is the project where I document the way I organize and structure my software development repositories.
 
-Su propósito es servir como referencia centralizada para mantener consistencia entre repositorios frontend, backend y fullstack, facilitando la comprensión, mantenimiento y evolución de cada proyecto.
+It serves as a centralized reference for the standards, conventions, architectural decisions and organizational criteria I apply across frontend, backend and full-stack projects. The goal is to promote consistency, simplify maintenance and provide a common understanding of how my projects are built.
 
-Este repositorio no busca definir una estructura universal ni establecer una única forma correcta de desarrollar software. Su objetivo es documentar cómo organizo mis proyectos y proporcionar una referencia común para cualquier persona que trabaje con ellos.
-
----
-
-## 🎯 Objetivos
-
-* Centralizar criterios de organización y desarrollo.
-* Mantener consistencia entre repositorios.
-* Reducir el tiempo de configuración inicial de nuevos proyectos.
-* Facilitar la incorporación de colaboradores.
-* Servir como plantilla de referencia para futuros desarrollos.
-* Documentar la evolución de mis estándares de trabajo.
+This repository does not aim to define a universal structure or establish a single correct way to develop software. Instead, it documents my own practices and provides a reusable reference for future projects and collaborators.
 
 ---
 
-## 🛠️ Tecnologías y Conceptos Habituales
+## 🎯 Goals
 
-### Frontend
+* Centralize project organization and development standards.
+* Maintain consistency across multiple repositories.
+* Reduce the setup time for new projects.
+* Simplify onboarding for collaborators.
+* Provide a reusable template and reference architecture.
+* Document the evolution of my development practices.
+
+---
+
+## 🛠️ Technologies
+
+### Application
 
 * React
 * Vite
 * React Router
-* JavaScript ES6+
+* JavaScript (ES6+)
 * CSS3
 
-### Organización y Arquitectura
+### Architecture and Organization
 
-* Programación Orientada a Objetos (POO)
-* Metodología BEM
-* Componentización
-* Modularización
-* Separación de responsabilidades
-* Convenciones de nomenclatura consistentes
+* Object-Oriented Programming (OOP)
+* Component-Based Architecture
+* Modular Design
+* Separation of Responsibilities
+* BEM Methodology
+* Consistent Naming Conventions
+* DRY, KISS and YAGNI principles
 
 ---
 
-## 🚀 Instalación y Ejecución
+## 🚀 Installation and Development
 
 ```bash
-# Clonar el repositorio
+# Clone the repository
 git clone https://github.com/Entus01/Repos-Structure.git
 
-# Entrar al proyecto
+# Enter the project directory
 cd Repos-Structure
 
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Ejecutar en modo desarrollo
+# Start the development server
 npm run dev
 ```
 
 ---
 
-## 🌐 Proyecto Publicado
+## 🌐 Live Project
 
-Producción:
+Production:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-## 📚 Documentación
+## 📚 Documentation
 
-Toda la documentación del proyecto se encuentra centralizada dentro de la carpeta:
+The project itself acts as an interactive documentation portal. The available documents are organized into categories and rendered dynamically through the application interface.
 
-```text
-docs/
-```
+### Available Documents
 
-### Documentos Disponibles
+| Document     | Purpose                                   |
+| ------------ | ----------------------------------------- |
+| README       | Project overview and purpose              |
+| Glossary     | Definitions and common terminology        |
+| Rules        | Development standards and conventions     |
+| Structure    | Repository organization guidelines        |
+| Architecture | Project architecture and design decisions |
+| Deployment   | Build and deployment process              |
+| Decisions    | Important project decisions and rationale |
+| Roadmap      | Planned improvements and future evolution |
+| Changelog    | Project history and significant updates   |
 
-| Documento         | Propósito                                                 |
-| ----------------- | --------------------------------------------------------- |
-| `glossary.md`     | Definiciones y terminología utilizada en la documentación |
-| `rules.md`        | Convenciones y estándares de desarrollo                   |
-| `structure.md`    | Organización y estructura de proyectos                    |
-| `roadmap.md`      | Evolución y mejoras futuras                               |
-| `changelog.md`    | Historial de cambios                                      |
-| `decisions.md`    | Registro de decisiones importantes                        |
-| `architecture.md` | Arquitectura específica del proyecto                      |
-| `deployment.md`   | Construcción y despliegue del proyecto                    |
-
----
-
-## 🧭 Filosofía
-
-La organización de un proyecto debe facilitar su comprensión, mantenimiento y evolución.
-
-La estructura, documentación y convenciones existen para reducir complejidad, mejorar la consistencia y permitir que cualquier persona pueda comprender rápidamente cómo está construido un proyecto.
+The source code for these documents is located in the `src/pages/` directory, while supplementary project resources may be stored inside the `docs/` folder.
 
 ---
 
-## 📌 Estado
+## 🧭 Philosophy
 
-Activo
+A well-organized project should be easy to understand, maintain and evolve.
 
-La documentación evoluciona junto con los proyectos y prácticas que representa.
+Documentation, structure and conventions exist to reduce complexity, improve consistency and help developers quickly understand how a project is organized and why certain decisions have been made.
 
 ---
 
-## 📄 Licencia
+## 📌 Status
 
-Repositorio de referencia personal utilizado para documentar la organización, convenciones y criterios aplicados en mis proyectos de desarrollo de software.
+**Active**
+
+This repository evolves together with the development practices and project organization standards it documents.
+
+---
+
+## 📄 License
+
+Personal reference repository used to document the organization, conventions and architectural criteria applied across my software development projects.

@@ -6,7 +6,7 @@ export default function Header({ logo, title }) {
             <img
                 className="header__logo"
                 src={logo}
-                alt="Structure Logo"
+                alt="Repos Documentation Logo"
             />
 
             <h1 className="header__title">

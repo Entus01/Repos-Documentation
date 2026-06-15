@@ -1,36 +1,36 @@
-# Reglas de Desarrollo
+# Development Rules
 
-Estado: Activo
+Status: Active
 
-Alcance: Todos los proyectos que adopten los estándares definidos en Repos Structure.
+Scope: All projects that adopt the standards defined in Repos Documentation.
 
-Referencia principal:
+Primary reference:
 
 [https://entus01.github.io/Repos-Structure/](https://entus01.github.io/Repos-Structure/)
 
-Este documento define las convenciones de desarrollo, documentación, control de versiones y flujo de trabajo utilizadas en mis proyectos.
+This document defines the development, documentation, version control, and workflow conventions used in my projects.
 
 ---
 
-## Principio de Aplicación
+## Application Principle
 
-Estas reglas representan un conjunto de buenas prácticas generales para el desarrollo y mantenimiento de proyectos de software.
+These rules represent a set of general best practices for software project development and maintenance.
 
-Su adopción debe considerar el contexto, tamaño y complejidad de cada proyecto.
+Their adoption should consider the context, size, and complexity of each project.
 
-En proyectos pequeños o personales, algunas convenciones pueden aplicarse de forma simplificada para evitar complejidad innecesaria. En proyectos medianos o grandes, se recomienda adoptar el conjunto completo de reglas para favorecer la mantenibilidad, la escalabilidad y la colaboración.
+In small or personal projects, some conventions may be applied in a simplified form to avoid unnecessary complexity. In medium or large projects, it is recommended to adopt the full set of rules to favor maintainability, scalability, and collaboration.
 
 ---
 
 ## 1) Commits
 
-Formato:
+Format:
 
 ```text
-<tipo>(alcance-opcional): descripcion breve
+<type>(optional-scope): brief description
 ```
 
-Tipos permitidos:
+Allowed types:
 
 ```text
 feat
@@ -46,16 +46,16 @@ perf
 revert
 ```
 
-Reglas:
+Rules:
 
-* Mensaje ideal <= 72 caracteres.
-* Utilizar un único idioma por commit.
-* Todos los commits deben escribirse en inglés.
-* Un único cambio lógico por commit.
-* Evitar commits masivos o ambiguos.
-* Los commits deben ser atómicos y fácilmente reversibles.
+* Ideal message <= 72 characters.
+* Use a single language per commit.
+* All commits must be written in English.
+* One logical change per commit.
+* Avoid massive or ambiguous commits.
+* Commits should be atomic and easily reversible.
 
-Ejemplos correctos:
+Correct examples:
 
 ```text
 feat(auth): add login validation
@@ -69,7 +69,7 @@ docs(rules): update commit conventions
 style(button): improve spacing and alignment
 ```
 
-Ejemplos incorrectos:
+Incorrect examples:
 
 ```text
 fix: several project updates
@@ -81,89 +81,89 @@ update stuff
 
 ---
 
-## 2) Comentarios
+## 2) Comments
 
-Formato:
+Format:
 
 ```text
-// Etiqueta: descripcion breve y tecnica.
+// Tag: brief and technical description.
 ```
 
-Etiquetas permitidas:
+Allowed tags:
 
-* Archivo
-* Constante
-* Funcion
-* Seccion
+* File
+* Constant
+* Function
+* Section
 * TODO
 * FIXME
 
-Reglas:
+Rules:
 
-* Los comentarios deben explicar el motivo de una decisión.
-* Evitar describir código evidente.
-* Evitar comentarios decorativos.
-* Evitar comentarios obsoletos.
-* El código debe ser entendible sin depender de comentarios extensos.
+* Comments should explain the reason for a decision.
+* Avoid describing obvious code.
+* Avoid decorative comments.
+* Avoid obsolete comments.
+* Code should be understandable without relying on extensive comments.
 
-Ejemplo correcto:
+Correct example:
 
 ```js
-// Funcion: Evita solicitudes duplicadas mientras la petición actual sigue activa.
+// Function: Prevents duplicate requests while the current request is still active.
 ```
 
-Ejemplo incorrecto:
+Incorrect example:
 
 ```js
-// Incrementa el contador en uno.
+// Increments the counter by one.
 counter++;
 ```
 
 ---
 
-## 3) Documentación
+## 3) Documentation
 
-Funciones complejas:
+Complex functions:
 
 ```js
 /**
- * Obtiene la información del usuario autenticado.
+ * Retrieves the authenticated user's information.
  * @returns {Promise<User>}
  */
 ```
 
-Componentes complejos:
+Complex components:
 
 ```jsx
 /**
- * Muestra un resumen visual del perfil del usuario.
+ * Displays a visual summary of the user's profile.
  */
 ```
 
-Archivos estratégicos:
+Strategic files:
 
 ```js
 /**
- * Archivo: Gestiona la configuración global de la aplicación.
+ * File: Manages the application's global configuration.
  */
 ```
 
-Reglas:
+Rules:
 
-* Documentar únicamente cuando aporte contexto.
-* Priorizar JSDoc en funciones, componentes o módulos complejos.
-* Documentar responsabilidades importantes.
-* Adaptar el nivel de documentación a la complejidad del proyecto.
-* Mantener la documentación sincronizada con el código.
-* Evitar documentación redundante o desactualizada.
+* Document only when it adds context.
+* Prioritize JSDoc for complex functions, components, or modules.
+* Document important responsibilities.
+* Adapt the level of documentation to the project's complexity.
+* Keep documentation synchronized with the code.
+* Avoid redundant or outdated documentation.
 
 ---
 
-## 4) Documentación del Proyecto
+## 4) Project Documentation
 
-Todo proyecto debe mantener actualizados los documentos definidos dentro de `docs/` que formen parte de su documentación adoptada.
+Every project should keep up to date the documents defined within `docs/` that are part of its adopted documentation.
 
-Documentación mínima recomendada:
+Minimum recommended documentation:
 
 ```text
 docs/
@@ -173,7 +173,7 @@ docs/
 └── structure.md
 ```
 
-Documentación recomendada para proyectos medianos o grandes:
+Recommended documentation for medium or large projects:
 
 ```text
 docs/
@@ -183,20 +183,20 @@ docs/
 └── deployment.md
 ```
 
-Reglas:
+Rules:
 
-* Mantener la documentación alineada con el estado real del proyecto.
-* Evitar documentación duplicada entre archivos.
-* Cada documento debe tener una responsabilidad claramente definida.
-* Utilizar `glossary.md` como fuente oficial para definiciones y terminología compartida.
-* Adaptar la cantidad de documentación al tamaño y necesidades del proyecto.
-* Evitar mantener documentos que no aporten valor al contexto actual.
+* Keep documentation aligned with the project's actual state.
+* Avoid duplicated documentation across files.
+* Each document should have a clearly defined responsibility.
+* Use `glossary.md` as the official source for shared definitions and terminology.
+* Adapt the amount of documentation to the project's size and needs.
+* Avoid maintaining documents that do not add value to the current context.
 
 ---
 
-## 5) Convenciones de Nombres
+## 5) Naming Conventions
 
-### Componentes
+### Components
 
 PascalCase
 
@@ -216,7 +216,7 @@ useModal.js
 useLocalStorage.js
 ```
 
-### Variables y funciones
+### Variables and functions
 
 camelCase
 
@@ -226,7 +226,7 @@ calculateTotal
 validateCredentials
 ```
 
-### Constantes
+### Constants
 
 UPPER_SNAKE_CASE
 
@@ -235,7 +235,7 @@ MAX_RETRY_ATTEMPTS
 DEFAULT_LANGUAGE
 ```
 
-### Carpetas
+### Folders
 
 kebab-case
 
@@ -245,7 +245,7 @@ authentication-service/
 shared-components/
 ```
 
-### Archivos CSS
+### CSS files
 
 kebab-case
 
@@ -254,9 +254,9 @@ public-tabs.css
 login-form.css
 ```
 
-### Clases CSS
+### CSS classes
 
-Metodología BEM
+BEM methodology
 
 ```css
 .card {}
@@ -265,11 +265,11 @@ Metodología BEM
 .card--active {}
 ```
 
-Reglas:
+Rules:
 
-* Utilizar nombres descriptivos.
+* Use descriptive names.
 
-* Evitar nombres genéricos como:
+* Avoid generic names such as:
 
   * data
   * temp
@@ -279,31 +279,31 @@ Reglas:
   * common
   * misc
 
-* Mantener consistencia en todo el repositorio.
+* Maintain consistency throughout the repository.
 
-Nota de despliegue:
+Deployment note:
 
-El proyecto debe respetar estas convenciones para evitar errores de rutas case-sensitive en Linux, Docker, Vercel y GitHub Pages.
+The project should respect these conventions to avoid case-sensitive path errors on Linux, Docker, Vercel, and GitHub Pages.
 
 ---
 
 ## 6) React
 
-Reglas:
+Rules:
 
-* Componentes pequeños y reutilizables.
-* Evitar lógica compleja dentro del JSX.
-* Mantener props explícitas.
-* * Extraer lógica reutilizable a hooks cuando mejore la reutilización o la separación de responsabilidades.
-* Evitar componentes con múltiples responsabilidades.
+* Small and reusable components.
+* Avoid complex logic inside JSX.
+* Keep props explicit.
+* * Extract reusable logic into hooks when it improves reusability or separation of responsibilities.
+* Avoid components with multiple responsibilities.
 
-Correcto:
+Correct:
 
 ```jsx
 const canEdit = user.role === "admin";
 ```
 
-Incorrecto:
+Incorrect:
 
 ```jsx
 {
@@ -317,20 +317,20 @@ Incorrecto:
 
 ## 7) CSS
 
-Reglas:
+Rules:
 
-* Utilizar metodología BEM.
-* Evitar selectores excesivamente anidados.
-* Centralizar colores, tipografías, espaciados y demás valores compartidos mediante variables o design tokens.
-* Mantener consistencia visual entre módulos.
+* Use BEM methodology.
+* Avoid excessively nested selectors.
+* Centralize colors, typography, spacing, and other shared values through variables or design tokens.
+* Maintain visual consistency across modules.
 
-Correcto:
+Correct:
 
 ```css
 .card__title {}
 ```
 
-Incorrecto:
+Incorrect:
 
 ```css
 .card .header .title {}
@@ -338,44 +338,44 @@ Incorrecto:
 
 ---
 
-## 8) Gestión de Archivos
+## 8) File Management
 
-Orden recomendado de imports:
+Recommended import order:
 
 ```text
-1. Librerías externas
+1. External libraries
 2. Hooks
-3. Servicios
-4. Componentes
-5. Estilos
+3. Services
+4. Components
+5. Styles
 6. Assets
 ```
 
-Reglas:
+Rules:
 
-* Eliminar imports sin utilizar.
-* No conservar código muerto comentado.
-* Utilizar Git para recuperar versiones anteriores.
-* Mantener un orden consistente de imports en todo el proyecto.
-* Mantener configuraciones y metadatos compartidos en una única fuente de verdad.
-* Evitar duplicar configuraciones o datos estructurales entre múltiples archivos o componentes.
-
----
-
-## 9) Variables de Entorno
-
-Reglas:
-
-* Nunca subir archivos `.env`.
-* Mantener un archivo `.env.example` actualizado cuando el proyecto utilice variables de entorno.
-* No exponer credenciales en el código fuente.
-* Documentar todas las variables requeridas por el proyecto.
+* Remove unused imports.
+* Do not keep commented-out dead code.
+* Use Git to recover previous versions.
+* Maintain a consistent import order throughout the project.
+* Keep shared configurations and metadata in a single source of truth.
+* Avoid duplicating configurations or structural data across multiple files or components.
 
 ---
 
-## 10) Ramas
+## 9) Environment Variables
 
-Formato recomendado:
+Rules:
+
+* Never commit `.env` files.
+* Keep an up-to-date `.env.example` file when the project uses environment variables.
+* Do not expose credentials in source code.
+* Document all variables required by the project.
+
+---
+
+## 10) Branches
+
+Recommended format:
 
 ```text
 feature/description
@@ -384,7 +384,7 @@ refactor/description
 docs/description
 ```
 
-Ejemplos:
+Examples:
 
 ```text
 feature/user-authentication
@@ -396,178 +396,178 @@ refactor/payment-service
 docs/update-readme
 ```
 
-Reglas:
+Rules:
 
-* Utilizar kebab-case.
-* Evitar espacios.
-* Evitar nombres genéricos.
-* El nombre de la rama debe describir claramente el objetivo del trabajo.
+* Use kebab-case.
+* Avoid spaces.
+* Avoid generic names.
+* The branch name should clearly describe the goal of the work.
 
 ---
 
 ## 11) Pull Requests
 
-Reglas:
+Rules:
 
-* Un único objetivo por Pull Request.
-* Evitar Pull Requests excesivamente grandes.
-* Incluir contexto suficiente para revisión.
-* Mantener sincronizada la documentación relacionada.
-* Resolver observaciones antes de solicitar aprobación final.
+* One objective per Pull Request.
+* Avoid excessively large Pull Requests.
+* Include sufficient context for review.
+* Keep related documentation synchronized.
+* Resolve feedback before requesting final approval.
 
-En proyectos individuales donde no se utilicen Pull Requests, estas recomendaciones pueden aplicarse al proceso de revisión previo al merge o al push principal.
-
----
-
-## 12) Sincronización de Documentación
-
-Reglas:
-
-* Los cambios estructurales deben reflejarse en `structure.md`.
-* Los cambios de estándares deben reflejarse en `rules.md`.
-* Los cambios relevantes deben reflejarse en `changelog.md`.
-* Las nuevas iniciativas deben reflejarse en `roadmap.md`.
-* Las decisiones técnicas importantes deben reflejarse en `decisions.md`.
-* Los cambios en despliegue o infraestructura deben reflejarse en `deployment.md`.
-* Los cambios arquitectónicos deben reflejarse en `architecture.md`.
-* Los nuevos términos compartidos deben evaluarse para su incorporación en `glossary.md`.
-* Toda fuente de verdad centralizada debe mantenerse sincronizada con la documentación correspondiente cuando tenga impacto arquitectónico o funcional.
+In individual projects where Pull Requests are not used, these recommendations may apply to the review process before merge or to the main push.
 
 ---
 
-## 13) Terminología
+## 12) Documentation Synchronization
 
-La terminología utilizada en la documentación del proyecto debe mantenerse alineada con:
+Rules:
+
+* Structural changes should be reflected in `structure.md`.
+* Standard changes should be reflected in `rules.md`.
+* Relevant changes should be reflected in `changelog.md`.
+* New initiatives should be reflected in `roadmap.md`.
+* Important technical decisions should be reflected in `decisions.md`.
+* Deployment or infrastructure changes should be reflected in `deployment.md`.
+* Architectural changes should be reflected in `architecture.md`.
+* New shared terms should be evaluated for inclusion in `glossary.md`.
+* Every centralized source of truth should be kept synchronized with the corresponding documentation when it has architectural or functional impact.
+
+---
+
+## 13) Terminology
+
+The terminology used in project documentation should remain aligned with:
 
 ```text
 docs/glossary.md
 ```
 
-Reglas:
+Rules:
 
-* Evitar duplicar definiciones en múltiples documentos.
-* Utilizar terminología consistente entre repositorios.
-* Incorporar nuevos términos al glosario cuando requieran una interpretación compartida.
-* Considerar `glossary.md` como la fuente oficial de referencia terminológica.
+* Avoid duplicating definitions across multiple documents.
+* Use consistent terminology across repositories.
+* Add new terms to the glossary when they require a shared interpretation.
+* Consider `glossary.md` the official terminological reference source.
 
 ---
 
-## 14) Validación Mínima antes de Integrar Cambios
+## 14) Minimum Validation before Integrating Changes
 
-Validaciones recomendadas:
+Recommended validations:
 
 ```bash
 npm run lint
 npm run build
 ```
 
-Además:
+Additionally:
 
-* Verificar ausencia de errores en consola.
-* Validar funcionalidades afectadas.
-* Confirmar que la documentación siga siendo válida.
-* Revisar que no existan imports sin utilizar.
+* Verify absence of console errors.
+* Validate affected functionality.
+* Confirm that documentation remains valid.
+* Check that there are no unused imports.
 
-Estas validaciones se recomiendan antes de abrir un Pull Request en proyectos colaborativos o antes de realizar el merge o push principal en proyectos individuales.
-
----
-
-## 15) Aprobación
-
-Reglas:
-
-* En proyectos colaborativos, no realizar merge sin revisión previa.
-* En proyectos individuales, realizar una revisión propia antes del merge o push final.
-* Toda modificación relevante debe poder justificarse mediante commit e historial.
+These validations are recommended before opening a Pull Request in collaborative projects or before performing the main merge or push in individual projects.
 
 ---
 
-## 16) Relación con Otros Documentos
+## 15) Approval
 
-Los siguientes documentos forman parte de la estructura documental recomendada.
+Rules:
 
-Su adopción dependerá del tamaño, complejidad y necesidades de cada proyecto.
+* In collaborative projects, do not merge without prior review.
+* In individual projects, perform a self-review before the final merge or push.
+* Every relevant modification should be justifiable through commit and history.
+
+---
+
+## 16) Relationship with Other Documents
+
+The following documents are part of the recommended documentation structure.
+
+Their adoption will depend on the size, complexity, and needs of each project.
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Aplicación recomendada: Proyectos medianos y grandes.
+Recommended for: Medium and large projects.
 
 ---
 
 ### structure.md
 
-Describe cómo se organiza el repositorio.
+Describes how the repository is organized.
 
-Aplicación recomendada: Todo proyecto.
+Recommended for: Every project.
 
 ---
 
 ### changelog.md
 
-Registra la evolución relevante del proyecto.
+Records the relevant evolution of the project.
 
-Aplicación recomendada: Todo proyecto.
+Recommended for: Every project.
 
 ---
 
 ### roadmap.md
 
-Describe objetivos e iniciativas futuras.
+Describes future objectives and initiatives.
 
-Aplicación recomendada: Proyectos medianos y grandes.
+Recommended for: Medium and large projects.
 
 ---
 
 ### decisions.md
 
-Registra el contexto detrás de decisiones importantes.
+Records the context behind important decisions.
 
-Aplicación recomendada: Proyectos medianos y grandes.
+Recommended for: Medium and large projects.
 
 ---
 
 ### architecture.md
 
-Describe cómo está construido el sistema.
+Describes how the system is built.
 
-Aplicación recomendada: Proyectos medianos y grandes.
+Recommended for: Medium and large projects.
 
 ---
 
 ### deployment.md
 
-Describe cómo se construye y publica el proyecto.
+Describes how the project is built and published.
 
-Aplicación recomendada: Proyectos medianos y grandes, o proyectos pequeños con procesos de despliegue no triviales.
-
----
-
-## 17) Evitar
-
-* Archivos excesivamente grandes.
-* Componentes con múltiples responsabilidades.
-* Comentarios redundantes.
-* Código muerto.
-* Variables ambiguas.
-* Imports sin utilizar.
-* Funciones demasiado extensas.
-* Commits con múltiples objetivos.
-* Refactors mezclados con nuevas funcionalidades.
+Recommended for: Medium and large projects, or small projects with non-trivial deployment processes.
 
 ---
 
-## 18) Principio Fundamental
+## 17) Avoid
 
-Toda decisión de desarrollo debe priorizar:
+* Excessively large files.
+* Components with multiple responsibilities.
+* Redundant comments.
+* Dead code.
+* Ambiguous variables.
+* Unused imports.
+* Overly long functions.
+* Commits with multiple objectives.
+* Refactors mixed with new features.
+
+---
+
+## 18) Fundamental Principle
+
+Every development decision should prioritize:
 
 ```text
-1. Legibilidad
-2. Consistencia
-3. Mantenibilidad
-4. Escalabilidad
-5. Optimización
+1. Readability
+2. Consistency
+3. Maintainability
+4. Scalability
+5. Optimization
 ```
 
-Si una optimización perjudica la legibilidad o la mantenibilidad, debe ser reconsiderada.
+If an optimization harms readability or maintainability, it should be reconsidered.

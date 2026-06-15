@@ -1,303 +1,45 @@
 # Architecture
 
-Estado: Activo
+Status: Active
 
-Alcance: Documentación de la arquitectura actual del proyecto.
+Scope: Documentation of the project's current architecture.
 
-Referencia principal:
+Main reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento describe la arquitectura específica del proyecto.
+This document describes the project-specific architecture.
 
-Su objetivo es proporcionar una visión clara de cómo está construido el sistema, cómo se relacionan sus principales módulos y cuáles son las decisiones arquitectónicas actualmente implementadas.
+Its goal is to provide a clear view of how the system is built, how its main modules relate to each other, and which architectural decisions are currently implemented.
 
-A diferencia de otros documentos de referencia reutilizables, este documento debe adaptarse a las necesidades particulares de cada proyecto.
-
----
-
-## Objetivos
-
-* Facilitar la comprensión general del sistema.
-* Documentar la arquitectura actualmente implementada.
-* Reducir la dependencia del conocimiento implícito.
-* Facilitar la incorporación de nuevos colaboradores.
-* Servir como referencia para futuras decisiones técnicas.
-* Mantener una visión actualizada de la estructura lógica del proyecto.
+Unlike other reusable reference documents, this document should be adapted to the particular needs of each project.
 
 ---
 
-## Cuándo Actualizar este Documento
+## Objectives
 
-Actualizar cuando exista algún cambio relevante relacionado con:
-
-* Arquitectura general del sistema.
-* Organización de módulos principales.
-* Flujos de comunicación.
-* Integraciones externas.
-* Patrones arquitectónicos utilizados.
-* Dependencias estructurales importantes.
-* Tecnologías que modifiquen el funcionamiento general del sistema.
+* Facilitate general understanding of the system.
+* Document the currently implemented architecture.
+* Reduce reliance on implicit knowledge.
+* Facilitate onboarding of new collaborators.
+* Serve as a reference for future technical decisions.
+* Maintain an up-to-date view of the project's logical structure.
 
 ---
 
-## Cuándo No Actualizar este Documento
+## Current Architecture
 
-No es necesario actualizar este documento para:
-
-* Correcciones menores.
-* Ajustes visuales.
-* Refactors internos sin impacto arquitectónico.
-* Cambios de contenido.
-* Actualizaciones de documentación no relacionadas con arquitectura.
-
----
-
-## Estructura Recomendada
-
-La documentación arquitectónica debería responder, como mínimo, las siguientes preguntas.
-
-### ¿Qué arquitectura utiliza el proyecto?
-
-Ejemplo:
-
-```text
-Single Page Application (SPA)
-
-Client / Server
-
-Monolito
-
-Monorepo
-
-Microservicios
-```
-
----
-
-### ¿Cuáles son los módulos principales?
-
-Ejemplo:
-
-```text
-Frontend
-Backend
-Autenticación
-Pagos
-Administración
-```
-
----
-
-### ¿Cómo interactúan entre sí?
-
-Ejemplo:
-
-```text
-Usuario
-   │
-   ▼
-Frontend
-   │
-   ▼
-API
-   │
-   ▼
-Backend
-   │
-   ▼
-Base de Datos
-```
-
----
-
-### ¿Qué servicios externos utiliza?
-
-Ejemplo:
-
-```text
-Firebase
-Stripe
-OpenAI
-AWS
-Cloudinary
-```
-
----
-
-### ¿Qué patrones arquitectónicos se utilizan?
-
-Ejemplo:
-
-```text
-Feature Based Architecture
-
-MVC
-
-Repository Pattern
-
-Layered Architecture
-
-Domain Driven Design
-```
-
----
-
-## Plantilla Recomendada
-
-```text
-# Arquitectura Actual
-
-## Resumen
-
-Descripción general de la arquitectura implementada.
-
-## Tecnologías Principales
-
-Listado de tecnologías relevantes.
-
-## Módulos Principales
-
-Descripción de los módulos que conforman el sistema.
-
-## Flujo General
-
-Representación simplificada del flujo de datos.
-
-## Integraciones Externas
-
-Servicios externos utilizados por el proyecto.
-
-## Dependencias Arquitectónicas
-
-Relaciones importantes entre módulos.
-
-## Consideraciones Técnicas
-
-Aspectos relevantes para el mantenimiento y evolución.
-```
-
----
-
-## Relación con Otros Documentos
-
-### glossary.md
-
-Define la terminología utilizada dentro de la documentación del proyecto.
-
----
-
-### structure.md
-
-Describe dónde se ubican los elementos del proyecto.
-
----
-
-### rules.md
-
-Describe cómo deben desarrollarse y mantenerse los elementos del proyecto.
-
----
-
-### decisions.md
-
-Documenta por qué se tomaron determinadas decisiones arquitectónicas.
-
----
-
-### roadmap.md
-
-Documenta posibles cambios o evoluciones futuras de la arquitectura.
-
----
-
-## Terminología
-
-La terminología utilizada en este documento debe mantenerse alineada con las definiciones establecidas en:
-
-```text
-docs/glossary.md
-```
-
-Cuando se introduzcan nuevos conceptos arquitectónicos, patrones o términos que requieran una interpretación compartida dentro del proyecto, estos deberán registrarse en `glossary.md`.
-
-Este documento debe utilizar la terminología definida oficialmente, evitando duplicar definiciones o mantener glosarios paralelos.
-
----
-
-## Registro de Cambios Arquitectónicos
-
-Toda modificación arquitectónica relevante debería registrarse también en:
-
-```text
-docs/decisions.md
-```
-
-cuando implique una decisión técnica significativa.
-
----
-
-## Principio Fundamental
-
-Este documento debe representar la arquitectura real del proyecto y no una arquitectura idealizada.
-
-Si existe una diferencia entre la documentación y la implementación, la documentación debe actualizarse para reflejar el estado real del sistema.
-
-Su propósito principal es servir como fuente de verdad sobre cómo está construido actualmente el proyecto.
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
-
-
-# Architecture
-
-Estado: Activo
-
-Alcance: Documentación de la arquitectura actual del proyecto.
-
-Referencia principal:
-
-https://entus01.github.io/Repos-Structure/
-
----
-
-# Propósito
-
-Este documento describe la arquitectura específica del proyecto.
-
-Su objetivo es proporcionar una visión clara de cómo está construido el sistema, cómo se relacionan sus principales módulos y cuáles son las decisiones arquitectónicas actualmente implementadas.
-
-A diferencia de otros documentos de referencia reutilizables, este documento debe adaptarse a las necesidades particulares de cada proyecto.
-
----
-
-## Objetivos
-
-* Facilitar la comprensión general del sistema.
-* Documentar la arquitectura actualmente implementada.
-* Reducir la dependencia del conocimiento implícito.
-* Facilitar la incorporación de nuevos colaboradores.
-* Servir como referencia para futuras decisiones técnicas.
-* Mantener una visión actualizada de la estructura lógica del proyecto.
-
----
-
-## Arquitectura Actual
-
-### Tipo de Aplicación
+### Application Type
 
 ```text
 Single Page Application (SPA)
 ```
 
-Construida con:
+Built with:
 
 ```text
 React
@@ -307,17 +49,17 @@ Vite
 
 ---
 
-## Resumen Arquitectónico
+## Architectural Summary
 
-Repos Structure es una aplicación web orientada a la consulta de documentación.
+Repos Documentation is a web application focused on consulting documentation.
 
-Su propósito es presentar estándares, convenciones y documentación reutilizable mediante una interfaz que simula una biblioteca documental organizada por categorías.
+Its purpose is to present standards, conventions, and reusable documentation through an interface that simulates a document library organized by categories.
 
-La aplicación consume contenido estático almacenado dentro del propio repositorio y actualmente no requiere backend ni persistencia externa.
+The application consumes static content stored within the repository itself and currently does not require a backend or external persistence.
 
 ---
 
-## Tecnologías Principales
+## Main Technologies
 
 ```text
 React
@@ -329,75 +71,75 @@ CSS
 
 ---
 
-## Módulos Principales
+## Main Modules
 
 ### App
 
-Responsable de:
+Responsible for:
 
-* Configurar React Router.
-* Definir la estructura general de la aplicación.
-* Integrar Header, SideBar y Footer.
-* Gestionar el área principal de contenido.
+* Configuring React Router.
+* Defining the general structure of the application.
+* Integrating Header, SideBar, and Footer.
+* Managing the main content area.
 
 ---
 
 ### Header
 
-Responsable de:
+Responsible for:
 
-* Mostrar la identidad visual del proyecto.
-* Mostrar el logotipo y el nombre del proyecto.
-* Actuar como punto principal de acceso y reconocimiento de la aplicación.
+* Displaying the project's visual identity.
+* Displaying the logo and project name.
+* Acting as the main point of access and recognition for the application.
 
 ---
 
 ### SideBar
 
-Responsable de:
+Responsible for:
 
-* Mostrar el catálogo documental.
-* Organizar documentos por categorías.
-* Gestionar la expansión y colapso de categorías.
-* Facilitar la navegación entre documentos mediante React Router.
+* Displaying the document catalog.
+* Organizing documents by categories.
+* Managing category expansion and collapse.
+* Facilitating navigation between documents via React Router.
 
 ---
 
 ### Content Area
 
-Responsable de:
+Responsible for:
 
-* Mostrar el documento seleccionado.
-* Gestionar las rutas definidas mediante React Router.
+* Displaying the selected document.
+* Managing routes defined via React Router.
 
 ---
 
 ### Footer
 
-Responsable de:
+Responsible for:
 
-* Mostrar información del autor y del proyecto.
-* Proporcionar enlaces sociales y recursos de referencia.
+* Displaying author and project information.
+* Providing social links and reference resources.
 
 ---
 
-## Modelo de Navegación
+## Navigation Model
 
-La navegación se basa en fuentes de datos centralizadas definidas en:
+Navigation is based on centralized data sources defined in:
 
 ```text
 src/constants/navigation.js
 ```
 
-Estas estructuras contienen la información necesaria para construir la interfaz de navegación sin duplicar configuraciones entre componentes.
+These structures contain the information needed to build the navigation interface without duplicating configurations between components.
 
 ---
 
-### Categorías
+### Categories
 
-Representan las secciones principales de la biblioteca documental.
+They represent the main sections of the document library.
 
-Ejemplo:
+Example:
 
 ```text
 Introduction
@@ -408,9 +150,9 @@ Project Management
 
 ---
 
-### Documentos
+### Documents
 
-Cada documento contiene la información mínima necesaria para generar la navegación:
+Each document contains the minimum information needed to generate navigation:
 
 ```text
 id
@@ -419,14 +161,14 @@ path
 category
 ```
 
-Esta estrategia permite mantener una única fuente de verdad para la estructura documental y simplifica la incorporación de nuevas categorías o documentos.
+This strategy allows maintaining a single source of truth for the document structure and simplifies the addition of new categories or documents.
 
 ---
 
-## Flujo General
+## General Flow
 
 ```text
-Usuario
+User
    │
    ▼
 SideBar
@@ -435,17 +177,17 @@ SideBar
 React Router
    │
    ▼
-Ruta Seleccionada
+Selected Route
    │
    ▼
-Documento
+Document
 ```
 
 ---
 
-## Organización Arquitectónica
+## Architectural Organization
 
-Actualmente la aplicación utiliza una arquitectura basada en componentes y responsabilidades separadas.
+The application currently uses an architecture based on components and separated responsibilities.
 
 ```text
 src/
@@ -458,46 +200,46 @@ src/
 └── styles/
 ```
 
-### Principios Aplicados
+### Applied Principles
 
-* Separación de responsabilidades.
-* Componentes reutilizables.
-* Configuración centralizada.
-* Navegación declarativa.
-* Escalabilidad progresiva.
-* Sistema de estilos global basado en design tokens.
+* Separation of responsibilities.
+* Reusable components.
+* Centralized configuration.
+* Declarative navigation.
+* Progressive scalability.
+* Global style system based on design tokens.
 
 ---
 
-## Dependencias Arquitectónicas
+## Architectural Dependencies
 
 ### Header
 
-Depende de:
+Depends on:
 
 ```text
 Logo
-Recursos visuales
-Estilos globales
+Visual resources
+Global styles
 ```
 
 ---
 
 ### SideBar
 
-Depende de:
+Depends on:
 
 ```text
 navigation.js
 React Router
-Estado interno de expansión de categorías
+Internal category expansion state
 ```
 
 ---
 
 ### App
 
-Depende de:
+Depends on:
 
 ```text
 Header
@@ -508,131 +250,131 @@ React Router
 
 ---
 
-## Integraciones Externas
+## External Integrations
 
-Actualmente el proyecto no utiliza:
+The project currently does not use:
 
 ```text
-APIs externas
-Bases de datos
-Servicios cloud
-Servicios de autenticación
+External APIs
+Databases
+Cloud services
+Authentication services
 ```
 
-Toda la información es gestionada localmente dentro del repositorio.
+All information is managed locally within the repository.
 
 ---
 
-## Consideraciones Técnicas
+## Technical Considerations
 
-### Navegación Centralizada
+### Centralized Navigation
 
-La estructura de navegación debe mantenerse en:
+The navigation structure must be maintained in:
 
 ```text
 src/constants/navigation.js
 ```
 
-Los componentes consumidores no deben duplicar esta información.
+Consumer components must not duplicate this information.
 
 ---
 
-### Arquitectura de Estilos
+### Style Architecture
 
-La aplicación utiliza una estructura de estilos globales organizada y desacoplada de los componentes.
+The application uses an organized global style structure decoupled from components.
 
-Los estilos compartidos, variables de diseño y reglas globales deben centralizarse dentro de:
+Shared styles, design variables, and global rules must be centralized within:
 
 ```text
 src/styles/
 ```
 
-Esta organización permite mantener consistencia visual y facilita la evolución del sistema de diseño.
+This organization allows maintaining visual consistency and facilitates the evolution of the design system.
 
 ---
 
-### Biblioteca Documental
+### Document Library
 
-La organización del contenido debe seguir una estructura similar a una biblioteca:
+Content organization should follow a library-like structure:
 
-1. Categorías.
-2. Documentos dentro de cada categoría.
-3. Orden consistente y predecible.
-
----
-
-### Escalabilidad
-
-La arquitectura actual permite:
-
-* Agregar nuevas categorías.
-* Incorporar nuevos documentos.
-* Crear nuevas rutas.
-* Reorganizar la navegación sin modificar los componentes principales.
-* Evolucionar el sistema de diseño a través de estilos y tokens globales.
+1. Categories.
+2. Documents within each category.
+3. Consistent and predictable order.
 
 ---
 
-## Relación con Otros Documentos
+### Scalability
+
+The current architecture allows:
+
+* Adding new categories.
+* Incorporating new documents.
+* Creating new routes.
+* Reorganizing navigation without modifying the main components.
+* Evolving the design system through global styles and tokens.
+
+---
+
+## Relationship with Other Documents
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación del proyecto.
+Defines the terminology used within the project documentation.
 
 ---
 
 ### structure.md
 
-Describe dónde se ubican los elementos del proyecto.
+Describes where project elements are located.
 
 ---
 
 ### rules.md
 
-Describe cómo deben desarrollarse y mantenerse los elementos del proyecto.
+Describes how project elements should be developed and maintained.
 
 ---
 
 ### decisions.md
 
-Documenta por qué se tomaron determinadas decisiones arquitectónicas.
+Documents why certain architectural decisions were made.
 
 ---
 
 ### roadmap.md
 
-Documenta posibles cambios o evoluciones futuras de la arquitectura.
+Documents possible future changes or evolutions of the architecture.
 
 ---
 
-## Terminología
+## Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con las definiciones establecidas en:
+The terminology used in this document must remain aligned with the definitions established in:
 
 ```text
 docs/glossary.md
 ```
 
-Cuando se introduzcan nuevos conceptos arquitectónicos, patrones o términos que requieran una interpretación compartida dentro del proyecto, estos deberán registrarse en `glossary.md`.
+When new architectural concepts, patterns, or terms that require a shared interpretation within the project are introduced, they must be registered in `glossary.md`.
 
 ---
 
-## Registro de Cambios Arquitectónicos
+## Architectural Change Log
 
-Toda modificación arquitectónica relevante debería registrarse también en:
+Any relevant architectural modification should also be recorded in:
 
 ```text
 docs/decisions.md
 ```
 
-cuando implique una decisión técnica significativa.
+when it involves a significant technical decision.
 
 ---
 
-## Principio Fundamental
+## Fundamental Principle
 
-Este documento debe representar la arquitectura real del proyecto y no una arquitectura idealizada.
+This document must represent the actual architecture of the project and not an idealized architecture.
 
-Si existe una diferencia entre la documentación y la implementación, la documentación debe actualizarse para reflejar el estado real del sistema.
+If there is a difference between the documentation and the implementation, the documentation must be updated to reflect the actual state of the system.
 
-Su propósito principal es servir como fuente de verdad sobre cómo está construido actualmente el proyecto.
+Its main purpose is to serve as the source of truth about how the project is currently built.

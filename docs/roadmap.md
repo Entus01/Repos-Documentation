@@ -1,342 +1,342 @@
 # Roadmap
 
-Estado: Activo
+Status: Active
 
-Alcance: Evolución y planificación estratégica del proyecto.
+Scope: Evolution and strategic planning for the project.
 
-Referencia principal:
+Main reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento define los objetivos, mejoras e iniciativas previstas para la evolución del proyecto.
+This document defines the objectives, improvements, and planned initiatives for the evolution of the project.
 
-Su finalidad es proporcionar una visión clara de las áreas de crecimiento identificadas, las prioridades actuales y las futuras líneas de desarrollo.
+Its purpose is to provide a clear view of identified growth areas, current priorities, and future development directions.
 
-A diferencia de un sistema de gestión de tareas, este documento no pretende registrar actividades operativas diarias, sino iniciativas con impacto estratégico para la evolución del proyecto.
+Unlike a task management system, this document does not aim to record daily operational activities, but initiatives with strategic impact for project evolution.
 
 ---
 
-# Estados
+# Statuses
 
 ## Planned
 
-Trabajo identificado y considerado para futuras versiones.
+Work identified and considered for future versions.
 
 ---
 
 ## In Progress
 
-Trabajo actualmente en desarrollo.
+Work currently in development.
 
 ---
 
 ## Completed
 
-Trabajo finalizado e incorporado al proyecto.
+Work finished and incorporated into the project.
 
 ---
 
 ## On Hold
 
-Trabajo pausado temporalmente.
+Work temporarily paused.
 
 ---
 
 ## Cancelled
 
-Trabajo descartado o sustituido por una alternativa.
+Work discarded or replaced by an alternative.
 
 ---
 
-# Iniciativas Actuales
+# Current Initiatives
 
 ## Planned
 
-### Estándares para TypeScript
+### TypeScript Standards
 
-Prioridad: Alta
+Priority: High
 
-Objetivos:
+Objectives:
 
-* Definir convenciones para proyectos TypeScript.
-* Establecer reglas de tipado.
-* Documentar organización de tipos e interfaces.
-* Definir estructura recomendada para proyectos React + TypeScript.
+* Define conventions for TypeScript projects.
+* Establish typing rules.
+* Document organization of types and interfaces.
+* Define recommended structure for React + TypeScript projects.
 
-Impacto esperado:
+Expected impact:
 
-* Mayor consistencia entre proyectos JavaScript y TypeScript.
-* Mejor mantenibilidad y escalabilidad.
-
----
-
-### Estándares para Testing
-
-Prioridad: Alta
-
-Objetivos:
-
-* Definir convenciones para pruebas unitarias.
-* Definir convenciones para pruebas de integración.
-* Documentar organización de archivos de pruebas.
-* Establecer criterios mínimos de validación antes de publicación.
-
-Impacto esperado:
-
-* Mejor calidad del software.
-* Mayor confianza durante refactors y nuevas funcionalidades.
+* Greater consistency between JavaScript and TypeScript projects.
+* Better maintainability and scalability.
 
 ---
 
-### Estándares para Monorepos
+### Testing Standards
 
-Prioridad: Media
+Priority: High
 
-Objetivos:
+Objectives:
 
-* Documentar estructuras recomendadas para monorepos.
-* Definir separación entre aplicaciones y paquetes compartidos.
-* Establecer criterios de organización escalable.
+* Define conventions for unit tests.
+* Define conventions for integration tests.
+* Document organization of test files.
+* Establish minimum validation criteria before publishing.
 
-Impacto esperado:
+Expected impact:
 
-* Facilitar la gestión de proyectos complejos.
-* Mantener consistencia entre aplicaciones relacionadas.
-
----
-
-### Estándares para CI/CD
-
-Prioridad: Media
-
-Objetivos:
-
-* Definir convenciones para automatización.
-* Establecer validaciones mínimas para integración continua.
-* Documentar flujos de despliegue recomendados.
-
-Impacto esperado:
-
-* Mejor control de calidad.
-* Procesos de despliegue más confiables.
+* Better software quality.
+* Greater confidence during refactors and new features.
 
 ---
 
-### Estándares para Docker
+### Monorepo Standards
 
-Prioridad: Media
+Priority: Medium
 
-Objetivos:
+Objectives:
 
-* Definir estructura base para proyectos contenerizados.
-* Documentar convenciones para Dockerfile y Docker Compose.
-* Establecer buenas prácticas para entornos de desarrollo y producción.
+* Document recommended structures for monorepos.
+* Define separation between applications and shared packages.
+* Establish criteria for scalable organization.
 
-Impacto esperado:
+Expected impact:
 
-* Mayor portabilidad entre entornos.
-* Configuraciones más consistentes.
-
----
-
-### Estándares para APIs
-
-Prioridad: Alta
-
-Objetivos:
-
-* Definir organización recomendada para servicios backend.
-* Establecer convenciones para controladores, servicios y repositorios.
-* Documentar patrones de validación y manejo de errores.
-
-Impacto esperado:
-
-* APIs más mantenibles.
-* Mayor consistencia entre proyectos backend.
+* Facilitate management of complex projects.
+* Maintain consistency across related applications.
 
 ---
 
-### Estándares de Accesibilidad
+### CI/CD Standards
 
-Prioridad: Media
+Priority: Medium
 
-Objetivos:
+Objectives:
 
-* Incorporar criterios mínimos de accesibilidad.
-* Documentar buenas prácticas para interfaces web.
-* Establecer validaciones recomendadas.
+* Define conventions for automation.
+* Establish minimum validations for continuous integration.
+* Document recommended deployment workflows.
 
-Impacto esperado:
+Expected impact:
 
-* Experiencias más inclusivas.
-* Mejor calidad general de las aplicaciones.
+* Better quality control.
+* More reliable deployment processes.
+
+---
+
+### Docker Standards
+
+Priority: Medium
+
+Objectives:
+
+* Define base structure for containerized projects.
+* Document conventions for Dockerfile and Docker Compose.
+* Establish best practices for development and production environments.
+
+Expected impact:
+
+* Greater portability across environments.
+* More consistent configurations.
+
+---
+
+### API Standards
+
+Priority: High
+
+Objectives:
+
+* Define recommended organization for backend services.
+* Establish conventions for controllers, services, and repositories.
+* Document validation patterns and error handling.
+
+Expected impact:
+
+* More maintainable APIs.
+* Greater consistency across backend projects.
+
+---
+
+### Accessibility Standards
+
+Priority: Medium
+
+Objectives:
+
+* Incorporate minimum accessibility criteria.
+* Document best practices for web interfaces.
+* Establish recommended validations.
+
+Expected impact:
+
+* More inclusive experiences.
+* Better overall application quality.
 
 ---
 
 ## In Progress
 
-### Consolidación de la Documentación Base
+### Base Documentation Consolidation
 
-Prioridad: Alta
+Priority: High
 
-Objetivos:
+Objectives:
 
-* Refinar los estándares iniciales.
-* Validar la coherencia entre documentos.
-* Garantizar reutilización en diferentes tipos de proyectos.
+* Refine initial standards.
+* Validate coherence between documents.
+* Ensure reusability across different project types.
 
-Impacto esperado:
+Expected impact:
 
-* Base documental sólida y sostenible.
-* Mayor consistencia entre repositorios.
+* Solid and sustainable documentation foundation.
+* Greater consistency across repositories.
 
 ---
 
 ## Completed
 
-### Versión Inicial
+### Initial Version
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Logros:
+Achievements:
 
-* Creación del proyecto.
-* Definición de estándares generales de desarrollo.
-* Definición de estándares de organización.
-* Establecimiento de una estructura documental centralizada.
-* Creación de documentación base para futuras iteraciones.
+* Project creation.
+* Definition of general development standards.
+* Definition of organization standards.
+* Establishment of a centralized documentation structure.
+* Creation of base documentation for future iterations.
 
 ---
 
 ## On Hold
 
-Actualmente no existen iniciativas pausadas.
+There are currently no paused initiatives.
 
 ---
 
 ## Cancelled
 
-Actualmente no existen iniciativas canceladas.
+There are currently no cancelled initiatives.
 
 ---
 
-# Plantilla para Nuevas Iniciativas
+# Template for New Initiatives
 
 ```text
-### Nombre de la iniciativa
+### Initiative name
 
-Prioridad:
+Priority:
 
-Objetivos:
+Objectives:
 
 -
 
-Impacto esperado:
+Expected impact:
 
 -
 ```
 
 ---
 
-# Prioridades
+# Priorities
 
-## Alta
+## High
 
-Elementos necesarios para la evolución inmediata del proyecto.
-
----
-
-## Media
-
-Mejoras importantes que no bloquean el avance actual.
+Items necessary for the immediate evolution of the project.
 
 ---
 
-## Baja
+## Medium
 
-Mejoras deseables con impacto limitado o sin urgencia inmediata.
+Important improvements that do not block current progress.
 
 ---
 
-## Relación con Otros Documentos
+## Low
+
+Desirable improvements with limited impact or no immediate urgency.
+
+---
+
+## Relationship with Other Documents
 
 ### changelog.md
 
-Registra los cambios que ya fueron implementados.
+Records changes that have already been implemented.
 
-roadmap.md describe cambios que podrían implementarse en el futuro.
+roadmap.md describes changes that could be implemented in the future.
 
 ---
 
 ### decisions.md
 
-Las iniciativas incluidas en este documento pueden derivar en decisiones técnicas, organizativas o estratégicas que deberán registrarse en decisions.md.
+Initiatives included in this document may lead to technical, organizational, or strategic decisions that must be recorded in decisions.md.
 
 ---
 
 ### architecture.md
 
-Las iniciativas relacionadas con arquitectura pueden requerir modificaciones en la documentación arquitectónica del proyecto.
+Architecture-related initiatives may require modifications to the project's architectural documentation.
 
 ---
 
 ### deployment.md
 
-Las iniciativas relacionadas con infraestructura o automatización pueden requerir actualizaciones en los procesos de construcción y despliegue.
+Infrastructure or automation-related initiatives may require updates to build and deployment processes.
 
 ---
 
 ### structure.md
 
-Las iniciativas relacionadas con organización del repositorio pueden requerir cambios en la estructura documentada.
+Repository organization-related initiatives may require changes to the documented structure.
 
 ---
 
 ### rules.md
 
-Las iniciativas relacionadas con procesos o estándares de desarrollo pueden requerir actualizaciones de las convenciones documentadas.
+Development process or standards-related initiatives may require updates to documented conventions.
 
 ---
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Los términos utilizados en este documento deben mantenerse alineados con glossary.md.
+Terms used in this document must remain aligned with glossary.md.
 
 ---
 
-## Terminología
+## Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con:
+The terminology used in this document must remain aligned with:
 
 ```text
 docs/glossary.md
 ```
 
-Cuando una iniciativa introduzca nuevos conceptos técnicos, organizativos o arquitectónicos que requieran una interpretación compartida, deberá evaluarse su incorporación al glosario oficial.
+When an initiative introduces new technical, organizational, or architectural concepts that require a shared interpretation, their inclusion in the official glossary should be evaluated.
 
 ---
 
-## Alcance de las Iniciativas
+## Scope of Initiatives
 
-La inclusión de una iniciativa dentro de este documento no implica un compromiso obligatorio de implementación.
+Including an initiative in this document does not imply a mandatory commitment to implementation.
 
-Las prioridades, estados y objetivos pueden modificarse a medida que evolucionen las necesidades del proyecto.
+Priorities, statuses, and objectives may change as project needs evolve.
 
-El roadmap representa dirección estratégica, no planificación cerrada.
+The roadmap represents strategic direction, not a fixed plan.
 
 ---
 
-## Principio Fundamental
+## Fundamental Principle
 
-Las iniciativas incluidas deben representar oportunidades reales de mejora para el proyecto.
+Included initiatives must represent real improvement opportunities for the project.
 
-Cada elemento documentado debe contribuir a la consistencia, sostenibilidad, mantenibilidad o evolución del ecosistema documental y de desarrollo.
+Each documented item should contribute to the consistency, sustainability, maintainability, or evolution of the documentation and development ecosystem.
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -346,411 +346,411 @@ Cada elemento documentado debe contribuir a la consistencia, sostenibilidad, man
 
 # Roadmap
 
-Estado: Activo
+Status: Active
 
-Alcance: Evolución y planificación estratégica del proyecto.
+Scope: Evolution and strategic planning for the project.
 
-Referencia principal:
+Main reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento define los objetivos, mejoras e iniciativas previstas para la evolución del proyecto.
+This document defines the objectives, improvements, and planned initiatives for the evolution of the project.
 
-Su finalidad es proporcionar una visión clara de las áreas de crecimiento identificadas, las prioridades actuales y las futuras líneas de desarrollo.
+Its purpose is to provide a clear view of identified growth areas, current priorities, and future development directions.
 
-A diferencia de un sistema de gestión de tareas, este documento no pretende registrar actividades operativas diarias, sino iniciativas con impacto estratégico para la evolución del proyecto.
+Unlike a task management system, this document does not aim to record daily operational activities, but initiatives with strategic impact for project evolution.
 
 ---
 
-# Estados
+# Statuses
 
 ## Planned
 
-Trabajo identificado y considerado para futuras versiones.
+Work identified and considered for future versions.
 
 ---
 
 ## In Progress
 
-Trabajo actualmente en desarrollo.
+Work currently in development.
 
 ---
 
 ## Completed
 
-Trabajo finalizado e incorporado al proyecto.
+Work finished and incorporated into the project.
 
 ---
 
 ## On Hold
 
-Trabajo pausado temporalmente.
+Work temporarily paused.
 
 ---
 
 ## Cancelled
 
-Trabajo descartado o sustituido por una alternativa.
+Work discarded or replaced by an alternative.
 
 ---
 
-# Iniciativas Actuales
+# Current Initiatives
 
 ## Planned
 
-### Estándares para TypeScript
+### TypeScript Standards
 
-Prioridad: Alta
+Priority: High
 
-Objetivos:
+Objectives:
 
-* Definir convenciones para proyectos TypeScript.
-* Establecer reglas de tipado.
-* Documentar organización de tipos e interfaces.
-* Definir estructura recomendada para proyectos React + TypeScript.
+* Define conventions for TypeScript projects.
+* Establish typing rules.
+* Document organization of types and interfaces.
+* Define recommended structure for React + TypeScript projects.
 
-Impacto esperado:
+Expected impact:
 
-* Mayor consistencia entre proyectos JavaScript y TypeScript.
-* Mejor mantenibilidad y escalabilidad.
-
----
-
-### Estándares para Testing
-
-Prioridad: Alta
-
-Objetivos:
-
-* Definir convenciones para pruebas unitarias.
-* Definir convenciones para pruebas de integración.
-* Documentar organización de archivos de pruebas.
-* Establecer criterios mínimos de validación antes de publicación.
-
-Impacto esperado:
-
-* Mejor calidad del software.
-* Mayor confianza durante refactors y nuevas funcionalidades.
+* Greater consistency between JavaScript and TypeScript projects.
+* Better maintainability and scalability.
 
 ---
 
-### Estándares para Monorepos
+### Testing Standards
 
-Prioridad: Media
+Priority: High
 
-Objetivos:
+Objectives:
 
-* Documentar estructuras recomendadas para monorepos.
-* Definir separación entre aplicaciones y paquetes compartidos.
-* Establecer criterios de organización escalable.
+* Define conventions for unit tests.
+* Define conventions for integration tests.
+* Document organization of test files.
+* Establish minimum validation criteria before publishing.
 
-Impacto esperado:
+Expected impact:
 
-* Facilitar la gestión de proyectos complejos.
-* Mantener consistencia entre aplicaciones relacionadas.
-
----
-
-### Estándares para CI/CD
-
-Prioridad: Media
-
-Objetivos:
-
-* Definir convenciones para automatización.
-* Establecer validaciones mínimas para integración continua.
-* Documentar flujos de despliegue recomendados.
-
-Impacto esperado:
-
-* Mejor control de calidad.
-* Procesos de despliegue más confiables.
+* Better software quality.
+* Greater confidence during refactors and new features.
 
 ---
 
-### Estándares para Docker
+### Monorepo Standards
 
-Prioridad: Media
+Priority: Medium
 
-Objetivos:
+Objectives:
 
-* Definir estructura base para proyectos contenerizados.
-* Documentar convenciones para Dockerfile y Docker Compose.
-* Establecer buenas prácticas para entornos de desarrollo y producción.
+* Document recommended structures for monorepos.
+* Define separation between applications and shared packages.
+* Establish criteria for scalable organization.
 
-Impacto esperado:
+Expected impact:
 
-* Mayor portabilidad entre entornos.
-* Configuraciones más consistentes.
-
----
-
-### Estándares para APIs
-
-Prioridad: Alta
-
-Objetivos:
-
-* Definir organización recomendada para servicios backend.
-* Establecer convenciones para controladores, servicios y repositorios.
-* Documentar patrones de validación y manejo de errores.
-
-Impacto esperado:
-
-* APIs más mantenibles.
-* Mayor consistencia entre proyectos backend.
+* Facilitate management of complex projects.
+* Maintain consistency across related applications.
 
 ---
 
-### Biblioteca Documental Escalable
+### CI/CD Standards
 
-Prioridad: Alta
+Priority: Medium
 
-Objetivos:
+Objectives:
 
-* Facilitar la incorporación de nuevos documentos y categorías.
-* Mantener una navegación consistente basada en configuración centralizada.
-* Mejorar la organización y mantenibilidad del catálogo documental.
-* Preparar la estructura para futuras ampliaciones del repositorio.
+* Define conventions for automation.
+* Establish minimum validations for continuous integration.
+* Document recommended deployment workflows.
 
-Impacto esperado:
+Expected impact:
 
-* Mayor escalabilidad del proyecto.
-* Menor esfuerzo para mantener y ampliar la documentación.
-* Consistencia estructural entre futuras versiones.
+* Better quality control.
+* More reliable deployment processes.
 
 ---
 
-### Estándares de Accesibilidad
+### Docker Standards
 
-Prioridad: Media
+Priority: Medium
 
-Objetivos:
+Objectives:
 
-* Incorporar criterios mínimos de accesibilidad.
-* Documentar buenas prácticas para interfaces web.
-* Establecer validaciones recomendadas.
+* Define base structure for containerized projects.
+* Document conventions for Dockerfile and Docker Compose.
+* Establish best practices for development and production environments.
 
-Impacto esperado:
+Expected impact:
 
-* Experiencias más inclusivas.
-* Mejor calidad general de las aplicaciones.
+* Greater portability across environments.
+* More consistent configurations.
+
+---
+
+### API Standards
+
+Priority: High
+
+Objectives:
+
+* Define recommended organization for backend services.
+* Establish conventions for controllers, services, and repositories.
+* Document validation patterns and error handling.
+
+Expected impact:
+
+* More maintainable APIs.
+* Greater consistency across backend projects.
+
+---
+
+### Scalable Documentation Library
+
+Priority: High
+
+Objectives:
+
+* Facilitate the addition of new documents and categories.
+* Maintain consistent navigation based on centralized configuration.
+* Improve organization and maintainability of the documentation catalog.
+* Prepare the structure for future repository expansions.
+
+Expected impact:
+
+* Greater project scalability.
+* Lower effort to maintain and expand documentation.
+* Structural consistency across future versions.
+
+---
+
+### Accessibility Standards
+
+Priority: Medium
+
+Objectives:
+
+* Incorporate minimum accessibility criteria.
+* Document best practices for web interfaces.
+* Establish recommended validations.
+
+Expected impact:
+
+* More inclusive experiences.
+* Better overall application quality.
 
 ---
 
 ## In Progress
 
-Actualmente no existen iniciativas en desarrollo.
+There are currently no initiatives in development.
 
-Las próximas evoluciones del proyecto se encuentran en fase de planificación estratégica y serán incorporadas a esta sección cuando comience su implementación.
+Upcoming project evolutions are in the strategic planning phase and will be added to this section when implementation begins.
 
 ---
 
 ## Completed
 
-### Versión Inicial
+### Initial Version
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Logros:
+Achievements:
 
-* Creación del proyecto.
-* Definición de estándares generales de desarrollo.
-* Definición de estándares de organización.
-* Establecimiento de una estructura documental centralizada.
-* Creación de documentación base para futuras iteraciones.
-
----
-
-### Incorporación del Glosario Oficial
-
-Fecha: 2026-06-08
-
-Logros:
-
-* Creación de `glossary.md`.
-* Definición de una fuente oficial de terminología.
-* Integración del glosario con todos los documentos principales.
-* Eliminación de definiciones duplicadas entre documentos.
+* Project creation.
+* Definition of general development standards.
+* Definition of organization standards.
+* Establishment of a centralized documentation structure.
+* Creation of base documentation for future iterations.
 
 ---
 
-### Navegación Documental Centralizada
+### Official Glossary Incorporation
 
-Fecha: 2026-06-08
+Date: 2026-06-08
 
-Logros:
+Achievements:
 
-* Centralización de la navegación en constantes compartidas.
-* Creación de categorías documentales.
-* Implementación del componente SideBar.
-* Organización de documentos por categorías.
-* Ordenamiento alfabético dentro de cada categoría.
-* Eliminación de páginas de ejemplo no utilizadas.
+* Creation of `glossary.md`.
+* Definition of an official source of terminology.
+* Integration of the glossary with all main documents.
+* Removal of duplicated definitions across documents.
 
 ---
 
-### Construcción de la Biblioteca Documental
+### Centralized Documentation Navigation
 
-Fecha: 2026-06-10
+Date: 2026-06-08
 
-Logros:
+Achievements:
 
-* Transformación de la aplicación en una biblioteca documental navegable.
-* Implementación de navegación estructurada mediante SideBar.
-* Incorporación de un menú lateral con soporte para expansión y colapso.
-* Consolidación de una experiencia de navegación basada en categorías.
-* Preparación de una estructura escalable para futuras ampliaciones del catálogo documental.
+* Centralization of navigation in shared constants.
+* Creation of documentation categories.
+* Implementation of the SideBar component.
+* Organization of documents by categories.
+* Alphabetical sorting within each category.
+* Removal of unused example pages.
 
 ---
 
-### Consolidación de la Documentación Base
+### Documentation Library Construction
 
-Fecha: 2026-06-10
+Date: 2026-06-10
 
-Logros:
+Achievements:
 
-* Refinamiento de los documentos principales del proyecto.
-* Alineación entre arquitectura, estructura, decisiones y roadmap.
-* Consolidación del glosario como referencia oficial de terminología.
-* Fortalecimiento de la coherencia y reutilización del ecosistema documental.
+* Transformation of the application into a navigable documentation library.
+* Implementation of structured navigation via SideBar.
+* Incorporation of a sidebar menu with expand and collapse support.
+* Consolidation of a category-based navigation experience.
+* Preparation of a scalable structure for future catalog expansions.
+
+---
+
+### Base Documentation Consolidation
+
+Date: 2026-06-10
+
+Achievements:
+
+* Refinement of the project's main documents.
+* Alignment between architecture, structure, decisions, and roadmap.
+* Consolidation of the glossary as the official terminology reference.
+* Strengthening of coherence and reusability of the documentation ecosystem.
 
 ---
 
 ## On Hold
 
-Actualmente no existen iniciativas pausadas.
+There are currently no paused initiatives.
 
 ---
 
 ## Cancelled
 
-### Sistema de Búsqueda Documental
+### Documentation Search System
 
-Fecha: 2026-06-10
+Date: 2026-06-10
 
-Motivo:
+Reason:
 
-La evolución del proyecto priorizó una navegación documental clara y estructurada mediante categorías, descartando la incorporación de un sistema de búsqueda en la interfaz principal.
+Project evolution prioritized clear, structured documentation navigation through categories, discarding the incorporation of a search system in the main interface.
 
-La iniciativa podrá reevaluarse en el futuro si el crecimiento del catálogo documental lo hace necesario.
+The initiative may be reevaluated in the future if the growth of the documentation catalog makes it necessary.
 
 ---
 
-# Plantilla para Nuevas Iniciativas
+# Template for New Initiatives
 
 ```text
-### Nombre de la iniciativa
+### Initiative name
 
-Prioridad:
+Priority:
 
-Objetivos:
+Objectives:
 
 -
 
-Impacto esperado:
+Expected impact:
 
 -
 ```
 
 ---
 
-# Prioridades
+# Priorities
 
-## Alta
+## High
 
-Elementos necesarios para la evolución inmediata del proyecto.
-
----
-
-## Media
-
-Mejoras importantes que no bloquean el avance actual.
+Items necessary for the immediate evolution of the project.
 
 ---
 
-## Baja
+## Medium
 
-Mejoras deseables con impacto limitado o sin urgencia inmediata.
+Important improvements that do not block current progress.
 
 ---
 
-## Relación con Otros Documentos
+## Low
+
+Desirable improvements with limited impact or no immediate urgency.
+
+---
+
+## Relationship with Other Documents
 
 ### changelog.md
 
-Registra los cambios que ya fueron implementados.
+Records changes that have already been implemented.
 
-`roadmap.md` describe cambios que podrían implementarse en el futuro.
+`roadmap.md` describes changes that could be implemented in the future.
 
 ---
 
 ### decisions.md
 
-Las iniciativas incluidas en este documento pueden derivar en decisiones técnicas, organizativas o estratégicas que deberán registrarse en `decisions.md`.
+Initiatives included in this document may lead to technical, organizational, or strategic decisions that must be recorded in `decisions.md`.
 
 ---
 
 ### architecture.md
 
-Las iniciativas relacionadas con arquitectura pueden requerir modificaciones en la documentación arquitectónica del proyecto.
+Architecture-related initiatives may require modifications to the project's architectural documentation.
 
 ---
 
 ### deployment.md
 
-Las iniciativas relacionadas con infraestructura o automatización pueden requerir actualizaciones en los procesos de construcción y despliegue.
+Infrastructure or automation-related initiatives may require updates to build and deployment processes.
 
 ---
 
 ### structure.md
 
-Las iniciativas relacionadas con organización del repositorio pueden requerir cambios en la estructura documentada.
+Repository organization-related initiatives may require changes to the documented structure.
 
 ---
 
 ### rules.md
 
-Las iniciativas relacionadas con procesos o estándares de desarrollo pueden requerir actualizaciones de las convenciones documentadas.
+Development process or standards-related initiatives may require updates to documented conventions.
 
 ---
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Los términos utilizados en este documento deben mantenerse alineados con `glossary.md`.
+Terms used in this document must remain aligned with `glossary.md`.
 
 ---
 
-## Terminología
+## Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con:
+The terminology used in this document must remain aligned with:
 
 ```text
 docs/glossary.md
 ```
 
-Cuando una iniciativa introduzca nuevos conceptos técnicos, organizativos o arquitectónicos que requieran una interpretación compartida, deberá evaluarse su incorporación al glosario oficial.
+When an initiative introduces new technical, organizational, or architectural concepts that require a shared interpretation, their inclusion in the official glossary should be evaluated.
 
 ---
 
-## Alcance de las Iniciativas
+## Scope of Initiatives
 
-La inclusión de una iniciativa dentro de este documento no implica un compromiso obligatorio de implementación.
+Including an initiative in this document does not imply a mandatory commitment to implementation.
 
-Las prioridades, estados y objetivos pueden modificarse a medida que evolucionen las necesidades del proyecto.
+Priorities, statuses, and objectives may change as project needs evolve.
 
-El roadmap representa dirección estratégica, no planificación cerrada.
+The roadmap represents strategic direction, not a fixed plan.
 
 ---
 
-## Principio Fundamental
+## Fundamental Principle
 
-Las iniciativas incluidas deben representar oportunidades reales de mejora para el proyecto.
+Included initiatives must represent real improvement opportunities for the project.
 
-Cada elemento documentado debe contribuir a la consistencia, sostenibilidad, mantenibilidad o evolución del ecosistema documental y de desarrollo.
+Each documented item should contribute to the consistency, sustainability, maintainability, or evolution of the documentation and development ecosystem.

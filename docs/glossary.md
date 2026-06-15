@@ -1,166 +1,166 @@
 # Glossary
 
-Estado: Activo
+Status: Active
 
-Alcance: Definiciones y terminología utilizada en la documentación y organización de proyectos.
+Scope: Definitions and terminology used in project documentation and organization.
 
-Referencia principal:
+Primary reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento centraliza las definiciones de términos utilizados dentro de la documentación del proyecto.
+This document centralizes the definitions of terms used within the project documentation.
 
-Su objetivo es reducir ambigüedades, facilitar la comunicación entre colaboradores y mantener un lenguaje consistente entre repositorios.
+Its goal is to reduce ambiguity, facilitate communication among collaborators, and maintain consistent language across repositories.
 
-Cuando un término técnico, organizacional o arquitectónico requiera una interpretación compartida, deberá documentarse en este archivo.
-
----
-
-## Cuándo Actualizar este Documento
-
-Actualizar cuando:
-
-* Se introduzca nueva terminología relevante.
-* Aparezcan conceptos utilizados frecuentemente en la documentación.
-* Sea necesario aclarar el significado de un término.
-* Se adopten nuevas prácticas, herramientas o patrones arquitectónicos.
+When a technical, organizational, or architectural term requires a shared interpretation, it should be documented in this file.
 
 ---
 
-## Cuándo No Actualizar este Documento
+## When to Update This Document
 
-No registrar:
+Update when:
 
-* Definiciones evidentes o universalmente conocidas.
-* Detalles específicos de implementación.
-* Reglas de desarrollo.
-* Decisiones técnicas.
-* Información temporal o dependiente de una versión.
+* New relevant terminology is introduced.
+* Concepts frequently used in the documentation appear.
+* It is necessary to clarify the meaning of a term.
+* New practices, tools, or architectural patterns are adopted.
 
 ---
 
-# Términos
+## When Not to Update This Document
 
-## Arquitectura
+Do not record:
 
-Organización conceptual del sistema y relación entre sus principales componentes, módulos y flujos de información.
+* Obvious or universally known definitions.
+* Implementation-specific details.
+* Development rules.
+* Technical decisions.
+* Temporary or version-dependent information.
+
+---
+
+# Terms
+
+## Architecture
+
+Conceptual organization of the system and the relationship between its main components, modules, and information flows.
 
 ---
 
 ## Atomic Commit
 
-Commit que representa un único cambio lógico, claramente identificable y fácilmente reversible.
+Commit that represents a single logical change, clearly identifiable and easily reversible.
 
 ---
 
 ## Backend
 
-Conjunto de servicios responsables de la lógica de negocio, procesamiento de datos, persistencia y comunicación con sistemas externos.
+Set of services responsible for business logic, data processing, persistence, and communication with external systems.
 
 ---
 
 ## Build
 
-Proceso mediante el cual el código fuente es transformado en una versión ejecutable o desplegable.
+Process by which source code is transformed into an executable or deployable version.
 
 ---
 
-## Componente
+## Component
 
-Unidad reutilizable de interfaz o funcionalidad con una responsabilidad específica.
+Reusable unit of interface or functionality with a specific responsibility.
 
 ---
 
 ## Deploy
 
-Proceso de publicación de una aplicación en un entorno accesible para usuarios o sistemas externos.
+Process of publishing an application to an environment accessible to users or external systems.
 
 ---
 
 ## Design Token
 
-Valor reutilizable que representa una decisión de diseño compartida, como colores, tipografías, espaciados o tamaños.
+Reusable value that represents a shared design decision, such as colors, typography, spacing, or sizes.
 
-Su objetivo es mantener consistencia visual y centralizar la configuración del sistema de diseño.
+Its goal is to maintain visual consistency and centralize the design system configuration.
 
 ---
 
-## Dominio
+## Domain
 
-Área funcional específica dentro de un proyecto.
+Specific functional area within a project.
 
-Ejemplos:
+Examples:
 
 ```text
-Autenticación
-Usuarios
-Facturación
-Inventario
+Authentication
+Users
+Billing
+Inventory
 ```
 
 ---
 
 ## Feature
 
-Funcionalidad o capacidad específica ofrecida por el sistema.
+Specific functionality or capability offered by the system.
 
-Una feature puede involucrar múltiples componentes, servicios y módulos relacionados.
+A feature may involve multiple related components, services, and modules.
 
 ---
 
 ## Frontend
 
-Capa responsable de la interfaz de usuario y de la interacción directa con el sistema.
+Layer responsible for the user interface and direct interaction with the system.
 
 ---
 
-## Fuente de Verdad (Single Source of Truth)
+## Single Source of Truth
 
-Principio según el cual una información debe mantenerse en una única ubicación oficial dentro del sistema, evitando duplicidad y reduciendo inconsistencias.
+Principle according to which information should be maintained in a single official location within the system, avoiding duplication and reducing inconsistencies.
 
-Los demás componentes o módulos deben consumir esa información en lugar de mantener copias independientes.
+Other components or modules should consume that information instead of maintaining independent copies.
 
 ---
 
 ## Hook
 
-Función reutilizable que encapsula lógica compartida dentro de una aplicación React.
+Reusable function that encapsulates shared logic within a React application.
 
 ---
 
-## Infraestructura
+## Infrastructure
 
-Conjunto de servicios, herramientas y recursos necesarios para ejecutar, desplegar y mantener una aplicación.
+Set of services, tools, and resources required to run, deploy, and maintain an application.
 
 ---
 
-## Módulo
+## Module
 
-Grupo de elementos relacionados que comparten una responsabilidad o propósito común.
+Group of related elements that share a common responsibility or purpose.
 
 ---
 
 ## Monorepo
 
-Repositorio que contiene múltiples aplicaciones o paquetes relacionados dentro de una misma base de código.
+Repository that contains multiple related applications or packages within the same codebase.
 
 ---
 
-## Página
+## Page
 
-Vista principal asociada a una ruta o sección específica de una aplicación.
+Main view associated with a specific route or section of an application.
 
 ---
 
-## Patrón Arquitectónico
+## Architectural Pattern
 
-Conjunto de reglas y principios utilizados para organizar la estructura de un sistema.
+Set of rules and principles used to organize the structure of a system.
 
-Ejemplos:
+Examples:
 
 ```text
 MVC
@@ -173,57 +173,57 @@ Feature Based Architecture
 
 ## Provider
 
-Componente encargado de compartir estado, servicios o configuraciones entre múltiples partes de una aplicación.
+Component responsible for sharing state, services, or configurations across multiple parts of an application.
 
 ---
 
 ## Refactor
 
-Modificación interna del código cuyo objetivo es mejorar legibilidad, mantenibilidad o estructura sin alterar el comportamiento funcional.
+Internal code modification whose goal is to improve readability, maintainability, or structure without altering functional behavior.
 
 ---
 
-## Repositorio
+## Repository
 
-Proyecto gestionado mediante control de versiones que contiene código, documentación y recursos relacionados.
-
----
-
-## Responsabilidad
-
-Propósito claramente definido que debe cumplir un archivo, componente, módulo o servicio.
+Project managed through version control that contains code, documentation, and related resources.
 
 ---
 
-## Servicio
+## Responsibility
 
-Elemento encargado de encapsular lógica de negocio o comunicación con sistemas externos.
+Clearly defined purpose that a file, component, module, or service must fulfill.
+
+---
+
+## Service
+
+Element responsible for encapsulating business logic or communication with external systems.
 
 ---
 
 ## Single Page Application (SPA)
 
-Aplicación web que actualiza contenido dinámicamente sin recargar completamente la página.
+Web application that updates content dynamically without fully reloading the page.
 
 ---
 
-## Sistema
+## System
 
-Conjunto completo de componentes, servicios y recursos que conforman una aplicación.
+Complete set of components, services, and resources that make up an application.
 
 ---
 
 ## Stakeholder
 
-Persona o grupo con interés directo en el proyecto, su evolución o sus resultados.
+Person or group with a direct interest in the project, its evolution, or its outcomes.
 
 ---
 
-## Tecnología Base
+## Base Technology
 
-Herramienta o framework fundamental sobre el cual se construye el proyecto.
+Fundamental tool or framework on which the project is built.
 
-Ejemplos:
+Examples:
 
 ```text
 React
@@ -234,52 +234,52 @@ Vite
 
 ---
 
-## Utilidad (Utility)
+## Utility
 
-Función o conjunto de funciones reutilizables destinadas a resolver tareas específicas y repetitivas.
-
----
-
-## Versionado
-
-Proceso de identificación y control de cambios mediante versiones del software.
+Function or set of reusable functions intended to solve specific and repetitive tasks.
 
 ---
 
-# Relación con Otros Documentos
+## Versioning
+
+Process of identifying and controlling changes through software versions.
+
+---
+
+# Relationship with Other Documents
 
 ### rules.md
 
-Define cómo deben aplicarse las convenciones de desarrollo.
+Defines how development conventions should be applied.
 
 ---
 
 ### structure.md
 
-Define cómo se organizan los proyectos.
+Defines how projects are organized.
 
 ---
 
 ### architecture.md
 
-Describe la arquitectura específica del proyecto.
+Describes the specific architecture of the project.
 
 ---
 
 ### deployment.md
 
-Describe los procesos de construcción y despliegue.
+Describes build and deployment processes.
 
 ---
 
 ### decisions.md
 
-Registra decisiones importantes relacionadas con el proyecto.
+Records important decisions related to the project.
 
 ---
 
-# Principio Fundamental
+# Fundamental Principle
 
-La documentación debe utilizar una terminología consistente.
+Documentation should use consistent terminology.
 
-Cuando exista ambigüedad sobre el significado de un término, este documento debe considerarse la referencia oficial para su interpretación dentro del proyecto.
+When there is ambiguity about the meaning of a term, this document should be considered the official reference for its interpretation within the project.

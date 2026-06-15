@@ -1,327 +1,94 @@
 # Changelog
 
-Estado: Activo
+Status: Active
 
-Alcance: Registro de cambios relevantes del proyecto.
+Scope: Record of relevant project changes.
 
-Referencia principal:
-
-[https://entus01.github.io/Repos-Structure/](https://entus01.github.io/Repos-Structure/)
-
----
-
-## Propósito
-
-Este documento registra los cambios significativos realizados en el proyecto a lo largo del tiempo.
-
-No pretende reemplazar el historial de Git, sino proporcionar una visión resumida de la evolución funcional, estructural y arquitectónica del repositorio.
-
-Su objetivo es permitir que cualquier persona pueda comprender rápidamente cómo ha evolucionado el proyecto sin necesidad de revisar el historial completo de commits.
-
----
-
-## Reglas
-
-Registrar únicamente cambios con impacto relevante.
-
-### Incluir
-
-* Nuevas funcionalidades.
-* Cambios arquitectónicos.
-* Reorganizaciones importantes.
-* Cambios en la estructura del proyecto.
-* Incorporación o eliminación de tecnologías.
-* Cambios en procesos de despliegue.
-* Modificaciones de estándares o convenciones.
-* Cambios que afecten el uso del proyecto.
-* Creación de nuevos documentos de referencia.
-* Eliminación o sustitución de documentación relevante.
-
-### No incluir
-
-* Commits rutinarios.
-* Correcciones menores.
-* Ajustes de estilos.
-* Refactors pequeños.
-* Actualizaciones menores de documentación.
-* Cambios internos sin impacto visible.
-* Actualizaciones triviales de dependencias.
-
----
-
-## Regla de Versionado
-
-Toda nueva versión del proyecto debe incluir una entrada correspondiente en este documento antes de ser publicada.
-
-No deben existir versiones publicadas sin registro en el changelog.
-
----
-
-## Formato
-
-```text
-## [Versión] - YYYY-MM-DD
-
-### Added
-- Nueva funcionalidad.
-
-### Changed
-- Cambio relevante.
-
-### Removed
-- Elemento eliminado.
-
-### Fixed
-- Corrección importante.
-
-### Notes
-- Información adicional.
-```
-
----
-
-## Convención de Versionado
-
-Formato recomendado:
-
-```text
-MAJOR.MINOR.PATCH
-```
-
-Ejemplos:
-
-```text
-1.0.0
-1.1.0
-1.2.0
-2.0.0
-```
-
-### MAJOR
-
-Cambios incompatibles o reestructuraciones importantes.
-
-Ejemplos:
-
-* Cambio significativo de arquitectura.
-* Reorganización completa de la estructura.
-* Sustitución de tecnologías principales.
-* Cambios que afecten directamente la forma de utilizar el proyecto.
-
----
-
-### MINOR
-
-Nuevas funcionalidades o ampliaciones compatibles con versiones anteriores.
-
-Ejemplos:
-
-* Nuevos documentos.
-* Nuevas guías.
-* Nuevas referencias.
-* Nuevas convenciones.
-
----
-
-### PATCH
-
-Correcciones o mejoras menores.
-
-Ejemplos:
-
-* Corrección de errores.
-* Ajustes de contenido.
-* Mejoras de redacción.
-* Correcciones de ejemplos o referencias.
-
----
-
-# Historial
-
-## [1.0.0] - 2026-06-07
-
-### Added
-
-* Creación inicial del proyecto Repos Structure.
-* Definición de la estructura documental base.
-* Creación de la carpeta `docs/` como ubicación oficial para la documentación interna.
-* Incorporación de los documentos:
-
-  * `rules.md`
-  * `structure.md`
-  * `changelog.md`
-  * `roadmap.md`
-  * `architecture.md`
-  * `decisions.md`
-  * `deployment.md`
-
-### Changed
-
-* Se establece una metodología centralizada para documentar organización, convenciones y estructura de proyectos.
-
-### Notes
-
-* Primera versión pública del proyecto.
-* Punto de partida para la evolución futura de los estándares documentados.
-
----
-
-## Plantilla para Nuevas Entradas
-
-```text
-## [X.Y.Z] - YYYY-MM-DD
-
-### Added
-
--
-
-### Changed
-
--
-
-### Removed
-
--
-
-### Fixed
-
--
-
-### Notes
-
--
-```
-
----
-
-## Relación con Git
-
-El changelog complementa el historial de Git.
-
-### Git responde:
-
-```text
-¿Qué cambió exactamente?
-```
-
-### Changelog responde:
-
-```text
-¿Por qué ese cambio fue importante para la evolución del proyecto?
-```
-
-Ambos mecanismos deben mantenerse sincronizados para garantizar trazabilidad y contexto histórico.
-
----
-
-## Principio Fundamental
-
-El historial de commits explica el trabajo realizado.
-
-El changelog explica la evolución del proyecto.
-
-Por esta razón, cada entrada debe centrarse en el impacto del cambio y no en los detalles específicos de implementación.
-
-Este documento funciona bien como plantilla reutilizable porque no depende del stack tecnológico, no depende del tamaño del proyecto y puede copiarse tal cual a cualquier repositorio manteniendo la misma filosofía de documentación.
-
-
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////
-
-
-# Changelog
-
-Estado: Activo
-
-Alcance: Registro de cambios relevantes del proyecto.
-
-Referencia principal:
+Primary reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento registra los cambios significativos realizados en el proyecto a lo largo del tiempo.
+This document records significant changes made to the project over time.
 
-No pretende reemplazar el historial de Git, sino proporcionar una visión resumida de la evolución funcional, estructural y arquitectónica del repositorio.
+It is not intended to replace the Git history, but to provide a summarized view of the functional, structural, and architectural evolution of the repository.
 
-Su objetivo es permitir que cualquier persona pueda comprender rápidamente cómo ha evolucionado el proyecto sin necesidad de revisar el historial completo de commits.
-
----
-
-## Reglas
-
-Registrar únicamente cambios con impacto relevante.
-
-### Incluir
-
-* Nuevas funcionalidades.
-* Cambios arquitectónicos.
-* Reorganizaciones importantes.
-* Cambios en la estructura del proyecto.
-* Incorporación o eliminación de tecnologías.
-* Cambios en procesos de despliegue.
-* Modificaciones de estándares o convenciones.
-* Cambios que afecten el uso del proyecto.
-* Creación de nuevos documentos de referencia.
-* Eliminación o sustitución de documentación relevante.
-
-### No incluir
-
-* Commits rutinarios.
-* Correcciones menores.
-* Ajustes de estilos.
-* Refactors pequeños.
-* Actualizaciones menores de documentación.
-* Cambios internos sin impacto visible.
-* Actualizaciones triviales de dependencias.
+Its goal is to allow anyone to quickly understand how the project has evolved without needing to review the complete commit history.
 
 ---
 
-## Regla de Versionado
+## Rules
 
-Toda nueva versión del proyecto debe incluir una entrada correspondiente en este documento antes de ser publicada.
+Record only changes with relevant impact.
 
-No deben existir versiones publicadas sin registro en el changelog.
+### Include
+
+* New features.
+* Architectural changes.
+* Major reorganizations.
+* Changes to project structure.
+* Addition or removal of technologies.
+* Changes to deployment processes.
+* Modifications to standards or conventions.
+* Changes that affect project usage.
+* Creation of new reference documents.
+* Removal or replacement of relevant documentation.
+
+### Do not include
+
+* Routine commits.
+* Minor fixes.
+* Style adjustments.
+* Small refactors.
+* Minor documentation updates.
+* Internal changes with no visible impact.
+* Trivial dependency updates.
 
 ---
 
-## Formato
+## Versioning Rule
+
+Every new project version must include a corresponding entry in this document before being published.
+
+Published versions should not exist without a changelog record.
+
+---
+
+## Format
 
 ```text
-## [Versión] - YYYY-MM-DD
+## [Version] - YYYY-MM-DD
 
 ### Added
-- Nueva funcionalidad.
+- New feature.
 
 ### Changed
-- Cambio relevante.
+- Relevant change.
 
 ### Removed
-- Elemento eliminado.
+- Removed element.
 
 ### Fixed
-- Corrección importante.
+- Important fix.
 
 ### Notes
-- Información adicional.
+- Additional information.
 ```
 
 ---
 
-## Convención de Versionado
+## Versioning Convention
 
-Formato recomendado:
+Recommended format:
 
 ```text
 MAJOR.MINOR.PATCH
 ```
 
-Ejemplos:
+Examples:
 
 ```text
 1.0.0
@@ -332,44 +99,44 @@ Ejemplos:
 
 ### MAJOR
 
-Cambios incompatibles o reestructuraciones importantes.
+Incompatible changes or major restructurings.
 
-Ejemplos:
+Examples:
 
-* Cambio significativo de arquitectura.
-* Reorganización completa de la estructura.
-* Sustitución de tecnologías principales.
-* Cambios que afecten directamente la forma de utilizar el proyecto.
+* Significant architecture change.
+* Complete structure reorganization.
+* Replacement of main technologies.
+* Changes that directly affect how the project is used.
 
 ---
 
 ### MINOR
 
-Nuevas funcionalidades o ampliaciones compatibles con versiones anteriores.
+New features or extensions compatible with previous versions.
 
-Ejemplos:
+Examples:
 
-* Nuevos documentos.
-* Nuevas guías.
-* Nuevas referencias.
-* Nuevas convenciones.
+* New documents.
+* New guides.
+* New references.
+* New conventions.
 
 ---
 
 ### PATCH
 
-Correcciones o mejoras menores.
+Minor fixes or improvements.
 
-Ejemplos:
+Examples:
 
-* Corrección de errores.
-* Ajustes de contenido.
-* Mejoras de redacción.
-* Correcciones de ejemplos o referencias.
+* Bug fixes.
+* Content adjustments.
+* Writing improvements.
+* Example or reference corrections.
 
 ---
 
-# Plantilla para Nuevas Entradas
+# Template for New Entries
 
 ```text
 ## [X.Y.Z] - YYYY-MM-DD
@@ -397,33 +164,33 @@ Ejemplos:
 
 ---
 
-# Historial del Proyecto
+# Project History
 
 ## [1.2.0] - 2026-06-10
 
 ### Added
 
-* Implementación de una navegación documental categorizada mediante un SideBar interactivo.
-* Incorporación de un menú lateral con soporte para expansión y colapso de categorías.
-* Adición de enlaces sociales e información del autor en el Footer.
-* Consolidación de una arquitectura global de estilos basada en archivos compartidos y design tokens.
+* Implementation of categorized documentation navigation through an interactive SideBar.
+* Addition of a sidebar menu with support for expanding and collapsing categories.
+* Addition of social links and author information in the Footer.
+* Consolidation of a global style architecture based on shared files and design tokens.
 
 ### Changed
 
-* Centralización de la configuración de navegación en constantes reutilizables.
-* Simplificación del Header para enfocarlo en la identidad visual y la navegación principal.
-* Reorganización de la arquitectura de estilos para mejorar consistencia y mantenibilidad.
-* Actualización de la documentación arquitectónica y de planificación para reflejar la evolución del proyecto.
+* Centralization of navigation configuration in reusable constants.
+* Simplification of the Header to focus on visual identity and main navigation.
+* Reorganization of the style architecture to improve consistency and maintainability.
+* Update of architectural and planning documentation to reflect the project's evolution.
 
 ### Removed
 
-* Eliminación de páginas plantilla y componentes temporales que dejaron de formar parte de la experiencia principal.
-* Retiro del componente de búsqueda de la interfaz como parte de la simplificación del layout.
+* Removal of template pages and temporary components that were no longer part of the main experience.
+* Removal of the search component from the interface as part of layout simplification.
 
 ### Notes
 
-* La interfaz evoluciona hacia un modelo de biblioteca documental más organizado y escalable.
-* Se consolida una estructura basada en configuración centralizada y componentes reutilizables como base para futuras ampliaciones.
+* The interface evolves toward a more organized and scalable documentation library model.
+* A structure based on centralized configuration and reusable components is consolidated as the foundation for future extensions.
 
 ---
 
@@ -431,21 +198,21 @@ Ejemplos:
 
 ### Added
 
-* Incorporación de `glossary.md` como fuente oficial de terminología.
-* Implementación inicial de navegación documental mediante Sidebar.
-* Organización de documentos en categorías temáticas.
-* Centralización de la configuración de navegación en constantes reutilizables.
+* Addition of `glossary.md` as the official terminology source.
+* Initial implementation of documentation navigation through Sidebar.
+* Organization of documents into thematic categories.
+* Centralization of navigation configuration in reusable constants.
 
 ### Changed
 
-* Actualización de toda la documentación para incorporar referencias a `glossary.md`.
-* Refinamiento de responsabilidades y relaciones entre documentos.
-* Reorganización de la navegación principal del proyecto.
-* Evolución de la interfaz hacia un modelo de biblioteca documental.
+* Update of all documentation to incorporate references to `glossary.md`.
+* Refinement of responsibilities and relationships between documents.
+* Reorganization of the project's main navigation.
+* Evolution of the interface toward a documentation library model.
 
 ### Removed
 
-* Eliminación de páginas temporales utilizadas durante el proceso inicial de desarrollo:
+* Removal of temporary pages used during the initial development process:
 
   * `Examples`
   * `Standards`
@@ -453,8 +220,8 @@ Ejemplos:
 
 ### Notes
 
-* Se adopta el concepto de catálogo documental como mecanismo principal de navegación.
-* La estructura documental se consolida como núcleo funcional del proyecto.
+* The documentation catalog concept is adopted as the main navigation mechanism.
+* The documentation structure is consolidated as the functional core of the project.
 
 ---
 
@@ -462,10 +229,10 @@ Ejemplos:
 
 ### Added
 
-* Creación inicial del proyecto Repos Structure.
-* Definición de la estructura documental base.
-* Creación de la carpeta `docs/` como ubicación oficial para la documentación interna.
-* Incorporación de los documentos:
+* Initial creation of the Repos Documentation project.
+* Definition of the base documentation structure.
+* Creation of the `docs/` folder as the official location for internal documentation.
+* Addition of the following documents:
 
   * `rules.md`
   * `structure.md`
@@ -477,93 +244,93 @@ Ejemplos:
 
 ### Changed
 
-* Se establece una metodología centralizada para documentar organización, convenciones y estructura de proyectos.
+* A centralized methodology is established for documenting project organization, conventions, and structure.
 
 ### Notes
 
-* Primera versión pública del proyecto.
-* Punto de partida para la evolución futura de los estándares documentados.
+* First public version of the project.
+* Starting point for the future evolution of documented standards.
 
 ---
 
-## Relación con Otros Documentos
+## Relationship with Other Documents
 
 ### roadmap.md
 
-Define las iniciativas futuras del proyecto.
+Defines the project's future initiatives.
 
-Las iniciativas completadas deberían reflejarse posteriormente en el changelog.
+Completed initiatives should subsequently be reflected in the changelog.
 
 ---
 
 ### decisions.md
 
-Registra el contexto y las razones detrás de cambios relevantes.
+Records the context and reasons behind relevant changes.
 
-El changelog registra el resultado de esos cambios.
+The changelog records the outcome of those changes.
 
 ---
 
 ### architecture.md
 
-Los cambios arquitectónicos importantes deberían reflejarse tanto en `architecture.md` como en este documento.
+Important architectural changes should be reflected in both `architecture.md` and this document.
 
 ---
 
 ### deployment.md
 
-Los cambios relevantes relacionados con construcción, infraestructura o despliegue deberían registrarse cuando afecten la evolución del proyecto.
+Relevant changes related to build, infrastructure, or deployment should be recorded when they affect the project's evolution.
 
 ---
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Los términos utilizados en este documento deben mantenerse alineados con `glossary.md`.
+Terms used in this document should remain aligned with `glossary.md`.
 
 ---
 
-## Terminología
+## Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con:
+The terminology used in this document should remain aligned with:
 
 ```text
 docs/glossary.md
 ```
 
-Cuando una nueva entrada introduzca un término técnico, organizacional o arquitectónico relevante para múltiples documentos, deberá evaluarse su incorporación al glosario oficial.
+When a new entry introduces a technical, organizational, or architectural term relevant to multiple documents, its inclusion in the official glossary should be evaluated.
 
 ---
 
-## Relación con Git
+## Relationship with Git
 
-El changelog complementa el historial de Git.
+The changelog complements the Git history.
 
-### Git responde:
-
-```text
-¿Qué cambió exactamente?
-```
-
-### Changelog responde:
+### Git answers:
 
 ```text
-¿Por qué ese cambio fue importante para la evolución del proyecto?
+What exactly changed?
 ```
 
-Las entradas del changelog representan versiones funcionales del proyecto y pueden agrupar múltiples commits relacionados bajo una misma evolución o iniciativa.
+### Changelog answers:
 
-Ambos mecanismos deben mantenerse sincronizados para garantizar trazabilidad y contexto histórico.
+```text
+Why was that change important for the project's evolution?
+```
+
+Changelog entries represent functional project versions and may group multiple related commits under the same evolution or initiative.
+
+Both mechanisms should be kept in sync to ensure traceability and historical context.
 
 ---
 
-## Principio Fundamental
+## Fundamental Principle
 
-El historial de commits explica el trabajo realizado.
+The commit history explains the work performed.
 
-El changelog explica la evolución del proyecto.
+The changelog explains the project's evolution.
 
-Por esta razón, cada entrada debe centrarse en el impacto del cambio y no en los detalles específicos de implementación, evitando convertirse en una copia del historial de Git.
+For this reason, each entry should focus on the impact of the change and not on specific implementation details, avoiding becoming a copy of the Git history.
 
-Este documento funciona como una referencia histórica del proyecto y como una plantilla reutilizable para mantener consistencia entre repositorios.
+This document serves as a historical reference for the project and as a reusable template to maintain consistency across repositories.

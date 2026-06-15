@@ -11,7 +11,7 @@ export default function Footer() {
             </section>
 
             <section className="footer__section footer__section--center">
-                <span className="footer__label">Repos Structure</span>
+                <span className="footer__label">Repos Documentation</span>
                 <p className="footer__text">
                     A personal reference for repository documentation and
                     project organization.

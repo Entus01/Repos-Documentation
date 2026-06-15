@@ -1,151 +1,151 @@
 # Decisions
 
-Estado: Activo
+Status: Active
 
-Alcance: Registro de decisiones técnicas, organizativas y estratégicas del proyecto.
+Scope: Record of technical, organizational, and strategic decisions for the project.
 
-Referencia principal:
+Main reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento registra las decisiones relevantes tomadas durante la evolución del proyecto.
+This document records relevant decisions made during the evolution of the project.
 
-Su objetivo es preservar el contexto detrás de cambios importantes, evitando la pérdida de conocimiento y facilitando futuras revisiones o refactors.
+Its goal is to preserve the context behind important changes, preventing knowledge loss and facilitating future reviews or refactors.
 
-Las decisiones registradas deben explicar el motivo de una elección, las alternativas consideradas y el impacto esperado.
-
----
-
-## Cuándo Registrar una Decisión
-
-Registrar una entrada cuando exista una decisión que afecte:
-
-* Arquitectura.
-* Organización del proyecto.
-* Estándares de desarrollo.
-* Tecnologías utilizadas.
-* Estrategias de despliegue.
-* Procesos de trabajo.
-* Convenciones compartidas entre equipos.
-* Cambios con impacto a largo plazo.
+Recorded decisions should explain the reason for a choice, the alternatives considered, and the expected impact.
 
 ---
 
-## Cuándo No Registrar una Decisión
+## When to Record a Decision
 
-No registrar:
+Record an entry when there is a decision that affects:
 
-* Correcciones menores.
-* Ajustes de estilos.
-* Refactors pequeños.
-* Cambios temporales.
-* Tareas rutinarias.
-* Actualizaciones sin impacto relevante.
+* Architecture.
+* Project organization.
+* Development standards.
+* Technologies used.
+* Deployment strategies.
+* Work processes.
+* Conventions shared across teams.
+* Changes with long-term impact.
 
 ---
 
-## Formato
+## When Not to Record a Decision
+
+Do not record:
+
+* Minor fixes.
+* Style adjustments.
+* Small refactors.
+* Temporary changes.
+* Routine tasks.
+* Updates without relevant impact.
+
+---
+
+## Format
 
 ```text
 ## DEC-XXX
 
-Fecha:
-Estado:
+Date:
+Status:
 
-Título:
+Title:
 
-Contexto:
+Context:
 
-Opciones consideradas:
+Options considered:
 
 1.
 2.
 3.
 
-Decisión:
+Decision:
 
-Motivo:
+Rationale:
 
-Impacto:
+Impact:
 
-Consecuencias:
+Consequences:
 
-Documentación relacionada:
+Related documentation:
 ```
 
 ---
 
-# Estados
+# Statuses
 
 ## Proposed
 
-La decisión ha sido planteada pero aún no ha sido adoptada.
+The decision has been proposed but not yet adopted.
 
 ---
 
 ## Accepted
 
-La decisión ha sido aprobada y forma parte del proyecto.
+The decision has been approved and is part of the project.
 
 ---
 
 ## Superseded
 
-La decisión fue reemplazada por una nueva.
+The decision was replaced by a new one.
 
 ---
 
 ## Rejected
 
-La decisión fue descartada.
+The decision was discarded.
 
 ---
 
-# Registro de Decisiones
+# Decision Log
 
 ## DEC-001
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Centralizar la documentación del proyecto dentro de `docs/`
+Centralize project documentation within `docs/`
 
-Contexto:
+Context:
 
-La documentación del proyecto podía dispersarse entre diferentes ubicaciones del repositorio, dificultando su mantenimiento y consulta.
+Project documentation could become scattered across different locations in the repository, making maintenance and consultation difficult.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener documentación distribuida.
-2. Centralizar únicamente documentación técnica.
-3. Centralizar toda la documentación interna en una única ubicación.
+1. Keep documentation distributed.
+2. Centralize technical documentation only.
+3. Centralize all internal documentation in a single location.
 
-Decisión:
+Decision:
 
-Centralizar toda la documentación interna dentro de la carpeta `docs/`.
+Centralize all internal documentation within the `docs/` folder.
 
-Motivo:
+Rationale:
 
-Facilitar la navegación, reducir duplicidad y mantener una estructura consistente entre proyectos.
+Facilitate navigation, reduce duplication, and maintain a consistent structure across projects.
 
-Impacto:
+Impact:
 
-* Mayor previsibilidad.
-* Mejor organización documental.
-* Menor esfuerzo de mantenimiento.
+* Greater predictability.
+* Better document organization.
+* Lower maintenance effort.
 
-Consecuencias:
+Consequences:
 
-Todos los proyectos que adopten estos estándares deberán utilizar la carpeta `docs/` como ubicación principal para documentación interna.
+All projects that adopt these standards must use the `docs/` folder as the primary location for internal documentation.
 
-Documentación relacionada:
+Related documentation:
 
 * structure.md
 * rules.md
@@ -154,46 +154,46 @@ Documentación relacionada:
 
 ## DEC-002
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Separar responsabilidades entre documentos de referencia
+Separate responsibilities between reference documents
 
-Contexto:
+Context:
 
-La documentación puede volverse difícil de mantener cuando varios documentos contienen información similar o duplicada.
+Documentation can become difficult to maintain when multiple documents contain similar or duplicated information.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener documentación general en un único archivo.
-2. Dividir documentación por responsabilidad.
+1. Keep general documentation in a single file.
+2. Split documentation by responsibility.
 
-Decisión:
+Decision:
 
-Asignar una responsabilidad específica a cada documento principal.
+Assign a specific responsibility to each main document.
 
-Motivo:
+Rationale:
 
-Reducir redundancia y facilitar el mantenimiento.
+Reduce redundancy and facilitate maintenance.
 
-Impacto:
+Impact:
 
-Cada documento responde a una necesidad concreta.
+Each document addresses a specific need.
 
-Consecuencias:
+Consequences:
 
-* rules.md → Cómo se trabaja.
-* structure.md → Cómo se organiza.
-* changelog.md → Qué cambió.
-* roadmap.md → Hacia dónde evoluciona.
-* decisions.md → Por qué se decidió.
-* architecture.md → Cómo se relacionan las partes del sistema.
-* deployment.md → Cómo se construye y publica el proyecto.
+* rules.md → How work is done.
+* structure.md → How things are organized.
+* changelog.md → What changed.
+* roadmap.md → Where the project is heading.
+* decisions.md → Why it was decided.
+* architecture.md → How the parts of the system relate.
+* deployment.md → How the project is built and published.
 
-Documentación relacionada:
+Related documentation:
 
 * rules.md
 * structure.md
@@ -206,46 +206,46 @@ Documentación relacionada:
 
 ## DEC-003
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Incorporar documentación especializada para arquitectura y despliegue
+Incorporate specialized documentation for architecture and deployment
 
-Contexto:
+Context:
 
-A medida que los proyectos crecen, la arquitectura y los procesos de despliegue suelen documentarse de forma dispersa o quedar implícitos dentro del conocimiento del equipo.
+As projects grow, architecture and deployment processes are often documented in a scattered way or remain implicit within team knowledge.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener la información distribuida en diferentes documentos.
-2. Incorporar secciones de arquitectura y despliegue dentro de otros documentos.
-3. Crear documentación especializada para cada responsabilidad.
+1. Keep information distributed across different documents.
+2. Include architecture and deployment sections within other documents.
+3. Create specialized documentation for each responsibility.
 
-Decisión:
+Decision:
 
-Crear documentos dedicados para arquitectura y despliegue.
+Create dedicated documents for architecture and deployment.
 
-Motivo:
+Rationale:
 
-Mantener responsabilidades claramente separadas, facilitar el mantenimiento de la documentación y reducir la dependencia del conocimiento implícito.
+Keep responsibilities clearly separated, facilitate documentation maintenance, and reduce reliance on implicit knowledge.
 
-Impacto:
+Impact:
 
-* Mayor claridad técnica.
-* Mejor incorporación de nuevos colaboradores.
-* Documentación más fácil de mantener.
-* Mejor trazabilidad de decisiones arquitectónicas y operativas.
+* Greater technical clarity.
+* Better onboarding of new contributors.
+* Documentation that is easier to maintain.
+* Better traceability of architectural and operational decisions.
 
-Consecuencias:
+Consequences:
 
-* architecture.md será responsable de documentar la arquitectura del proyecto.
-* deployment.md será responsable de documentar los procesos de construcción y despliegue.
-* La información técnica deberá mantenerse en los documentos correspondientes y evitar duplicidad.
+* architecture.md will be responsible for documenting the project architecture.
+* deployment.md will be responsible for documenting build and deployment processes.
+* Technical information must be kept in the corresponding documents and duplication must be avoided.
 
-Documentación relacionada:
+Related documentation:
 
 * architecture.md
 * deployment.md
@@ -253,39 +253,39 @@ Documentación relacionada:
 
 ---
 
-# Plantilla para Nuevas Decisiones
+# Template for New Decisions
 
 ```text
 ## DEC-XXX
 
-Fecha:
+Date:
 
-Estado:
+Status:
 
-Título:
+Title:
 
-Contexto:
+Context:
 
-Opciones consideradas:
+Options considered:
 
 1.
 
-Decisión:
+Decision:
 
-Motivo:
+Rationale:
 
-Impacto:
+Impact:
 
-Consecuencias:
+Consequences:
 
-Documentación relacionada:
+Related documentation:
 ```
 
 ---
 
-# Numeración
+# Numbering
 
-Formato recomendado:
+Recommended format:
 
 ```text
 DEC-001
@@ -293,19 +293,19 @@ DEC-002
 DEC-003
 ```
 
-Reglas:
+Rules:
 
-* La numeración debe ser secuencial.
-* Los identificadores no deben reutilizarse.
-* Una decisión reemplazada conserva su identificador original y cambia su estado a Superseded.
+* Numbering must be sequential.
+* Identifiers must not be reused.
+* A replaced decision keeps its original identifier and its status changes to Superseded.
 
 ---
 
-# Principio Fundamental
+# Fundamental Principle
 
-Las decisiones importantes deben quedar registradas junto con su contexto.
+Important decisions must be recorded along with their context.
 
-La implementación puede cambiar con el tiempo, pero comprender por qué se tomó una decisión permite mantener la coherencia y facilitar la evolución del proyecto.
+Implementation may change over time, but understanding why a decision was made helps maintain coherence and facilitates project evolution.
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -316,152 +316,152 @@ La implementación puede cambiar con el tiempo, pero comprender por qué se tom�
 
 # Decisions
 
-Estado: Activo
+Status: Active
 
-Alcance: Registro de decisiones técnicas, organizativas y estratégicas del proyecto.
+Scope: Record of technical, organizational, and strategic decisions for the project.
 
-Referencia principal:
+Main reference:
 
 https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Propósito
+# Purpose
 
-Este documento registra las decisiones relevantes tomadas durante la evolución del proyecto.
+This document records relevant decisions made during the evolution of the project.
 
-Su objetivo es preservar el contexto detrás de cambios importantes, evitando la pérdida de conocimiento y facilitando futuras revisiones, mantenimientos o refactors.
+Its goal is to preserve the context behind important changes, preventing knowledge loss and facilitating future reviews, maintenance, or refactors.
 
-Las decisiones registradas deben explicar el motivo de una elección, las alternativas consideradas y el impacto esperado.
-
----
-
-## Cuándo Registrar una Decisión
-
-Registrar una entrada cuando exista una decisión que afecte:
-
-* Arquitectura.
-* Organización del proyecto.
-* Estándares de desarrollo.
-* Tecnologías utilizadas.
-* Estrategias de despliegue.
-* Procesos de trabajo.
-* Convenciones compartidas entre equipos.
-* Cambios con impacto a largo plazo.
+Recorded decisions should explain the reason for a choice, the alternatives considered, and the expected impact.
 
 ---
 
-## Cuándo No Registrar una Decisión
+## When to Record a Decision
 
-No registrar:
+Record an entry when there is a decision that affects:
 
-* Correcciones menores.
-* Ajustes de estilos.
-* Refactors pequeños.
-* Cambios temporales.
-* Tareas rutinarias.
-* Actualizaciones sin impacto relevante.
+* Architecture.
+* Project organization.
+* Development standards.
+* Technologies used.
+* Deployment strategies.
+* Work processes.
+* Conventions shared across teams.
+* Changes with long-term impact.
 
 ---
 
-## Formato
+## When Not to Record a Decision
+
+Do not record:
+
+* Minor fixes.
+* Style adjustments.
+* Small refactors.
+* Temporary changes.
+* Routine tasks.
+* Updates without relevant impact.
+
+---
+
+## Format
 
 ```text
 ## DEC-XXX
 
-Fecha:
-Estado:
+Date:
+Status:
 
-Título:
+Title:
 
-Contexto:
+Context:
 
-Opciones consideradas:
+Options considered:
 
 1.
 2.
 3.
 
-Decisión:
+Decision:
 
-Motivo:
+Rationale:
 
-Impacto:
+Impact:
 
-Consecuencias:
+Consequences:
 
-Documentación relacionada:
+Related documentation:
 ````
 
 ---
 
-# Estados
+# Statuses
 
 ## Proposed
 
-La decisión ha sido planteada pero aún no ha sido adoptada.
+The decision has been proposed but not yet adopted.
 
 ---
 
 ## Accepted
 
-La decisión ha sido aprobada y forma parte del proyecto.
+The decision has been approved and is part of the project.
 
 ---
 
 ## Superseded
 
-La decisión fue reemplazada por una nueva.
+The decision was replaced by a new one.
 
 ---
 
 ## Rejected
 
-La decisión fue descartada.
+The decision was discarded.
 
 ---
 
-# Registro de Decisiones
+# Decision Log
 
 ## DEC-001
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Centralizar la documentación del proyecto dentro de `docs/`
+Centralize project documentation within `docs/`
 
-Contexto:
+Context:
 
-La documentación del proyecto podía dispersarse entre diferentes ubicaciones del repositorio, dificultando su mantenimiento y consulta.
+Project documentation could become scattered across different locations in the repository, making maintenance and consultation difficult.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener documentación distribuida.
-2. Centralizar únicamente documentación técnica.
-3. Centralizar toda la documentación interna en una única ubicación.
+1. Keep documentation distributed.
+2. Centralize technical documentation only.
+3. Centralize all internal documentation in a single location.
 
-Decisión:
+Decision:
 
-Centralizar toda la documentación interna dentro de la carpeta `docs/`.
+Centralize all internal documentation within the `docs/` folder.
 
-Motivo:
+Rationale:
 
-Facilitar la navegación, reducir duplicidad y mantener una estructura consistente entre proyectos.
+Facilitate navigation, reduce duplication, and maintain a consistent structure across projects.
 
-Impacto:
+Impact:
 
-* Mayor previsibilidad.
-* Mejor organización documental.
-* Menor esfuerzo de mantenimiento.
+* Greater predictability.
+* Better document organization.
+* Lower maintenance effort.
 
-Consecuencias:
+Consequences:
 
-Todos los proyectos que adopten estos estándares deberán utilizar la carpeta `docs/` como ubicación principal para documentación interna.
+All projects that adopt these standards must use the `docs/` folder as the primary location for internal documentation.
 
-Documentación relacionada:
+Related documentation:
 
 * structure.md
 * rules.md
@@ -470,47 +470,47 @@ Documentación relacionada:
 
 ## DEC-002
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Separar responsabilidades entre documentos de referencia
+Separate responsibilities between reference documents
 
-Contexto:
+Context:
 
-La documentación puede volverse difícil de mantener cuando varios documentos contienen información similar o duplicada.
+Documentation can become difficult to maintain when multiple documents contain similar or duplicated information.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener documentación general en un único archivo.
-2. Dividir documentación por responsabilidad.
+1. Keep general documentation in a single file.
+2. Split documentation by responsibility.
 
-Decisión:
+Decision:
 
-Asignar una responsabilidad específica a cada documento principal.
+Assign a specific responsibility to each main document.
 
-Motivo:
+Rationale:
 
-Reducir redundancia y facilitar el mantenimiento.
+Reduce redundancy and facilitate maintenance.
 
-Impacto:
+Impact:
 
-Cada documento responde a una necesidad concreta.
+Each document addresses a specific need.
 
-Consecuencias:
+Consequences:
 
-* glossary.md → Qué significan los términos utilizados.
-* rules.md → Cómo se trabaja.
-* structure.md → Cómo se organiza.
-* changelog.md → Qué cambió.
-* roadmap.md → Hacia dónde evoluciona.
-* decisions.md → Por qué se decidió.
-* architecture.md → Cómo está construido el proyecto.
-* deployment.md → Cómo se construye y publica el proyecto.
+* glossary.md → What the terms used mean.
+* rules.md → How work is done.
+* structure.md → How things are organized.
+* changelog.md → What changed.
+* roadmap.md → Where the project is heading.
+* decisions.md → Why it was decided.
+* architecture.md → How the project is built.
+* deployment.md → How the project is built and published.
 
-Documentación relacionada:
+Related documentation:
 
 * glossary.md
 * rules.md
@@ -524,46 +524,46 @@ Documentación relacionada:
 
 ## DEC-003
 
-Fecha: 2026-06-07
+Date: 2026-06-07
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Incorporar documentación especializada para arquitectura y despliegue
+Incorporate specialized documentation for architecture and deployment
 
-Contexto:
+Context:
 
-A medida que los proyectos crecen, la arquitectura y los procesos de despliegue suelen documentarse de forma dispersa o quedar implícitos dentro del conocimiento del equipo.
+As projects grow, architecture and deployment processes are often documented in a scattered way or remain implicit within team knowledge.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener la información distribuida en diferentes documentos.
-2. Incorporar secciones de arquitectura y despliegue dentro de otros documentos.
-3. Crear documentación especializada para cada responsabilidad.
+1. Keep information distributed across different documents.
+2. Include architecture and deployment sections within other documents.
+3. Create specialized documentation for each responsibility.
 
-Decisión:
+Decision:
 
-Crear documentos dedicados para arquitectura y despliegue.
+Create dedicated documents for architecture and deployment.
 
-Motivo:
+Rationale:
 
-Mantener responsabilidades claramente separadas, facilitar el mantenimiento de la documentación y reducir la dependencia del conocimiento implícito.
+Keep responsibilities clearly separated, facilitate documentation maintenance, and reduce reliance on implicit knowledge.
 
-Impacto:
+Impact:
 
-* Mayor claridad técnica.
-* Mejor incorporación de nuevos colaboradores.
-* Documentación más fácil de mantener.
-* Mejor trazabilidad de decisiones arquitectónicas y operativas.
+* Greater technical clarity.
+* Better onboarding of new contributors.
+* Documentation that is easier to maintain.
+* Better traceability of architectural and operational decisions.
 
-Consecuencias:
+Consequences:
 
-* architecture.md será responsable de documentar la arquitectura del proyecto.
-* deployment.md será responsable de documentar los procesos de construcción y despliegue.
-* La información técnica deberá mantenerse en los documentos correspondientes y evitar duplicidad.
+* architecture.md will be responsible for documenting the project architecture.
+* deployment.md will be responsible for documenting build and deployment processes.
+* Technical information must be kept in the corresponding documents and duplication must be avoided.
 
-Documentación relacionada:
+Related documentation:
 
 * architecture.md
 * deployment.md
@@ -573,48 +573,48 @@ Documentación relacionada:
 
 ## DEC-004
 
-Fecha: 2026-06-08
+Date: 2026-06-08
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Incorporar `glossary.md` como fuente oficial de terminología
+Incorporate `glossary.md` as the official source of terminology
 
-Contexto:
+Context:
 
-A medida que la documentación crece, términos técnicos, organizacionales y arquitectónicos comienzan a repetirse en múltiples documentos.
+As documentation grows, technical, organizational, and architectural terms begin to repeat across multiple documents.
 
-Sin una referencia centralizada, pueden aparecer interpretaciones inconsistentes, definiciones duplicadas o diferencias de significado entre proyectos.
+Without a centralized reference, inconsistent interpretations, duplicated definitions, or differences in meaning between projects may arise.
 
-Opciones consideradas:
+Options considered:
 
-1. Definir términos dentro de cada documento.
-2. Mantener un glosario distribuido.
-3. Crear una fuente única de terminología.
+1. Define terms within each document.
+2. Maintain a distributed glossary.
+3. Create a single source of terminology.
 
-Decisión:
+Decision:
 
-Incorporar `glossary.md` como documento oficial para centralizar definiciones y terminología.
+Incorporate `glossary.md` as the official document to centralize definitions and terminology.
 
-Motivo:
+Rationale:
 
-Mantener consistencia documental, reducir ambigüedades y facilitar la reutilización de los estándares entre repositorios.
+Maintain documentation consistency, reduce ambiguities, and facilitate reuse of standards across repositories.
 
-Impacto:
+Impact:
 
-* Terminología unificada.
-* Menor duplicidad de definiciones.
-* Mayor consistencia entre documentos.
-* Mejor incorporación de nuevos colaboradores.
+* Unified terminology.
+* Less duplication of definitions.
+* Greater consistency between documents.
+* Better onboarding of new contributors.
 
-Consecuencias:
+Consequences:
 
-* Los documentos deberán referenciar `glossary.md` cuando utilicen terminología especializada.
-* Las definiciones no deberán duplicarse en otros documentos.
-* `glossary.md` se convierte en la fuente oficial de interpretación terminológica.
+* Documents should reference `glossary.md` when using specialized terminology.
+* Definitions should not be duplicated in other documents.
+* `glossary.md` becomes the official source for terminological interpretation.
 
-Documentación relacionada:
+Related documentation:
 
 * glossary.md
 * rules.md
@@ -625,48 +625,48 @@ Documentación relacionada:
 
 ## DEC-005
 
-Fecha: 2026-06-08
+Date: 2026-06-08
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Construir una biblioteca documental navegable mediante React
+Build a navigable documentation library using React
 
-Contexto:
+Context:
 
-Inicialmente la documentación del proyecto existía únicamente como archivos Markdown dentro del repositorio.
+Initially, project documentation existed only as Markdown files within the repository.
 
-Aunque esta aproximación era suficiente para consulta directa desde GitHub, limitaba la experiencia de navegación, descubrimiento de contenido y reutilización como referencia pública.
+Although this approach was sufficient for direct consultation from GitHub, it limited navigation, content discovery, and reuse as a public reference.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener la documentación únicamente en archivos Markdown.
-2. Publicar los documentos mediante un generador estático externo.
-3. Construir una interfaz propia utilizando React y React Router.
+1. Keep documentation only in Markdown files.
+2. Publish documents using an external static site generator.
+3. Build a custom interface using React and React Router.
 
-Decisión:
+Decision:
 
-Construir una aplicación React que permita navegar la documentación como una biblioteca organizada por categorías.
+Build a React application that allows navigating the documentation as a library organized by categories.
 
-Motivo:
+Rationale:
 
-Facilitar el acceso a la información, mejorar la experiencia de lectura y utilizar el proyecto como ejercicio práctico de desarrollo frontend.
+Facilitate access to information, improve the reading experience, and use the project as a practical frontend development exercise.
 
-Impacto:
+Impact:
 
-* Navegación centralizada de documentos.
-* Mejor experiencia de consulta.
-* Base para futuras funcionalidades de búsqueda y filtrado.
-* Mayor valor educativo para el mantenimiento del proyecto.
+* Centralized document navigation.
+* Better consultation experience.
+* Foundation for future search and filtering features.
+* Greater educational value for project maintenance.
 
-Consecuencias:
+Consequences:
 
-* Se incorpora una estructura de navegación basada en categorías.
-* Los documentos pasan a representarse como contenido navegable dentro de la aplicación.
-* La documentación del proyecto deberá mantenerse sincronizada con la interfaz de navegación.
+* A category-based navigation structure is incorporated.
+* Documents become navigable content within the application.
+* Project documentation must be kept in sync with the navigation interface.
 
-Documentación relacionada:
+Related documentation:
 
 * structure.md
 * roadmap.md
@@ -677,48 +677,48 @@ Documentación relacionada:
 
 ## DEC-006
 
-Fecha: 2026-06-10
+Date: 2026-06-10
 
-Estado: Accepted
+Status: Accepted
 
-Título:
+Title:
 
-Centralizar la configuración de navegación documental
+Centralize documentation navigation configuration
 
-Contexto:
+Context:
 
-A medida que la interfaz evolucionó hacia una biblioteca documental organizada por categorías, la información de navegación comenzó a ser utilizada por múltiples componentes.
+As the interface evolved into a documentation library organized by categories, navigation information began to be used by multiple components.
 
-Mantener rutas, categorías y metadatos distribuidos en la implementación de cada componente incrementaba el riesgo de inconsistencias y dificultaba la incorporación de nuevos documentos.
+Keeping routes, categories, and metadata distributed across each component's implementation increased the risk of inconsistencies and made it harder to add new documents.
 
-Opciones consideradas:
+Options considered:
 
-1. Mantener la configuración de navegación distribuida entre los componentes.
-2. Generar la navegación de forma manual dentro de cada vista.
-3. Centralizar toda la configuración de navegación en una única fuente de datos reutilizable.
+1. Keep navigation configuration distributed across components.
+2. Generate navigation manually within each view.
+3. Centralize all navigation configuration in a single reusable data source.
 
-Decisión:
+Decision:
 
-Centralizar la definición de categorías, documentos y rutas en un archivo de configuración compartido ubicado en `src/constants/navigation.js`.
+Centralize the definition of categories, documents, and routes in a shared configuration file located at `src/constants/navigation.js`.
 
-Motivo:
+Rationale:
 
-Reducir la duplicidad de información, facilitar el mantenimiento y permitir que la estructura documental evolucione sin modificar la lógica de los componentes consumidores.
+Reduce information duplication, facilitate maintenance, and allow the documentation structure to evolve without modifying consumer component logic.
 
-Impacto:
+Impact:
 
-* Configuración de navegación mantenida en una única fuente de verdad.
-* Mayor reutilización entre componentes.
-* Incorporación simplificada de nuevas categorías y documentos.
-* Menor acoplamiento entre la estructura documental y la interfaz.
+* Navigation configuration maintained in a single source of truth.
+* Greater reuse across components.
+* Simplified addition of new categories and documents.
+* Lower coupling between the documentation structure and the interface.
 
-Consecuencias:
+Consequences:
 
-* Los componentes de navegación deberán consumir la configuración centralizada en lugar de definir datos propios.
-* Las modificaciones de la estructura documental deberán realizarse desde el módulo de constantes correspondiente.
-* La documentación arquitectónica y estructural deberá mantenerse sincronizada con esta decisión.
+* Navigation components must consume the centralized configuration instead of defining their own data.
+* Changes to the documentation structure must be made from the corresponding constants module.
+* Architectural and structural documentation must be kept in sync with this decision.
 
-Documentación relacionada:
+Related documentation:
 
 * architecture.md
 * structure.md
@@ -727,39 +727,39 @@ Documentación relacionada:
 
 ---
 
-# Plantilla para Nuevas Decisiones
+# Template for New Decisions
 
 ```text
 ## DEC-XXX
 
-Fecha:
+Date:
 
-Estado:
+Status:
 
-Título:
+Title:
 
-Contexto:
+Context:
 
-Opciones consideradas:
+Options considered:
 
 1.
 
-Decisión:
+Decision:
 
-Motivo:
+Rationale:
 
-Impacto:
+Impact:
 
-Consecuencias:
+Consequences:
 
-Documentación relacionada:
+Related documentation:
 ```
 
 ---
 
-# Numeración
+# Numbering
 
-Formato recomendado:
+Recommended format:
 
 ```text
 DEC-001
@@ -767,101 +767,101 @@ DEC-002
 DEC-003
 ```
 
-Reglas:
+Rules:
 
-* La numeración debe ser secuencial.
-* Los identificadores no deben reutilizarse.
-* Una decisión reemplazada conserva su identificador original y cambia su estado a Superseded.
+* Numbering must be sequential.
+* Identifiers must not be reused.
+* A replaced decision keeps its original identifier and its status changes to Superseded.
 
 ---
 
-## Relación con Otros Documentos
+## Relationship with Other Documents
 
 ### changelog.md
 
-Registra los cambios realizados.
+Records changes that have been made.
 
-decisions.md registra las razones que justifican dichos cambios.
+decisions.md records the reasons that justify those changes.
 
 ---
 
 ### architecture.md
 
-Describe la arquitectura actual del proyecto.
+Describes the current project architecture.
 
-Las decisiones arquitectónicas relevantes deben registrarse en este documento.
+Relevant architectural decisions must be recorded in this document.
 
 ---
 
 ### deployment.md
 
-Describe el proceso de construcción y despliegue.
+Describes the build and deployment process.
 
-Las decisiones relacionadas con infraestructura o publicación deben registrarse aquí antes de implementarse.
+Decisions related to infrastructure or publishing must be recorded here before implementation.
 
 ---
 
 ### structure.md
 
-Describe cómo se organiza el repositorio.
+Describes how the repository is organized.
 
-Cuando una decisión modifique la estructura general del proyecto, ambos documentos deben mantenerse sincronizados.
+When a decision modifies the overall project structure, both documents must be kept in sync.
 
 ---
 
 ### rules.md
 
-Define las convenciones y estándares de desarrollo.
+Defines development conventions and standards.
 
-Las decisiones relacionadas con procesos de trabajo, nomenclatura o estándares deben reflejarse también en rules.md cuando corresponda.
+Decisions related to work processes, naming, or standards should also be reflected in rules.md when applicable.
 
 ---
 
 ### roadmap.md
 
-Puede contener iniciativas futuras que eventualmente requieran nuevas decisiones.
+May contain future initiatives that eventually require new decisions.
 
 ---
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Los términos utilizados en este documento deben mantenerse alineados con glossary.md.
+Terms used in this document must remain aligned with glossary.md.
 
 ---
 
-## Terminología
+## Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con:
+The terminology used in this document must remain aligned with:
 
 ```text
 docs/glossary.md
 ```
 
-Cuando una decisión introduzca un nuevo término técnico, organizacional o arquitectónico que requiera una interpretación compartida, deberá evaluarse su incorporación al glosario oficial.
+When a decision introduces a new technical, organizational, or architectural term that requires a shared interpretation, its inclusion in the official glossary should be evaluated.
 
 ---
 
-## Registro Histórico
+## Historical Record
 
-Las decisiones registradas deben conservarse como parte de la historia del proyecto.
+Recorded decisions must be preserved as part of the project history.
 
-Si una decisión deja de ser válida, no debe eliminarse. En su lugar, deberá registrarse una nueva decisión que la sustituya y actualizar su estado a:
+If a decision is no longer valid, it must not be deleted. Instead, a new decision that replaces it should be recorded and its status updated to:
 
 ```text
 Superseded
 ```
 
-De esta forma se mantiene la trazabilidad de la evolución técnica y organizativa del proyecto.
+This way, traceability of the project's technical and organizational evolution is maintained.
 
 ---
 
-## Principio Fundamental
+## Fundamental Principle
 
-Las decisiones importantes deben quedar registradas junto con su contexto.
+Important decisions must be recorded along with their context.
 
-La implementación puede cambiar con el tiempo, pero comprender por qué se tomó una decisión permite mantener la coherencia, facilitar el mantenimiento y respaldar la evolución del proyecto.
+Implementation may change over time, but understanding why a decision was made helps maintain coherence, facilitate maintenance, and support project evolution.
 
 ```
 ```

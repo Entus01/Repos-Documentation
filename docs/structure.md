@@ -1,43 +1,43 @@
-# Estructura de Proyectos
+# Project Structure
 
-Estado: Activo
+Status: Active
 
-Alcance: Todos los proyectos que adopten los estándares definidos en Repos Structure.
+Scope: All projects that adopt the standards defined in Repos Documentation.
 
-Referencia principal:
+Primary reference:
 
 https://entus01.github.io/Repos-Structure/
 
-Este documento describe la forma en que organizo mis proyectos y las responsabilidades esperadas para cada nivel de la estructura.
+This document describes how I organize my projects and the expected responsibilities for each level of the structure.
 
-No pretende definir una arquitectura universal, sino documentar las convenciones que utilizo para mantener consistencia entre repositorios.
-
----
-
-## Principio de Aplicación
-
-Las estructuras descritas en este documento representan convenciones y recomendaciones generales.
-
-No todos los proyectos requieren adoptar todos los directorios, archivos o niveles de organización aquí descritos. La estructura debe ajustarse al alcance, complejidad y necesidades reales de cada repositorio.
-
-Se recomienda comenzar con una organización simple y evolucionarla progresivamente a medida que el proyecto crezca.
+It is not intended to define a universal architecture, but rather to document the conventions I use to maintain consistency across repositories.
 
 ---
 
-## 1) Principios de Organización
+## Application Principle
 
-### Una responsabilidad por carpeta
+The structures described in this document represent general conventions and recommendations.
 
-Cada carpeta debe representar un dominio, responsabilidad o contexto claramente identificable.
+Not all projects need to adopt every directory, file, or level of organization described here. The structure should be adapted to the scope, complexity, and real needs of each repository.
 
-Correcto:
+It is recommended to start with a simple organization and evolve it progressively as the project grows.
+
+---
+
+## 1) Organization Principles
+
+### One responsibility per folder
+
+Each folder should represent a clearly identifiable domain, responsibility, or context.
+
+Correct:
 
 auth/
 users/
 payments/
 
 
-Incorrecto:
+Incorrect:
 
 misc/
 general/
@@ -45,18 +45,18 @@ common/
 stuff/
 
 
-### Una responsabilidad por archivo
+### One responsibility per file
 
-Cada archivo debe resolver un único problema o responsabilidad principal.
+Each file should solve a single problem or primary responsibility.
 
-Correcto:
+Correct:
 
 UserCard.jsx
 UserService.js
 UserRepository.js
 
 
-Incorrecto:
+Incorrect:
 
 helpers.js
 everything.js
@@ -64,18 +64,18 @@ misc.js
 
 
 
-### Escalabilidad progresiva
+### Progressive scalability
 
-La estructura debe funcionar tanto para proyectos pequeños como para aplicaciones que crezcan con el tiempo.
+The structure should work for both small projects and applications that grow over time.
 
-La organización inicial debe permitir evolución sin reorganizaciones constantes.
+The initial organization should allow evolution without constant reorganization.
 
 
-### Organización por dominio
+### Domain-based organization
 
-Siempre que sea posible, agrupar elementos relacionados por funcionalidad antes que por tipo de archivo.
+Whenever possible, group related elements by functionality before grouping by file type.
 
-Preferido:
+Preferred:
 
 users/
 ├── components/
@@ -84,7 +84,7 @@ users/
 └── pages/
 
 
-Menos recomendado:
+Less recommended:
 
 components/
 services/
@@ -93,16 +93,16 @@ pages/
 
 
 
-### Legibilidad antes que complejidad
+### Readability over complexity
 
-La estructura debe priorizar claridad y facilidad de navegación antes que patrones complejos o sobreingeniería.
+The structure should prioritize clarity and ease of navigation over complex patterns or over-engineering.
 
 
-## 2) Estructura Base del Repositorio
+## 2) Base Repository Structure
 
-Todo proyecto debe mantener una estructura raíz clara, consistente y fácilmente reconocible.
+Every project should maintain a clear, consistent, and easily recognizable root structure.
 
-Estructura base recomendada:
+Recommended base structure:
 
 project-root/
 │
@@ -127,22 +127,22 @@ project-root/
 ├── package.json
 └── README.md
 
-La composición exacta dependerá del tipo y tamaño del proyecto. Algunos directorios o archivos pueden no ser necesarios en repositorios pequeños.
-La carpeta `tests/` es recomendable para proyectos que incorporen pruebas automatizadas, pero no es un requisito para repositorios pequeños o prototipos.
+The exact composition will depend on the type and size of the project. Some directories or files may not be necessary in small repositories.
+The `tests/` folder is recommended for projects that include automated tests, but it is not a requirement for small repositories or prototypes.
 
-Objetivos:
+Objectives:
 
-* Mantener una estructura reconocible entre proyectos.
-* Facilitar la navegación del repositorio.
-* Centralizar responsabilidades por ubicación.
-* Reducir la necesidad de exploración innecesaria.
+* Maintain a recognizable structure across projects.
+* Facilitate repository navigation.
+* Centralize responsibilities by location.
+* Reduce the need for unnecessary exploration.
 
 
-## 3) Documentación
+## 3) Documentation
 
-Toda la documentación interna que forme parte del proyecto debería centralizarse dentro de la carpeta `docs/`.
+All internal documentation that is part of the project should be centralized within the `docs/` folder.
 
-Estructura recomendada:
+Recommended structure:
 
 docs/
 ├── glossary.md
@@ -154,68 +154,68 @@ docs/
 ├── decisions.md
 └── deployment.md
 
-No todos los proyectos requieren mantener todos estos documentos. Su adopción dependerá del alcance y las necesidades del repositorio.
+Not all projects need to maintain all of these documents. Their adoption will depend on the scope and needs of the repository.
 
-Objetivos:
+Objectives:
 
-* Centralizar el conocimiento del proyecto.
-* Mantener responsabilidades documentales separadas.
-* Facilitar la incorporación de nuevos colaboradores.
-* Evitar documentación dispersa dentro del repositorio.
+* Centralize project knowledge.
+* Keep documentation responsibilities separate.
+* Facilitate onboarding of new collaborators.
+* Avoid scattered documentation within the repository.
 
 
-## 4) Ubicación de Responsabilidades
+## 4) Responsibility Placement
 
-Cada elemento del proyecto debe ubicarse según su responsabilidad principal.
+Each element of the project should be placed according to its primary responsibility.
 
-Ejemplos:
+Examples:
 
-### Código fuente
+### Source code
 
 src/
 
 
-Contiene la implementación principal de la aplicación.
+Contains the main application implementation.
 
 
-### Documentación
+### Documentation
 
 docs/
 
 
-Contiene documentación técnica, organizativa y operativa.
+Contains technical, organizational, and operational documentation.
 
 
-### Recursos públicos
+### Public assets
 
 public/
 
 
-Contiene archivos accesibles directamente desde la aplicación.
+Contains files directly accessible from the application.
 
 
-### Configuración
+### Configuration
 
 project-root/
 
 
-Contiene configuraciones globales del proyecto.
+Contains global project configuration.
 
 
-### Pruebas
+### Tests
 
 tests/
 
 
-Contiene pruebas automatizadas y recursos relacionados.
+Contains automated tests and related resources.
 
 ---
 
-## 5) Archivos de Configuración
+## 5) Configuration Files
 
-Los archivos de configuración global deben ubicarse en la raíz del proyecto.
+Global configuration files should be placed at the project root.
 
-Ejemplo:
+Example:
 
 project-root/
 │
@@ -232,9 +232,9 @@ project-root/
 └── README.md
 
 
-### Regla General
+### General Rule
 
-Si una herramienta requiere configuración a nivel de proyecto, su archivo debe ubicarse en la raíz.
+If a tool requires project-level configuration, its file should be placed at the root.
 
 ### Frontend
 
@@ -244,7 +244,7 @@ tsconfig.json
 jsconfig.json
 
 
-### Calidad de Código
+### Code Quality
 
 eslint.config.js
 .prettierrc
@@ -257,27 +257,27 @@ vercel.json
 netlify.toml
 
 
-### Contenedores
+### Containers
 
 Dockerfile
 docker-compose.yml
 
 
-### Automatización
+### Automation
 
 .github/
 
 
-### Excepción
+### Exception
 
-Si una herramienta permite configurarse dentro de `package.json`, puede mantenerse allí cuando contribuya a una configuración más simple y legible.
+If a tool allows configuration within `package.json`, it may remain there when it contributes to a simpler and more readable setup.
 
 
-## 6) Frontend (Referencia)
+## 6) Frontend (Reference)
 
-Estructura sugerida:
+Suggested structure:
 
-La siguiente organización representa una referencia. Cada proyecto puede adoptar únicamente las carpetas que aporten valor según su complejidad y arquitectura.
+The following organization represents a reference. Each project may adopt only the folders that add value according to its complexity and architecture.
 
 src/
 │
@@ -296,7 +296,7 @@ src/
 
 ### app/
 
-Configuración principal de la aplicación.
+Main application configuration.
 
 app/
 ├── App.jsx
@@ -307,7 +307,7 @@ app/
 
 ### assets/
 
-Recursos estáticos.
+Static resources.
 
 assets/
 ├── images/
@@ -319,7 +319,7 @@ assets/
 
 ### components/
 
-Componentes reutilizables.
+Reusable components.
 
 components/
 ├── Button/
@@ -331,7 +331,7 @@ components/
 
 ### features/
 
-Organización por dominio o funcionalidad.
+Organization by domain or functionality.
 
 features/
 ├── auth/
@@ -343,7 +343,7 @@ features/
 
 ### hooks/
 
-Hooks reutilizables.
+Reusable hooks.
 
 hooks/
 ├── useAuth.js
@@ -354,7 +354,7 @@ hooks/
 
 ### services/
 
-Comunicación con APIs y lógica externa.
+API communication and external logic.
 
 services/
 ├── authService.js
@@ -365,7 +365,7 @@ services/
 
 ### styles/
 
-Estilos globales y configuración visual.
+Global styles and visual configuration.
 
 styles/
 ├── reset.css
@@ -375,9 +375,9 @@ styles/
 
 
 
-## 7) Backend (Referencia)
+## 7) Backend (Reference)
 
-Estructura sugerida:
+Suggested structure:
 
 src/
 │
@@ -392,21 +392,21 @@ src/
 └── utils/
 
 
-### Responsabilidades comunes
+### Common responsibilities
 
-config/        → Configuraciones globales.
-controllers/   → Recepción y respuesta de peticiones.
-services/      → Lógica de negocio.
-repositories/  → Acceso a persistencia.
-models/        → Representación de entidades.
-validators/    → Validaciones de entrada.
-middlewares/   → Procesamiento intermedio.
+config/        → Global configuration.
+controllers/   → Request reception and response.
+services/      → Business logic.
+repositories/  → Persistence access.
+models/        → Entity representation.
+validators/    → Input validation.
+middlewares/   → Intermediate processing.
 
 
 
-## 8) Fullstack (Referencia)
+## 8) Fullstack (Reference)
 
-Monorepo sugerido:
+Suggested monorepo:
 
 project-root/
 │
@@ -423,25 +423,25 @@ project-root/
 
 
 
-## 9) Evolución de la Estructura
+## 9) Structure Evolution
 
-La estructura debe evolucionar junto con el proyecto.
+The structure should evolve alongside the project.
 
-Principios:
+Principles:
 
-* Crecer según necesidades reales.
-* Mantener coherencia organizativa.
-* Evitar complejidad innecesaria.
-* Priorizar claridad sobre anticipación.
-* Favorecer la mantenibilidad a largo plazo.
-* Evitar crear carpetas o niveles de organización que aún no tengan una responsabilidad real.
+* Grow according to real needs.
+* Maintain organizational coherence.
+* Avoid unnecessary complexity.
+* Prioritize clarity over anticipation.
+* Favor long-term maintainability.
+* Avoid creating folders or levels of organization that do not yet have a real responsibility.
 
 
-## 10) Principio de Organización de la Raíz
+## 10) Root Organization Principle
 
-La raíz del proyecto debe contener únicamente elementos de primer nivel claramente identificables.
+The project root should contain only clearly identifiable top-level elements.
 
-Ejemplo de estructura esperada:
+Expected structure example:
 
 project-root/
 │
@@ -451,10 +451,10 @@ project-root/
 ├── tests/
 ├── package.json
 ├── README.md
-└── archivos de configuración
+└── configuration files
 
 
-Evitar:
+Avoid:
 
 project-root/
 │
@@ -465,88 +465,89 @@ project-root/
 └── test2/
 
 
-Todo elemento en la raíz debe tener una responsabilidad claramente identificable.
-
-### Regla Fundamental
-
-La raíz del proyecto debe ser predecible.
-
-Cualquier desarrollador que abra el repositorio debe poder encontrar documentación, configuración y código en ubicaciones consistentes sin necesidad de explorar el proyecto completo.
+Every element at the root should have a clearly identifiable responsibility.
 
 
-## 11) Relación con Otros Documentos
+### Fundamental Rule
 
-Los siguientes documentos complementan las convenciones de organización descritas en este archivo. Su utilización dependerá del tamaño, complejidad y necesidades de cada proyecto.
+The project root should be predictable.
+
+Any developer who opens the repository should be able to find documentation, configuration, and code in consistent locations without needing to explore the entire project.
+
+
+## 11) Relationship with Other Documents
+
+The following documents complement the organization conventions described in this file. Their use will depend on the size, complexity, and needs of each project.
 
 ### glossary.md
 
-Define la terminología utilizada dentro de la documentación.
+Defines the terminology used within the documentation.
 
-Los términos utilizados en este documento deben mantenerse alineados con el glosario oficial.
+The terms used in this document should remain aligned with the official glossary.
 
 
 ### rules.md
 
-Define las convenciones y estándares de desarrollo.
+Defines development conventions and standards.
 
-Mientras structure.md define dónde se organiza cada elemento, rules.md define cómo debe desarrollarse.
+While structure.md defines where each element is organized, rules.md defines how development should be carried out.
 
 
 ### architecture.md
 
-Describe cómo está construido el sistema.
+Describes how the system is built.
 
-La estructura del repositorio y la arquitectura del sistema son conceptos relacionados pero independientes.
+Repository structure and system architecture are related but independent concepts.
 
 
 ### deployment.md
 
-Describe cómo se construye y publica el proyecto.
+Describes how the project is built and published.
 
-Los cambios organizativos que afecten procesos de despliegue deben mantenerse sincronizados entre ambos documentos.
+Organizational changes that affect deployment processes should be kept synchronized between both documents.
 
 
 ### decisions.md
 
-Registra el contexto detrás de decisiones organizativas relevantes.
+Records the context behind relevant organizational decisions.
 
-Cuando una modificación estructural tenga impacto significativo, debería registrarse como decisión formal.
+When a structural change has significant impact, it should be recorded as a formal decision.
 
 
 ### roadmap.md
 
-Puede contener futuras iniciativas relacionadas con la organización del proyecto.
+May contain future initiatives related to project organization.
 
 
 ### changelog.md
 
-Registra cambios relevantes en la evolución del repositorio.
+Records relevant changes in the evolution of the repository.
 
-Las reorganizaciones importantes deben reflejarse también en el historial del proyecto.
+Important reorganizations should also be reflected in the project history.
 
 
-## 12) Terminología
+## 12) Terminology
 
-La terminología utilizada en este documento debe mantenerse alineada con:
+The terminology used in this document should remain aligned with:
 
 docs/glossary.md
 
 
-Cuando se incorporen nuevos conceptos relacionados con organización, estructura o arquitectura documental, deberá evaluarse su inclusión en el glosario oficial.
+When new concepts related to organization, structure, or documentation architecture are incorporated, their inclusion in the official glossary should be evaluated.
 
-Este documento debe utilizar terminología consistente con el resto de la documentación del proyecto.
+This document should use terminology consistent with the rest of the project documentation.
 
 
-## 13) Objetivo Final
+## 13) Final Objective
 
-La organización de un proyecto debe permitir que cualquier desarrollador pueda:
+Project organization should allow any developer to:
 
-* Comprender rápidamente la estructura.
-* Localizar funcionalidades fácilmente.
-* Incorporarse al proyecto con poca fricción.
-* Mantener el código sin depender de conocimiento implícito.
-* Escalar el sistema sin reorganizaciones frecuentes.
+* Quickly understand the structure.
+* Locate functionality easily.
+* Join the project with minimal friction.
+* Maintain the code without relying on implicit knowledge.
+* Scale the system without frequent reorganizations.
 
-La estructura existe para facilitar el desarrollo, no para imponer complejidad innecesaria.
+Structure exists to facilitate development, not to impose unnecessary complexity.
 
-Las decisiones relacionadas con organización deben documentarse aquí, mientras que las decisiones arquitectónicas, operativas o estratégicas deben mantenerse en sus respectivos documentos de referencia.
+Organization-related decisions should be documented here, while architectural, operational, or strategic decisions should be kept in their respective reference documents.
