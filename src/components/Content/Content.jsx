@@ -1,17 +1,37 @@
 import { Routes, Route } from "react-router-dom";
 import "./Content.css";
 import { NAV_ITEMS } from "../../constants/navigation.js";
-import DocumentPage from "../DocumentPage/DocumentPage.jsx";
 
 export default function Content() {
-  return (
-    <div className="content">
-      <Routes>
-        <Route path="/" element={<div>Select a document</div>} />
-        {NAV_ITEMS.map(({ id, path }) => (
-          <Route key={id} path={path} element={<DocumentPage documentId={id} />} />
-        ))}
-      </Routes>
-    </div>
-  );
+    return (
+        <main className="content">
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <article className="document document--empty">
+                            <h1>Virtual Library</h1>
+                            <p>
+                                Select a document from the catalog to begin
+                                reading.
+                            </p>
+                        </article>
+                    }
+                />
+
+                {NAV_ITEMS.map(({ id, path, name, document: Document }) => (
+                    <Route
+                        key={id}
+                        path={path}
+                        element={
+                            <article className="document">
+                                <h1>{name}</h1>
+                                <Document />
+                            </article>
+                        }
+                    />
+                ))}
+            </Routes>
+        </main>
+    );
 }

@@ -11,7 +11,7 @@ import logo from "../assets/Repos-Structure.png";
 export default function App() {
   return (
     <div className="app">
-      <Header logo={logo} title="Repos Documentation" />
+      <Header logo={logo} title="Repos Documentation" subtitle="A Central Library for Project Documentation" />
 
       <SideBar />
 
