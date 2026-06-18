@@ -1,5 +1,3 @@
-import "./ReadMeDocument.css";
-
 export default function ReadMeDocument() {
   return (
     <>

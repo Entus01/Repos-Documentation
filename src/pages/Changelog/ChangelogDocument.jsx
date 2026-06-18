@@ -1,5 +1,3 @@
-import "./ChangelogDocument.css";
-
 export default function ChangelogDocument() {
   return (
     <>

@@ -80,6 +80,14 @@ The application follows a component-based architecture where components are orga
 
 ---
 
+## Content Area
+
+The main application region responsible for displaying the active documentation content.
+
+Within this project, the Content Area configures document routes from the centralized navigation model and renders the selected document component.
+
+---
+
 ## Deploy
 
 The process of publishing the generated application so that it becomes accessible to users.
@@ -101,6 +109,22 @@ Design tokens are centralized within the global style system to maintain visual 
 A reusable piece of project documentation presented through the application interface.
 
 Each document addresses a single responsibility and is organized into categories within the document library.
+
+---
+
+## Document Component
+
+A React component responsible for presenting the reusable guidance, structure, or content associated with a specific documentation page.
+
+Document components are registered in the navigation model and rendered by the Content Area.
+
+---
+
+## Document Library
+
+The application model that organizes documentation as a catalog of categorized documents.
+
+The document library is navigated through the SideBar and rendered through the Content Area.
 
 ---
 

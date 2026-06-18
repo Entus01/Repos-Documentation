@@ -1,5 +1,3 @@
-import "./ArchitectureDocument.css";
-
 export default function ArchitectureDocument() {
   return (
     <>
@@ -36,20 +34,18 @@ export default function ArchitectureDocument() {
       <section>
         <h2>When to Update this Document</h2>
 
-        <p>
-          Update when there is any relevant change related to:
-          <ul>
-            <li>General system architecture.</li>
-            <li>Organization of main modules.</li>
-            <li>Communication flows.</li>
-            <li>External integrations.</li>
-            <li>Architectural patterns used.</li>
-            <li>Important structural dependencies.</li>
-            <li>
-              Technologies that modify the general functioning of the system.
-            </li>
-          </ul>
-        </p>
+        <p>Update when there is any relevant change related to:</p>
+        <ul>
+          <li>General system architecture.</li>
+          <li>Organization of main modules.</li>
+          <li>Communication flows.</li>
+          <li>External integrations.</li>
+          <li>Architectural patterns used.</li>
+          <li>Important structural dependencies.</li>
+          <li>
+            Technologies that modify the general functioning of the system.
+          </li>
+        </ul>
       </section>
 
       <section>

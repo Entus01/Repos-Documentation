@@ -1,5 +1,3 @@
-import "./RulesDocument.css"
-
 export default function RulesDocument() {
   return (
     <>
@@ -11,9 +9,9 @@ export default function RulesDocument() {
           applied across the project.
         </p>
         <p>
-          Its goal is to establish a common framework that promotes
-          consistency, reduces ambiguity, and helps collaborators understand
-          how work should be organized and maintained.
+          Its goal is to establish a common framework that promotes consistency,
+          reduces ambiguity, and helps collaborators understand how work should
+          be organized and maintained.
         </p>
         <p>
           Unlike project-specific documents, this document is designed to be
@@ -38,9 +36,7 @@ export default function RulesDocument() {
       <section>
         <h2>When to Update this Document</h2>
 
-        <p>
-          Update when there is any relevant change related to:
-        </p>
+        <p>Update when there is any relevant change related to:</p>
 
         <ul>
           <li>Development conventions.</li>
@@ -105,7 +101,11 @@ export default function RulesDocument() {
             <ul>
               <li>Descriptive file names.</li>
               <li>Consistent component naming.</li>
-              <li>Predictable folder organization.</li>
+              <li>
+                Folder naming conventions based on responsibility (kebab-case
+                for features and services, PascalCase for React components and
+                UI modules).
+              </li>
               <li>Clear variable and function names.</li>
             </ul>
           </li>
@@ -187,10 +187,9 @@ export default function RulesDocument() {
         <h2>Rule Evolution</h2>
 
         <p>
-          Significant modifications to shared standards or long-term
-          conventions should also be recorded in{" "}
-          <span>docs/decisions.md</span> when they represent an important
-          organizational or strategic decision.
+          Significant modifications to shared standards or long-term conventions
+          should also be recorded in <span>docs/decisions.md</span> when they
+          represent an important organizational or strategic decision.
         </p>
 
         <p>
@@ -219,4 +218,4 @@ export default function RulesDocument() {
       </section>
     </>
   );
-};
+}

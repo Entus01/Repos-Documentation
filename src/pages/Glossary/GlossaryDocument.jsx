@@ -1,5 +1,3 @@
-import "./GlossaryDocument.css";
-
 export default function GlossaryDocument() {
   return (
     <>

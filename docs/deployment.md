@@ -136,6 +136,28 @@ dist/
 
 ---
 
+## Vite Configuration
+
+The project currently uses Vite as the build tool.
+
+The active configuration is maintained in:
+
+```text
+vite.config.js
+```
+
+For GitHub Pages deployments under a repository path, the public base path must be reviewed before publishing.
+
+In this project, the production URL uses the repository path:
+
+```text
+/Repos-Structure/
+```
+
+If static assets fail to load after deployment, the Vite `base` option should be validated and aligned with the GitHub Pages path before publishing a new version.
+
+---
+
 ## Deployment Platform
 
 The project is currently deployed using:
@@ -172,8 +194,9 @@ The recommended process for publishing a new version is:
 2. Update the relevant documentation.
 3. Review and commit pending changes.
 4. Generate the production build.
-5. Publish the updated version to GitHub Pages.
-6. Verify that the deployed application is working correctly.
+5. Validate the generated build locally when possible.
+6. Publish the updated version to GitHub Pages.
+7. Verify that the deployed application is working correctly.
 
 ---
 
@@ -182,6 +205,26 @@ The recommended process for publishing a new version is:
 ### Documentation Synchronization
 
 Any relevant change affecting the build or deployment process should be reflected in this document to keep it aligned with the actual operational workflow.
+
+---
+
+### Case-Sensitive Paths
+
+The production environment should be treated as case-sensitive.
+
+Imports, folder names, and file names must match exactly to avoid build or runtime failures in Linux-based environments and static hosting platforms.
+
+This is especially relevant for component folders and route-related modules, where differences such as uppercase and lowercase directory names can work locally on Windows but fail after deployment.
+
+---
+
+### Single Page Application Routing
+
+The application uses React Router and is published as a static site.
+
+When using browser-based routing on GitHub Pages, internal routes should be validated after deployment, including direct navigation and browser refresh on document pages.
+
+If direct access to nested routes fails, the routing or hosting fallback strategy must be reviewed before publishing the next version.
 
 ---
 

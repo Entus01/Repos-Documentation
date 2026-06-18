@@ -10,7 +10,7 @@ https://entus01.github.io/Repos-Structure/
 
 ---
 
-# Purpose
+## Purpose
 
 This document describes the project-specific architecture.
 
@@ -55,7 +55,7 @@ Repos Documentation is a web application focused on consulting documentation.
 
 Its purpose is to present standards, conventions, and reusable documentation through an interface that simulates a document library organized by categories.
 
-The application consumes static content stored within the repository itself and currently does not require a backend or external persistence.
+The application consumes static documentation content stored within the repository and rendered through reusable React components. It currently does not require a backend or external persistence layer.
 
 ---
 
@@ -77,7 +77,6 @@ CSS
 
 Responsible for:
 
-* Configuring React Router.
 * Defining the general structure of the application.
 * Integrating Header, SideBar, and Footer.
 * Managing the main content area.
@@ -109,8 +108,10 @@ Responsible for:
 
 Responsible for:
 
-* Displaying the selected document.
-* Managing routes defined via React Router.
+* Configuring the document routes through React Router.
+* Resolving document routes generated from the centralized navigation configuration.
+* Displaying the content associated with the active route.
+* Rendering each selected document component inside a shared document layout.
 
 ---
 
@@ -159,28 +160,30 @@ id
 name
 path
 category
+document
 ```
 
-This strategy allows maintaining a single source of truth for the document structure and simplifies the addition of new categories or documents.
+Each document entry references the React component responsible for rendering its content through the `document` property, allowing routes to be generated from a single centralized configuration.
 
 ---
 
-## General Flow
-
 ```text
 User
-   │
-   ▼
+   |
+   v
 SideBar
-   │
-   ▼
+   |
+   v
+navigation.js
+   |
+   v
 React Router
-   │
-   ▼
-Selected Route
-   │
-   ▼
-Document
+   |
+   v
+Content
+   |
+   v
+Document Component
 ```
 
 ---
@@ -191,13 +194,13 @@ The application currently uses an architecture based on components and separated
 
 ```text
 src/
-│
-├── app/
-├── assets/
-├── components/
-├── constants/
-├── pages/
-└── styles/
+|
+|-- App/
+|-- assets/
+|-- components/
+|-- constants/
+|-- pages/
+`-- styles/
 ```
 
 ### Applied Principles
@@ -244,8 +247,20 @@ Depends on:
 ```text
 Header
 SideBar
+Content
 Footer
+```
+
+---
+
+### Content Area
+
+Depends on:
+
+```text
+navigation.js
 React Router
+Document page components
 ```
 
 ---
@@ -274,6 +289,13 @@ The navigation structure must be maintained in:
 ```text
 src/constants/navigation.js
 ```
+
+This centralized configuration acts as the single source of truth for:
+
+* Sidebar navigation.
+* Document metadata.
+* Route generation.
+* Document component resolution.
 
 Consumer components must not duplicate this information.
 
@@ -309,41 +331,10 @@ The current architecture allows:
 
 * Adding new categories.
 * Incorporating new documents.
-* Creating new routes.
-* Reorganizing navigation without modifying the main components.
+* Generating new routes through centralized configuration.
+* Reorganizing navigation without duplicating route or sidebar configuration.
+* Reusing the shared document layout defined in the content area.
 * Evolving the design system through global styles and tokens.
-
----
-
-## Relationship with Other Documents
-
-### glossary.md
-
-Defines the terminology used within the project documentation.
-
----
-
-### structure.md
-
-Describes where project elements are located.
-
----
-
-### rules.md
-
-Describes how project elements should be developed and maintained.
-
----
-
-### decisions.md
-
-Documents why certain architectural decisions were made.
-
----
-
-### roadmap.md
-
-Documents possible future changes or evolutions of the architecture.
 
 ---
 

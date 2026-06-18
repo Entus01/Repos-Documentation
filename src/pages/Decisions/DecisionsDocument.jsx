@@ -1,5 +1,3 @@
-import "./DecisionsDocument.css";
-
 export default function DecisionsDocument() {
   return (
     <>

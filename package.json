@@ -1,5 +1,6 @@
 {
   "name": "repos-documentation",
+  "type": "module",
   "homepage": "https://Entus01.github.io/Repos-Documentation",
   "version": "0.0.0",
   "private": true,
@@ -7,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -17,8 +19,13 @@
     "react-router-dom": "^7.17.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
     "gh-pages": "^6.3.0",
+    "globals": "^17.6.0",
     "vite": "^7.3.5"
   }
 }

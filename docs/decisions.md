@@ -259,7 +259,7 @@ Related documentation:
 
 Date: 2026-06-15
 
-Status: Accepted
+Status: Superseded
 
 Title:
 
@@ -294,6 +294,7 @@ Consequences:
 * *Document.jsx components describe how each document should be structured.
 * Markdown files contain the real documentation of the repository.
 * Changes to the project should be reflected in the corresponding .md files, not duplicated in the UI templates.
+* This decision is superseded by DEC-007, which documents the same decision with clearer terminology and broader impact.
 
 Related documentation:
 
@@ -308,7 +309,7 @@ Related documentation:
 
 Date: 2026-06-15
 
-Status: Accepted
+Status: Superseded
 
 Title: Use a centralized navigation model for the documentation library
 
@@ -339,6 +340,8 @@ Impact:
 Consequences:
 
 All components responsible for rendering navigation should consume the centralized configuration rather than maintaining independent copies.
+
+This decision is superseded by DEC-006, which documents the same navigation decision with more complete context, consequences, and related documentation.
 
 Related documentation:
 
@@ -453,6 +456,60 @@ Related documentation:
 * architecture.md
 * deployment.md
 * glossary.md
+* structure.md
+
+---
+
+## DEC-008
+
+Date: 2026-06-17
+
+Status: Accepted
+
+Title:
+
+Render document routes directly from the Content area
+
+Context:
+
+The application previously introduced a standalone `DocumentPage` layer to provide a reusable structure for rendering documentation pages.
+
+After the navigation model was centralized, the Content area could generate routes directly from `NAV_ITEMS` and render each registered document component inside a shared document layout.
+
+Keeping both `DocumentPage` and the route generation logic in Content increased indirection without adding a separate responsibility.
+
+Options considered:
+
+1. Keep the standalone `DocumentPage` component as the generic document wrapper.
+2. Move route generation and document rendering fully into `DocumentPage`.
+3. Render document routes directly in the Content area using the centralized navigation model.
+
+Decision:
+
+Render document routes directly from the Content area using `NAV_ITEMS`, and keep the shared document structure inside the route element rendered by Content.
+
+Rationale:
+
+This keeps route generation close to the main content responsibility, avoids an unnecessary intermediate layer, and preserves the centralized navigation model as the source of truth for document metadata and document component resolution.
+
+Impact:
+
+* Simpler rendering flow.
+* Lower indirection between route configuration and document rendering.
+* Continued reuse of centralized navigation metadata.
+* Clearer alignment between `Content.jsx`, `navigation.js`, and the documented architecture.
+
+Consequences:
+
+* The standalone `DocumentPage` component is no longer part of the active architecture.
+* `Content.jsx` is responsible for generating document routes and rendering the selected document component.
+* `architecture.md` must describe Content as the document rendering layer.
+* Future document additions should continue to be registered through `src/constants/navigation.js`.
+
+Related documentation:
+
+* architecture.md
+* changelog.md
 * structure.md
 
 ---

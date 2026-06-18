@@ -160,25 +160,6 @@ Expected impact:
 
 ---
 
-### Scalable Documentation Library
-
-Priority: High
-
-Objectives:
-
-* Facilitate the addition of new documents and categories.
-* Maintain consistent navigation based on centralized configuration.
-* Improve organization and maintainability of the documentation catalog.
-* Prepare the structure for future repository expansions.
-
-Expected impact:
-
-* Greater project scalability.
-* Lower effort to maintain and expand documentation.
-* Structural consistency across future versions.
-
----
-
 ### Accessibility Standards
 
 Priority: Medium
@@ -198,24 +179,24 @@ Expected impact:
 
 ## In Progress
 
-### Documentation System Consolidation
+### Scalable Documentation Library
 
 Priority: High
 
 Objectives:
 
-* Refine the project's main documents.
-* Align interactive documentation components with project-specific Markdown files.
-* Consolidate the glossary as the official terminology reference.
-* Strengthen consistency and reusability across the documentation ecosystem.
-* Validate the separation of responsibilities between reusable templates and project documentation.
+* Facilitate the addition of new documents and categories.
+* Maintain consistent navigation based on centralized configuration.
+* Improve organization and maintainability of the documentation catalog.
+* Prepare the structure for future repository expansions.
+* Continue validating the relationship between navigation metadata, routes, and document components.
 
 Expected impact:
 
-* Greater consistency across all project documents.
 * Better maintainability of the documentation library.
-* Increased reusability for future repositories.
-* Reduced duplication between the interface and the documentation sources.
+* Lower effort to maintain and expand documentation.
+* Structural consistency across future versions.
+* Clearer scalability path for new documentation categories.
 
 ---
 
@@ -223,7 +204,7 @@ Expected impact:
 
 ### Initial Version
 
-Date: 2026-06-07
+Date: 2026-06-17
 
 Achievements:
 
@@ -274,6 +255,20 @@ Achievements:
 * Incorporation of a sidebar menu with expand and collapse support.
 * Consolidation of a category-based navigation experience.
 * Preparation of a scalable structure for future catalog expansions.
+
+---
+
+### Documentation System Consolidation
+
+Date: 2026-06-17
+
+Achievements:
+
+* Refinement of the project's main documents.
+* Alignment of interactive documentation components with project-specific Markdown files.
+* Consolidation of the glossary as the official terminology reference.
+* Validation of the separation between reusable documentation guidance and project-specific documentation.
+* Synchronization of architecture, changelog, decisions, deployment, and glossary documentation with the current implementation.
 
 ---
 

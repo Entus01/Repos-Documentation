@@ -166,6 +166,33 @@ Examples:
 
 # Project History
 
+## [1.3.0] - 2026-06-17
+
+### Added
+
+* Addition of dedicated React document components for the main documentation pages.
+* Registration of document components in the centralized navigation configuration.
+* Implementation of route generation from the navigation model.
+
+### Changed
+
+* Standardization of Markdown documentation and interactive document components.
+* Unification of project documentation language to English.
+* Integration of document rendering into the Content area through the centralized navigation model.
+* Refinement of the library-inspired visual layout for the documentation experience.
+* Update of `architecture.md` to reflect the current rendering flow and document navigation model.
+
+### Removed
+
+* Removal of the standalone `DocumentPage` layer after consolidating document rendering inside the Content area.
+
+### Notes
+
+* The documentation library continues to move toward a centralized model where navigation metadata drives both sidebar navigation and route generation.
+* The current architecture favors direct rendering of document components from `NAV_ITEMS`, reducing an intermediate layer while preserving a shared document layout.
+
+---
+
 ## [1.2.0] - 2026-06-10
 
 ### Added

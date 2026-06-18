@@ -248,13 +248,26 @@ DEFAULT_LANGUAGE
 
 ### Folders
 
-kebab-case
+The naming convention depends on the responsibility of the folder.
 
-```text
+Feature, service, utility, and infrastructure folders should generally use kebab-case:
+
 user-profile/
 authentication-service/
 shared-components/
-```
+
+Folders that represent React components, pages, or UI modules may use PascalCase when the repository follows a component-per-folder organization.
+
+This convention helps maintain visual consistency between folders and the components they contain.
+
+Examples:
+
+Header/
+Footer/
+SideBar/
+Content/
+Roadmap/
+Architecture/
 
 ### CSS files
 

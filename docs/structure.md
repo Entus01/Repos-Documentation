@@ -207,12 +207,14 @@ Not all projects need to maintain all of these documents. Their adoption will de
 
 ## Frontend Reference Structure
 
+This structure represents a reference architecture and not necessarily the exact structure of this repository.
+
 The following organization represents a reference. Each project may adopt only the folders that add value according to its complexity and architecture.
 
 ```text
 src/
 │
-├── app/
+├── App/
 ├── assets/
 ├── components/
 ├── features/
@@ -225,12 +227,12 @@ src/
 └── constants/
 ```
 
-### app/
+### App/
 
 Main application configuration.
 
 ```text
-app/
+App/
 ├── App.jsx
 ├── router.jsx
 └── providers.jsx

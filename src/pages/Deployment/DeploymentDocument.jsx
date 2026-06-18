@@ -1,5 +1,3 @@
-import "./DeploymentDocument.css";
-
 export default function DeploymentDocument() {
   return (
     <>

@@ -1,5 +1,3 @@
-import "./RoadmapDocument.css";
-
 export default function RoadmapDocument() {
   return (
     <>

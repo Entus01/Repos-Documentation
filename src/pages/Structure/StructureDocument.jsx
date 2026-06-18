@@ -1,5 +1,3 @@
-import "./StructureDocument.css";
-
 export default function StructureDocument() {
   return (
     <>
